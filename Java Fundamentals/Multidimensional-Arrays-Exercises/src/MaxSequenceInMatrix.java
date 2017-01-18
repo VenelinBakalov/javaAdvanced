@@ -13,53 +13,58 @@ public class MaxSequenceInMatrix {
 
         int maxSequence = Integer.MIN_VALUE;
 
+        int maxRow = 0;
+        int maxCol = 0;
+
         for (int row = 0; row < matrix.length; row++) {
-            int currentRow = 0;
-            int currentCol = 0;
-            int currentSequence = 1;
-            int maxRow = 0;
-            int maxCol = 0;
-            while (currentRow < rows - 1 && currentCol < cols - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow][currentCol + 1])) {
-                currentSequence++;
-                if (currentSequence > maxSequence) {
-                    maxSequence = currentSequence;
-                    maxRow = currentRow;
-                    maxCol = currentCol;
-                }
-                currentCol++;
-            }
+            for (int col = 0; col < matrix[row].length; col++) {
+                int currentRow = row;
+                int currentCol = col;
+                int currentSequence = 1;
 
-            currentRow = 0;
-            currentCol = 0;
-            currentSequence = 1;
-            while (currentRow < rows - 1 && currentCol < cols - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow + 1][currentCol])) {
-                currentSequence++;
-                if (currentSequence > maxSequence) {
-                    maxSequence = currentSequence;
-                    maxRow = currentRow;
-                    maxCol = currentCol;
+                while (currentCol < cols - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow][currentCol + 1])) {
+                    currentSequence++;
+                    if (currentSequence > maxSequence) {
+                        maxSequence = currentSequence;
+                        maxRow = currentRow;
+                        maxCol = currentCol;
+                    }
+                    currentCol++;
                 }
-                currentRow++;
-            }
 
-            currentRow = 0;
-            currentCol = 0;
-            currentSequence = 1;
-            while (currentRow < rows - 1 && currentCol < cols - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow + 1][currentCol + 1])) {
-                currentSequence++;
-                if (currentSequence > maxSequence) {
-                    maxSequence = currentSequence;
-                    maxRow = currentRow;
-                    maxCol = currentCol;
+                currentRow = row;
+                currentCol = col;
+                currentSequence = 1;
+                while (currentRow < rows - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow + 1][currentCol])) {
+                    currentSequence++;
+                    if (currentSequence > maxSequence) {
+                        maxSequence = currentSequence;
+                        maxRow = currentRow;
+                        maxCol = currentCol;
+                    }
+                    currentRow++;
                 }
-                currentRow++;
-                currentCol++;
-            }
 
-            String maxString = matrix[maxRow][maxCol];
-            for (int i = 0; i < maxSequence; i++) {
-                System.out.print(maxString + ", ");
+                currentRow = row;
+                currentCol = col;
+                currentSequence = 1;
+                while (currentRow < rows - 1 && currentCol < cols - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow + 1][currentCol + 1])) {
+                    currentSequence++;
+                    if (currentSequence > maxSequence) {
+                        maxSequence = currentSequence;
+                        maxRow = currentRow;
+                        maxCol = currentCol;
+                    }
+                    currentRow++;
+                    currentCol++;
+                }
             }
+        }
+
+        String maxString = matrix[maxRow][maxCol];
+        
+        for (int i = 0; i < maxSequence; i++) {
+            System.out.print(maxString + ", ");
         }
     }
 
