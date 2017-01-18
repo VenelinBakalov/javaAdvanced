@@ -37,7 +37,7 @@ public class MaxSequenceInMatrix {
                 currentSequence = 1;
                 while (currentRow < rows - 1 && matrix[currentRow][currentCol].equals(matrix[currentRow + 1][currentCol])) {
                     currentSequence++;
-                    if (currentSequence > maxSequence) {
+                    if (currentSequence >= maxSequence) {
                         maxSequence = currentSequence;
                         maxRow = currentRow;
                         maxCol = currentCol;
@@ -62,7 +62,7 @@ public class MaxSequenceInMatrix {
         }
 
         String maxString = matrix[maxRow][maxCol];
-        
+
         for (int i = 0; i < maxSequence; i++) {
             System.out.print(maxString + ", ");
         }
