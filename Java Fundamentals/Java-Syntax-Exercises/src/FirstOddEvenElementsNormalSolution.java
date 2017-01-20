@@ -17,7 +17,7 @@ public class FirstOddEvenElementsNormalSolution {
         for (int i = 0; i < elements.length; i++) {
             int currentNumber = Integer.parseInt(elements[i]);
 
-            if (currentNumber % 2 == remainder) {
+            if (Math.abs(currentNumber) % 2 == remainder) {
                 resultingNums.add(elements[i]);
             }
 

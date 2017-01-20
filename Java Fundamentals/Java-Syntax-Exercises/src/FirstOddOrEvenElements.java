@@ -16,11 +16,11 @@ public class FirstOddOrEvenElements {
         for (int i = 0; i < elements.length; i++) {
             int currentNumber = Integer.parseInt(elements[i]);
 
-            if (currentNumber % 2 == remainder) {
+            if (Math.abs(currentNumber) % 2 == remainder) {
                 System.out.printf("%d ", currentNumber);
 
                 currentCount++;
-                if (currentCount == count){
+                if (currentCount >= count){
                     break;
                 }
             }
