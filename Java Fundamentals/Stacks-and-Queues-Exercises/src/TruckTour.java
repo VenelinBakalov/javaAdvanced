@@ -32,8 +32,8 @@ public class TruckTour {
 
             long petrol = 0;
 
-            for (Pump pump : stationsQueue) {
-                petrol += pump.petrolDifference;
+            for (Pump pump : stationsQueue) {       // other option to iterate over the collection is to call
+                petrol += pump.petrolDifference;    // stationsQueue.toArray and to iterate over the new array
 
                 if (petrol < 0){
                     break;
