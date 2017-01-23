@@ -32,8 +32,8 @@ public class TruckTour {
 
             long petrol = 0;
 
-            for (Pump pump : stationsQueue) {       // other option to iterate over the collection is to call
-                petrol += pump.petrolDifference;    // stationsQueue.toArray and to iterate over the new array
+            for (Pump pump : stationsQueue) {            // other option to iterate over the collection is to call
+                petrol += pump.getPetrolDifference();    // stationsQueue.toArray and to iterate over the new array
 
                 if (petrol < 0){
                     break;
@@ -62,6 +62,30 @@ public class TruckTour {
             this.petrol = petrol;
             this.distanceToNextPump = distanceToNextPump;
             this.petrolDifference = petrol - distanceToNextPump;
+        }
+
+        public long getPetrol() {
+            return petrol;
+        }
+
+        public void setPetrol(long petrol) {
+            this.petrol = petrol;
+        }
+
+        public long getDistanceToNextPump() {
+            return distanceToNextPump;
+        }
+
+        public void setDistanceToNextPump(long distanceToNextPump) {
+            this.distanceToNextPump = distanceToNextPump;
+        }
+
+        public long getPetrolDifference() {
+            return petrolDifference;
+        }
+
+        public void setPetrolDifference(long petrolDifference) {
+            this.petrolDifference = petrolDifference;
         }
     }
 }

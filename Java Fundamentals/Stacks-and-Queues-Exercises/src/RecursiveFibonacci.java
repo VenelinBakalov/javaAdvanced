@@ -4,22 +4,20 @@ public class RecursiveFibonacci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int count = Integer.parseInt(scanner.nextLine());
+        int index = Integer.parseInt(scanner.nextLine());
 
-        long fibonacciNumber = getFibonacci(count + 1);
+        long fibonacciNumber = getFibonacci(index + 1);
 
         System.out.println(fibonacciNumber);
     }
 
-    private static long getFibonacci(int count) {
-        long fibonacciNumber = 1;
-        if (count == 1) {
-            fibonacciNumber = 1;
-        } else if (count == 0) {
-            fibonacciNumber = 0;
+    private static long getFibonacci(int index) {
+        if (index == 1) {
+            return 1;
+        } else if (index == 0) {
+           return 0;
         } else {
-            fibonacciNumber = getFibonacci(count - 1) + getFibonacci(count - 2);
+            return getFibonacci(index - 1) + getFibonacci(index - 2);
         }
-        return fibonacciNumber;
     }
 }
