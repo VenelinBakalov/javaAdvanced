@@ -1,5 +1,4 @@
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.Scanner;
 
@@ -33,12 +32,9 @@ public class SimpleTextEditor {
                     break;
                 case 3:
                     int printPosition = Integer.parseInt(commandLine[1]);
-                    Object[] currentText = text.toArray();
-                    String textToPrint = "";
-                    for (int j = currentText.length; j >= 0 ; j--) {
-                        textToPrint += currentText[j].toString();
-                    }
-                    System.out.println(textToPrint.charAt(printPosition));
+                    String[] currentText = text.toString().split("\\[|, |\\]", -1);
+
+                    System.out.println(currentText[currentText.length - 1 - printPosition]);
                     break;
                 case 4:
                     String[] previousCommand = commandsExecuted.poll();
