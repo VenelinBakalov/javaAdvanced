@@ -27,8 +27,8 @@ public class Robotics {
             currentSeconds++;
 
             String currentProduct = products.poll();
-            boolean productIsProcessed = false;
 
+            boolean productIsProcessed = false;
 
             for (Robot robot : robots) {
 
@@ -41,7 +41,11 @@ public class Robotics {
                     }
                 }
 
-                if (!robot.isProcessingProduct() && !currentProduct.equals("none")) {
+                if (productIsProcessed){
+                    continue;
+                }
+
+                if (!robot.isProcessingProduct()) {
                     robot.setProcessingProduct(true);
                     robot.setTimeCurrentProductIsProcessed(robot.getProcessingTime());
                     productIsProcessed = true;
@@ -49,10 +53,6 @@ public class Robotics {
                     String currentTime = getCurrentTime(currentSeconds);
 
                     System.out.printf("%s - %s %s", robot.getName(), currentProduct, currentTime);
-                }
-
-                if (productIsProcessed) {
-                    currentProduct = "none";
                 }
             }
 
