@@ -3,9 +3,7 @@ package states;
 import java.awt.*;
 
 public abstract class State {
-    public void tick() {
-    }
+    public abstract void tick();
 
-    public void render(Graphics g) {
-    }
+    public abstract void render(Graphics g);
 }
