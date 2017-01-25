@@ -1,35 +1,44 @@
 package game;
 
 import display.Display;
+import gfx.Assets;
+import gfx.SpriteSheet;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 
-public class Game implements Runnable{
+public class Game implements Runnable {
     private String title;
 
     private Display display;
     private BufferStrategy bs;
     private Graphics g;
 
+    private SpriteSheet sh;
+
     private Thread thread;
     private boolean isRunning;
 
-    // Testing
-    private int x;
+    //Testing
+    private int i = 0;
+
 
     public Game(String name) {
         this.title = name;
     }
 
     private void init() {
-        this.display = new Display(this.title);
+        Assets.init();
 
-        this.x = 100;
+        this.display = new Display(this.title);
+        this.sh = new SpriteSheet(Assets.player, 95, 130);
+      //  SpriteSheet background = new SpriteSheet(Assets.background, 800, 600);
     }
 
     private void tick() {
-        this.x++;
+        i++;
+        if (i >= 7) i = 0;
+
     }
 
     private void render() {
@@ -44,12 +53,13 @@ public class Game implements Runnable{
 
         g.clearRect(0, 0, Display.WIDTH, Display.HEIGHT);
 
-        g.setColor(Color.red);
-        g.fillRect(this.x, 200, 50, 50);
+        //Start drawing
 
-        g.setColor(Color.green);
-        g.fillRect(150, 250, 100, 100);
 
+        g.drawImage(this.sh.crop(0, i), 100, 100, null);
+
+
+        //END drawing
         this.g.dispose();
         this.bs.show();
 
@@ -59,15 +69,29 @@ public class Game implements Runnable{
     public void run() {
         this.init();
 
+        int fps = 14;
+        double timePerTick = 1_000_000_000.0 / fps;
+        double delta = 0;
+        //The current time in nanoseconds
+        long now;
+        long lastTime = System.nanoTime();
+
         while (isRunning) {
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            //Sets the variable to the current time in nanoseconds
+            now = System.nanoTime();
+
+            delta += (now - lastTime) / timePerTick;
+            lastTime = now;
+
+            if (delta >= 1) {
+                //If we don't want to lower the framerate take the this.tick() outside the while loop.
+                this.tick();
+                this.render();
+                delta--;
+
             }
 
-            this.tick();
-           this.render();
+
         }
 
         this.stop();
