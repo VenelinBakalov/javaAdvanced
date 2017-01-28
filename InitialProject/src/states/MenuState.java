@@ -1,6 +1,5 @@
 package states;
 
-
 import java.awt.*;
 
 public class MenuState extends State{

@@ -51,11 +51,11 @@ public class DragonArmy {
         }
 
         for (String type : typeAverageStats.keySet()) {
-            System.out.println(type + "::(" + String.join("/", typeAverageStats.get(type)));
+            System.out.println(type + "::(" + String.join("/", typeAverageStats.get(type)) + ")");
 
             for (String dragon : dragonTypes.get(type).keySet()) {
                 ArrayList<Integer> stats = dragonTypes.get(type).get(dragon);
-                System.out.println("-" + dragon + " -> damage: " + stats.toString().substring(1, stats.toString().length() - 1));
+                System.out.printf("-%s -> damage: %d, health: %d, armor: %d%n", dragon, stats.get(0), stats.get(1), stats.get(2));
             }
         }
     }
@@ -77,7 +77,7 @@ public class DragonArmy {
     private static Integer getValue(String typeValue, int typeIndex) {
         int value = 0;
 
-        if (typeValue != null) {
+        if (!"null".equals(typeValue)) {
             value = Integer.parseInt(typeValue);
 
             return value;
