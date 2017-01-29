@@ -5,6 +5,7 @@ import java.io.IOException;
 
 public class CopyBytes {
     public static void main(String[] args) {
+
         String inputPath = "D:\\Venelin\\javaAdvanced\\Java Fundamentals\\Files-and-Streams-Lab\\05. Java-Advanced-Files-and-Directories-Lab-Resources\\input.txt";
         String outputPath = "D:\\Venelin\\javaAdvanced\\Java Fundamentals\\Files-and-Streams-Lab\\05. Java-Advanced-Files-and-Directories-Lab-Resources\\output2.txt";
 

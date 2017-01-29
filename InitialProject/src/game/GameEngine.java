@@ -3,6 +3,8 @@ package game;
 import display.Display;
 import gfx.Assets;
 import gfx.SpriteSheet;
+import states.GameState;
+import states.MenuState;
 import states.StateManager;
 
 import java.awt.*;
@@ -18,6 +20,11 @@ public class GameEngine implements Runnable {
     private Thread thread;
     private boolean isRunning;
 
+    private GameState gameState;
+    private MenuState menuState;
+
+    private InputHandler inputHandler;
+
 
     public GameEngine (String name) {
         this.title = name;
@@ -26,23 +33,53 @@ public class GameEngine implements Runnable {
     private void init() {
 
         this.display = new Display(this.title);
+
+        gameState = new GameState();
+        menuState = new MenuState();
+
+        this.inputHandler = new InputHandler(this.display);
+        StateManager.setCurrentState(gameState);
        // this.sh = new SpriteSheet(Assets.player, 95, 130);
       //  SpriteSheet background = new SpriteSheet(Assets.background, 800, 600);
     }
 
     private void tick() {
-
+        if (StateManager.getCurrentState() != null) {
+            StateManager.getCurrentState().tick();
+        }
     }
 
     private void render() {
+        this.bs = this.display.getCanvas().getBufferStrategy();
 
+        if (this.bs == null) {
+            this.display.getCanvas().createBufferStrategy(2);
+            return;
+        }
+
+        this.g = this.bs.getDrawGraphics();
+
+        g.clearRect(0, 0, Display.WIDTH, Display.HEIGHT);
+
+        //Start drawing
+
+        if (StateManager.getCurrentState() != null) {
+            StateManager.getCurrentState().render(g);
+        }
+
+        //g.drawImage(this.sh.crop(0, i), 100, 100, null);
+
+
+        //END drawing
+        this.g.dispose();
+        this.bs.show();
     }
 
     @Override
     public void run() {
         this.init();
 
-        int fps = 14;
+        int fps = 30;
         double timePerTick = 1_000_000_000.0 / fps;
         double delta = 0;
         //The current time in nanoseconds
@@ -58,8 +95,8 @@ public class GameEngine implements Runnable {
 
             if (delta >= 1) {
                 //If we don't want to lower the framerate take the this.tick() outside the while loop.
-                StateManager.getCurrentState().tick();
-                StateManager.getCurrentState().render(g);
+                this.tick();
+                this.render();
                 delta--;
 
             }
@@ -71,18 +108,22 @@ public class GameEngine implements Runnable {
     }
 
     public synchronized void start() {
-        this.thread = new Thread(this);
+        if (!isRunning) {
+            this.thread = new Thread(this);
 
-        this.isRunning = true;
-        this.thread.start();
+            this.isRunning = true;
+            this.thread.start();
+        }
     }
 
     public synchronized void stop() {
-        try {
-            this.isRunning = false;
-            this.thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if (isRunning) {
+            try {
+                this.isRunning = false;
+                this.thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
