@@ -29,7 +29,7 @@ public class Player extends Unit{
         this.y = y;
         this.velocityX = this.velocityY = 4;
         // Well...we are talking about nakovkata so...
-        this.health = CHUCK_NORRIS;
+        this.health = 500;
 
         this.boundingBox = new Rectangle(x, y, width, height);
         this.playerImage = new SpriteSheet(Assets.player, width, height);
@@ -76,5 +76,37 @@ public class Player extends Unit{
         }
 
         return false;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public Rectangle getBoundingBox() {
+        return boundingBox;
+    }
+
+    public void setBoundingBox(Rectangle boundingBox) {
+        this.boundingBox = boundingBox;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }
