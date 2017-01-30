@@ -33,30 +33,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1241">
               <caret line="87" column="53" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1832#1833#0" expanded="false" />
-                <element signature="e#1869#1870#0" expanded="false" />
-                <element signature="e#1915#1916#0" expanded="false" />
-                <element signature="e#1959#1960#0" expanded="false" />
-                <element signature="e#2006#2007#0" expanded="false" />
-                <element signature="e#2055#2056#0" expanded="false" />
-                <element signature="e#2125#2126#0" expanded="false" />
-                <element signature="e#2193#2194#0" expanded="false" />
-                <element signature="e#2238#2239#0" expanded="false" />
-                <element signature="e#2285#2286#0" expanded="false" />
-                <element signature="e#2351#2352#0" expanded="false" />
-                <element signature="e#2415#2416#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecursiveFibonacci.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RecursiveFibonacci.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,9 +43,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,9 +53,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,34 +63,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="782">
               <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfixToPostfix.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InfixToPostfix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="59" selection-end-column="5" />
               <folding>
-                <element signature="e#3273#3274#0" expanded="false" />
-                <element signature="e#3308#3309#0" expanded="false" />
-                <element signature="e#3352#3353#0" expanded="false" />
-                <element signature="e#3392#3393#0" expanded="false" />
-                <element signature="e#3435#3436#0" expanded="false" />
-                <element signature="e#3480#3481#0" expanded="false" />
-                <element signature="e#3542#3543#0" expanded="false" />
-                <element signature="e#3602#3603#0" expanded="false" />
-                <element signature="e#3650#3651#0" expanded="false" />
-                <element signature="e#3698#3699#0" expanded="false" />
-                <element signature="e#3769#3770#0" expanded="false" />
-                <element signature="e#3835#3836#0" expanded="false" />
-                <element signature="e#3893#3894#0" expanded="false" />
-                <element signature="e#3953#3954#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InfixToPostfix.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/InfixToPostfix.java">
+      <file leaf-file-name="EvaluateExpression.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EvaluateExpression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="257">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,9 +105,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,9 +115,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,9 +125,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
               <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -205,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/Robotics.java" />
         <option value="$PROJECT_DIR$/src/TerroristsWinExercise.java" />
         <option value="$PROJECT_DIR$/src/InfixToPostfix.java" />
+        <option value="$PROJECT_DIR$/src/EvaluateExpression.java" />
       </list>
     </option>
   </component>
@@ -249,6 +211,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Android Instrumentation Tests" />
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,10 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Android Instrumentation Tests" />
-      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -300,22 +262,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.InfixToPostfix">
-    <configuration default="false" name="SimpleTextEditor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="SimpleTextEditor" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Stacks-and-Queues-Exercises" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.EvaluateExpression">
     <configuration default="false" name="SimpleTextEditorWithStringBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="SimpleTextEditorWithStringBuilder" />
@@ -364,6 +311,21 @@
     <configuration default="false" name="InfixToPostfix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="InfixToPostfix" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Stacks-and-Queues-Exercises" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="EvaluateExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="EvaluateExpression" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -799,19 +761,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.SimpleTextEditor" />
-      <item index="1" class="java.lang.String" itemvalue="Application.SimpleTextEditorWithStringBuilder" />
-      <item index="2" class="java.lang.String" itemvalue="Application.RoboticsInExercise" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Robotics" />
-      <item index="4" class="java.lang.String" itemvalue="Application.InfixToPostfix" />
+      <item index="0" class="java.lang.String" itemvalue="Application.SimpleTextEditorWithStringBuilder" />
+      <item index="1" class="java.lang.String" itemvalue="Application.RoboticsInExercise" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Robotics" />
+      <item index="3" class="java.lang.String" itemvalue="Application.InfixToPostfix" />
+      <item index="4" class="java.lang.String" itemvalue="Application.EvaluateExpression" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.InfixToPostfix" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Robotics" />
-        <item index="2" class="java.lang.String" itemvalue="Application.RoboticsInExercise" />
-        <item index="3" class="java.lang.String" itemvalue="Application.SimpleTextEditorWithStringBuilder" />
-        <item index="4" class="java.lang.String" itemvalue="Application.SimpleTextEditor" />
+        <item index="0" class="java.lang.String" itemvalue="Application.EvaluateExpression" />
+        <item index="1" class="java.lang.String" itemvalue="Application.InfixToPostfix" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Robotics" />
+        <item index="3" class="java.lang.String" itemvalue="Application.RoboticsInExercise" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SimpleTextEditorWithStringBuilder" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -868,11 +830,12 @@
       <workItem from="1485187311668" duration="8031000" />
       <workItem from="1485205443711" duration="732000" />
       <workItem from="1485247679721" duration="3043000" />
+      <workItem from="1485801841131" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59485000" />
+    <option name="totallyTimeSpent" value="62664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,7 +847,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -895,7 +858,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -904,8 +867,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39542484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39583334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -947,8 +910,14 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/EvaluateExpression.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -957,14 +926,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ReverseNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BasicStackOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -979,21 +940,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="110" selection-start-line="35" selection-start-column="110" selection-end-line="35" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1869#1870#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1959#1960#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2125#2126#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,22 +968,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
-          <folding>
-            <element signature="e#3273#3274#0" expanded="false" />
-            <element signature="e#3308#3309#0" expanded="false" />
-            <element signature="e#3352#3353#0" expanded="false" />
-            <element signature="e#3392#3393#0" expanded="false" />
-            <element signature="e#3435#3436#0" expanded="false" />
-            <element signature="e#3480#3481#0" expanded="false" />
-            <element signature="e#3542#3543#0" expanded="false" />
-            <element signature="e#3602#3603#0" expanded="false" />
-            <element signature="e#3650#3651#0" expanded="false" />
-            <element signature="e#3698#3699#0" expanded="false" />
-            <element signature="e#3769#3770#0" expanded="false" />
-            <element signature="e#3835#3836#0" expanded="false" />
-            <element signature="e#3893#3894#0" expanded="false" />
-            <element signature="e#3953#3954#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1096,21 +1028,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1869#1870#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1959#1960#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2125#2126#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,22 +1056,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#3273#3274#0" expanded="false" />
-            <element signature="e#3308#3309#0" expanded="false" />
-            <element signature="e#3352#3353#0" expanded="false" />
-            <element signature="e#3392#3393#0" expanded="false" />
-            <element signature="e#3435#3436#0" expanded="false" />
-            <element signature="e#3480#3481#0" expanded="false" />
-            <element signature="e#3542#3543#0" expanded="false" />
-            <element signature="e#3602#3603#0" expanded="false" />
-            <element signature="e#3650#3651#0" expanded="false" />
-            <element signature="e#3698#3699#0" expanded="false" />
-            <element signature="e#3769#3770#0" expanded="false" />
-            <element signature="e#3835#3836#0" expanded="false" />
-            <element signature="e#3893#3894#0" expanded="false" />
-            <element signature="e#3953#3954#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,21 +1106,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1869#1870#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1959#1960#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2125#2126#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,21 +1166,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1869#1870#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1959#1960#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2125#2126#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,9 +1270,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,9 +1278,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,21 +1286,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="87" column="53" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1869#1870#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1959#1960#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2125#2126#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2238#2239#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2351#2352#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,9 +1295,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,9 +1303,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1458,9 +1311,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,22 +1319,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#3273#3274#0" expanded="false" />
-            <element signature="e#3308#3309#0" expanded="false" />
-            <element signature="e#3352#3353#0" expanded="false" />
-            <element signature="e#3392#3393#0" expanded="false" />
-            <element signature="e#3435#3436#0" expanded="false" />
-            <element signature="e#3480#3481#0" expanded="false" />
-            <element signature="e#3542#3543#0" expanded="false" />
-            <element signature="e#3602#3603#0" expanded="false" />
-            <element signature="e#3650#3651#0" expanded="false" />
-            <element signature="e#3698#3699#0" expanded="false" />
-            <element signature="e#3769#3770#0" expanded="false" />
-            <element signature="e#3835#3836#0" expanded="false" />
-            <element signature="e#3893#3894#0" expanded="false" />
-            <element signature="e#3953#3954#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,11 +1334,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InfixToPostfix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvaluateExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
