@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class StudentsRepository {
@@ -39,5 +40,53 @@ public class StudentsRepository {
 
         isDataInitialized = true;
         OutputWriter.writeMessageOnNewLine("Data read.");
+    }
+
+    private static boolean isQueryForCoursePossible(String courseName) {
+        if (!isDataInitialized) {
+            OutputWriter.displayException(ExceptionMessages.DATA_NOT_INITIALIZED);
+            return false;
+        }
+
+        if (!studentsByCourse.containsKey(courseName)) {
+            OutputWriter.displayException(ExceptionMessages.NON_EXISTING_COURSE);
+            return false;
+        }
+
+        return true;
+    }
+
+    private static boolean isQueryForStudentPossible(String courseName, String studentName) {
+        if (!isQueryForCoursePossible(courseName)) {
+            return false;
+        }
+
+        if (!studentsByCourse.get(courseName).containsKey(studentName)) {
+            OutputWriter.displayException(ExceptionMessages.NON_EXISTING_STUDENT);
+            return false;
+        }
+
+        return true;
+    }
+
+    public static void getStudentMarksInCourse(String course, String student) {
+        if (!isQueryForStudentPossible(course, student)) {
+            return;
+        }
+
+        ArrayList<Integer> marks = studentsByCourse.get(course).get(student);
+        OutputWriter.printStudent(student, marks);
+    }
+
+    public static void getStudentsByCourse(String course) {
+        if (!isQueryForCoursePossible(course)) {
+            return;
+        }
+
+        OutputWriter.writeMessageOnNewLine(course + ":");
+
+        for (Map.Entry<String, ArrayList<Integer>> student : studentsByCourse.get(course).entrySet()) {
+            OutputWriter.printStudent(student.getKey(), student.getValue());
+        }
     }
 }
