@@ -4,8 +4,16 @@ import java.util.LinkedList;
 
 public class IOManager {
 
-    public static void main(String[] args) {
-        traverseDirectory("C:\\Program Files");
+    public static void createDirectoryInCurrentFolder(String name) {
+
+        String path = getCurrentDirectoryPath() + "\\" + name;
+        File file = new File(path);
+        file.mkdir();
+    }
+
+    private static String getCurrentDirectoryPath() {
+        String currentPath = SessionData.currentPath;
+        return currentPath;
     }
 
     public static void traverseDirectory(String path) {
