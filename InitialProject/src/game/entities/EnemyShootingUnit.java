@@ -24,7 +24,7 @@ public class EnemyShootingUnit extends Unit {
     private int shootingTimer;
     private Set<Projectile> projectiles;
 
-    public EnemyShootingUnit(String name, int width, int height, int x, int y, int shootingRange, int damage) {
+    public EnemyShootingUnit(String name, int width, int height, int x, int y, int shootingRange, int damage, int health) {
         this.name = name;
         this.width = width;
         this.height = height;
@@ -35,7 +35,7 @@ public class EnemyShootingUnit extends Unit {
         this.damage = damage;
 
         this.velocityX = this.velocityY = 4;
-        this.health = 250;
+        this.health = health;
 
         this.boundingBox = new Rectangle(x, y, width, height);
         this.enemyImage = new SpriteSheet(Assets.enemy, width, height);
@@ -114,7 +114,7 @@ public class EnemyShootingUnit extends Unit {
     }
 
     public boolean isPlayerInRange(Player player) {
-        return this.x - this.shootingRange <= player.getX();
+        return this.x - this.shootingRange <= player.getBoundingBox().getMaxX();
     }
 
     public int getX() {

@@ -3,13 +3,11 @@ package game.entities;
 
 import java.awt.*;
 
-public interface Shootable {
+public interface Collectable {
 
     void tick();
 
     void render(Graphics graphics);
 
-    boolean intersects(Rectangle player);
-
-    boolean isInRange();
+    boolean isCollected(Player player);
 }

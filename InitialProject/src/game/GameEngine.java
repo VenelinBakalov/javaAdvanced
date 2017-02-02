@@ -39,8 +39,7 @@ public class GameEngine implements Runnable {
 
         this.inputHandler = new InputHandler(this.display);
         StateManager.setCurrentState(gameState);
-       // this.sh = new SpriteSheet(Assets.player, 95, 130);
-      //  SpriteSheet background = new SpriteSheet(Assets.background, 800, 600);
+
     }
 
     private void tick() {
@@ -79,7 +78,7 @@ public class GameEngine implements Runnable {
     public void run() {
         this.init();
 
-        int fps = 30;
+        int fps = 15;
         double timePerTick = 1_000_000_000.0 / fps;
         double delta = 0;
         //The current time in nanoseconds
