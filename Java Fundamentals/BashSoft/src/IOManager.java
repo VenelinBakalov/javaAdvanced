@@ -61,4 +61,31 @@ public class IOManager {
             }
         }
     }
+
+    public static void changeCurrentDirRelativePath(String relativePath) {
+        if (relativePath.equals("..")) {
+            // go one directory up
+            String currentPath = SessionData.currentPath;
+            int indexOfLastSlash = currentPath.lastIndexOf("\\");
+            String newPath = currentPath.substring(0, indexOfLastSlash);
+            SessionData.currentPath = newPath;
+        } else {
+
+            // go to a given directory
+            String currentPath = SessionData.currentPath;
+            currentPath += "\\" + relativePath;
+            changeCurrentDirAbsolute(currentPath);
+        }
+    }
+
+    private static void changeCurrentDirAbsolute(String absolutePath) {
+        File file = new File(absolutePath);
+
+        if (!file.exists()) {
+            OutputWriter.displayException(ExceptionMessages.INVALID_PATH);
+            return;
+        }
+
+        SessionData.currentPath = absolutePath;
+    }
 }
