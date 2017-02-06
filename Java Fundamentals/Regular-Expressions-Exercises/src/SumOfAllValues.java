@@ -14,7 +14,7 @@ public class SumOfAllValues {
         String keysRegex = "^(?<startKey>[a-zA-Z_]+)[\\d](.*?[\\d])?(?<endKey>[a-zA-Z_]+)$";
         Pattern keyPattern = Pattern.compile(keysRegex);
 
-        String numberRegex = "(\\d+\\.?|\\.?\\d+|\\d+\\.\\d+)(?!\\.)(?!\\.)";
+        String numberRegex = "([\\d]+(\\.\\d+)?(?!\\.))";
         Pattern numberPattern = Pattern.compile(numberRegex);
 
         String keys = reader.readLine();
