@@ -3,16 +3,18 @@ import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SumOfAllValues {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String keysRegex = "^(?<startKey>[a-zA-Z_]+)[\\d].*?[\\d](?<endKey>[a-zA-Z_]+)$";
+        String keysRegex = "^(?<startKey>[a-zA-Z_]+)[\\d](.*?[\\d])?(?<endKey>[a-zA-Z_]+)$";
         Pattern keyPattern = Pattern.compile(keysRegex);
 
-        String numberRegex = "([\\d]+(\\.\\d+)?(?!\\.))";
+        String numberRegex = "(\\d+\\.?|\\.?\\d+|\\d+\\.\\d+)(?!\\.)(?!\\.)";
         Pattern numberPattern = Pattern.compile(numberRegex);
 
         String keys = reader.readLine();
@@ -28,7 +30,7 @@ public class SumOfAllValues {
         String startKey = matchKeys.group("startKey");
         String endKey = matchKeys.group("endKey");
 
-        double totalValue = 0;
+        BigDecimal totalValue = new BigDecimal(0 + "");
 
         Pattern matchPattern = Pattern.compile(startKey + ".*?" + endKey);
         Matcher patternMatch = matchPattern.matcher(text);
@@ -37,14 +39,14 @@ public class SumOfAllValues {
             Matcher numbers = numberPattern.matcher(match);
 
             while (numbers.find()) {
-                totalValue += Double.parseDouble(numbers.group());
+                totalValue = totalValue.add(new BigDecimal(numbers.group() + ""));
             }
         }
 
-        if (totalValue == 0) {
+        if (totalValue.equals(BigInteger.ZERO)) {
             System.out.println("<p>The total value is: <em>nothing</em></p>");
         } else {
-            System.out.println(String.format("<p>The total value is: <em>%.2f</em></p>", totalValue));
+            System.out.println(String.format("<p>The total value is: <em>%s</em></p>", totalValue));
         }
 
     }
