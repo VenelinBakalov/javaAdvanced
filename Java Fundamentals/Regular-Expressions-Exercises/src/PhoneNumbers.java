@@ -10,25 +10,29 @@ import java.util.regex.Pattern;
 public class PhoneNumbers {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String regex = "(?<name>[A-Z][a-z]*)[^+a-zA-Z]*?(?<number>\\+?[\\d]+?([()\\/.\\- ]*[\\d]+)+)";
+        String regex = "(?<name>[A-Z][a-zA-Z]*)[^+a-zA-Z]*?(?<number>\\+?[\\d]+?([()\\/.\\- ]*[\\d]+)+)";
         Pattern pattern = Pattern.compile(regex);
 
         Map<String, String> phonebook = new LinkedHashMap<>();
+
+        StringBuilder sb = new StringBuilder();
         String inputLine = reader.readLine();
 
         while (!"END".equals(inputLine)) {
-            Matcher matcher = pattern.matcher(inputLine);
-
-            while (matcher.find()) {
-                String name = matcher.group("name");
-                String[] numberArgs = matcher.group("number").split("[()\\/.\\- ]");
-                String number = String.join("", numberArgs);
-
-                phonebook.put(name, number);
-            }
-
+            sb.append(inputLine);
             inputLine = reader.readLine();
         }
+
+        Matcher matcher = pattern.matcher(sb);
+
+        while (matcher.find()) {
+            String name = matcher.group("name");
+            String[] numberArgs = matcher.group("number").split("[()\\/.\\- ]");
+            String number = String.join("", numberArgs);
+
+            phonebook.put(name, number);
+        }
+
 
         if (phonebook.size() > 0) {
             System.out.print("<ol>");
