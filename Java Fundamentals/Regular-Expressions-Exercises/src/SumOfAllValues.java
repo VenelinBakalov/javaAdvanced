@@ -32,7 +32,7 @@ public class SumOfAllValues {
 
         BigDecimal totalValue = new BigDecimal(0 + "");
 
-        Pattern matchPattern = Pattern.compile(startKey + ".*?" + endKey);
+        Pattern matchPattern = Pattern.compile(startKey + "([\\d]+(\\.\\d+)?(?!\\.))" + endKey);
         Matcher patternMatch = matchPattern.matcher(text);
         while (patternMatch.find()) {
             String match = patternMatch.group();
@@ -43,7 +43,7 @@ public class SumOfAllValues {
             }
         }
 
-        if (totalValue.equals(BigInteger.ZERO)) {
+        if (totalValue.equals(new BigDecimal(0))) {
             System.out.println("<p>The total value is: <em>nothing</em></p>");
         } else {
             System.out.println(String.format("<p>The total value is: <em>%s</em></p>", totalValue));
