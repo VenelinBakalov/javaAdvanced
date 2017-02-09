@@ -2,6 +2,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StudentsRepository {
     public static boolean isDataInitialized = false;
@@ -19,24 +21,33 @@ public class StudentsRepository {
 
     public static void readData(String fileName) throws IOException {
 
+        String regex = "(?<courseName>[A-Z][a-zA-Z+#]*_[A-Z][a-z]{2}_\\d{4})\\s+(?<userName>[A-Z][a-z]{0,3}\\d{2}_\\d{2,4})\\s+(?<score>\\d+)";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher;
+
         String path = SessionData.currentPath + "\\" + fileName;
         List<String> lines = Files.readAllLines(Paths.get(path));
 
         for (String line : lines) {
+            matcher = pattern.matcher(line);
 
-            String[] tokens = line.split("\\s+");
-            String course = tokens[0];
-            String student = tokens[1];
-            Integer mark = Integer.parseInt(tokens[2]);
+            if (!line.isEmpty() && matcher.find()) {
+                String course = matcher.group("courseName");
+                String student = matcher.group("userName");
+                Integer mark = Integer.parseInt(matcher.group("score"));
 
-            if (!studentsByCourse.containsKey(course)) {
-                studentsByCourse.put(course, new HashMap<>());
+                if (mark >= 0 && mark <= 100) {
+
+                    if (!studentsByCourse.containsKey(course)) {
+                        studentsByCourse.put(course, new HashMap<>());
+                    }
+                    if (!studentsByCourse.get(course).containsKey(student)) {
+                        studentsByCourse.get(course).put(student, new ArrayList<>());
+                    }
+
+                    studentsByCourse.get(course).get(student).add(mark);
+                }
             }
-            if (!studentsByCourse.get(course).containsKey(student)) {
-                studentsByCourse.get(course).put(student, new ArrayList<>());
-            }
-
-            studentsByCourse.get(course).get(student).add(mark);
         }
 
         isDataInitialized = true;
