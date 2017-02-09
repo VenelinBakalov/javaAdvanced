@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class InputReader {
 
     private static final String END_COMMAND = "quit";
 
-    public static void readCommands() {
+    public static void readCommands() throws IOException {
 
         OutputWriter.writeMessage(String.format("%s > ", SessionData.currentPath));
 

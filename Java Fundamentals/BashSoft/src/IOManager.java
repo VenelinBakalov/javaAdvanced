@@ -42,7 +42,6 @@ public class IOManager {
                     for (File file : currentFolder.listFiles()) {
                         if (file.isDirectory()) {
                             subFolders.add(file);
-                          //  subFolders.addAll(Arrays.asList(file.listFiles()));
                         } else {
                             int indexOfLastSlash = file.toString().lastIndexOf("\\");
                             for (int i = 0; i < indexOfLastSlash; i++) {
@@ -54,7 +53,6 @@ public class IOManager {
                     }
                 }
 
-                System.out.println(currentFolder.toString());
             } catch (Exception err) {
                 System.out.println("Access denied");
             }
@@ -69,7 +67,6 @@ public class IOManager {
             String newPath = currentPath.substring(0, indexOfLastSlash);
             SessionData.currentPath = newPath;
         } else {
-
             // go to a given directory
             String currentPath = SessionData.currentPath;
             currentPath += "\\" + relativePath;
@@ -77,7 +74,7 @@ public class IOManager {
         }
     }
 
-    private static void changeCurrentDirAbsolute(String absolutePath) {
+    public static void changeCurrentDirAbsolute(String absolutePath) {
         File file = new File(absolutePath);
 
         if (!file.exists()) {

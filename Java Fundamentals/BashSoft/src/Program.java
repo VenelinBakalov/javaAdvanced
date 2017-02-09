@@ -1,7 +1,8 @@
+import java.io.IOException;
 
 public class Program {
     private static final String PROJECT_PATH = System.getProperty("user.dir");
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
    //   StudentsRepository.initializeData();
    //   StudentsRepository.getStudentsByCourse("Unity");
 
@@ -10,6 +11,8 @@ public class Program {
 
  //   Tester.compareContent(testFirstPath, testSecondPath);
 
-        IOManager.createDirectoryInCurrentFolder("pesho");
+ //       IOManager.createDirectoryInCurrentFolder("pesho");
+
+        InputReader.readCommands();
     }
 }
