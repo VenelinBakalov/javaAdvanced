@@ -5,4 +5,6 @@ public class ExceptionMessages {
     public static final String NON_EXISTING_COURSE = "Course does not exist.";
     public static final String NON_EXISTING_STUDENT = "Student does not exist.";
     public static final String INVALID_PATH = "File does not exist.";
+
+    public static final String UNABLE_TO_OPEN_FILE = "Error while opening file.";
 }
