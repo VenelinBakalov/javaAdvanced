@@ -118,6 +118,7 @@ public class Main {
         /*
         8.	Weak Students
               students.stream()
+              .filter(s -> s.getGrades().stream.filter(g -> g <= 3).count() > 2)
                 .filter(s -> {
                     List<Integer> grades = s.getGrades().stream()
                             .filter(g -> g <= 3)
@@ -134,6 +135,8 @@ public class Main {
                             .sorted(Integer::compareTo) // (g1, g2) -> g1.compareTo(g2)
                             .forEach(g -> System.out.print(g + " "));
                     System.out.println();
+
+                    gosho.getGrades().stream().sorter().map(String:vvalueOf).collect(Collectors.joining(" "))
                 });
          */
 
