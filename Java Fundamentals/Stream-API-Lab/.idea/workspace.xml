@@ -242,6 +242,7 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BashSoft" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -673,12 +674,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486684763699</updated>
       <workItem from="1486684767739" duration="2744000" />
-      <workItem from="1486718407026" duration="11979000" />
+      <workItem from="1486718407026" duration="12609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14723000" />
+    <option name="totallyTimeSpent" value="15353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1448" height="864" extended-state="6" />
