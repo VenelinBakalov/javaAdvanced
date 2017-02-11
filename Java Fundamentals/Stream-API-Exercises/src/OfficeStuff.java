@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class OfficeStuff {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String regex = "^\\|(?<company>[a-zA-Z]+) - (?<amount>\\d+) - (?<product>[a-zA-Z]+)\\|$";
+        String regex = "^\\|(?<company>\\w+) - (?<amount>\\d+) - (?<product>\\w+)\\|$";
         Pattern pattern = Pattern.compile(regex);
 
         int orders = Integer.parseInt(reader.readLine());
@@ -38,9 +38,9 @@ public class OfficeStuff {
                 .sorted((c1, c2) -> c1.getKey().compareTo(c2.getKey()))
                 .forEach(company -> {
                     System.out.print(company.getKey() + ": ");
-//                    StringBuilder sb = new StringBuilder();
                     System.out.println(company.getValue().entrySet().stream().map(p -> p.getKey() + "-" + p.getValue()).collect(Collectors.joining(", ")));
 //
+//                    StringBuilder sb = new StringBuilder();
 //                    company.getValue().entrySet().forEach(product -> {
 //                        sb.append(product.getKey()).append("-").append(product.getValue()).append(", ");
 //                    });
