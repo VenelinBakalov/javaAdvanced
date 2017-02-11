@@ -101,4 +101,28 @@ public class StudentsRepository {
             OutputWriter.printStudent(student.getKey(), student.getValue());
         }
     }
+
+    public static void printFilteredStudents(String course, String filter, Integer numberOfStudents) {
+        if (!isQueryForCoursePossible(course)) {
+            return;
+        }
+
+        if (numberOfStudents == null) {
+            numberOfStudents = studentsByCourse.get(course).size();
+        }
+
+        RepositoryFilters.printFilteredStudents(studentsByCourse.get(course), filter, numberOfStudents);
+    }
+
+    public static void printOrderedStudents(String course, String compareType, Integer numberOfStudents) {
+        if (!isQueryForCoursePossible(course)) {
+            return;
+        }
+
+        if (numberOfStudents == null) {
+            numberOfStudents = studentsByCourse.get(course).size();
+        }
+
+        RepositorySorters.printSortedStudents(studentsByCourse.get(course), compareType, numberOfStudents);
+    }
 }

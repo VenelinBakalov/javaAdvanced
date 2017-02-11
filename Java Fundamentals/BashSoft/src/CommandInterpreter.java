@@ -34,10 +34,10 @@ public class CommandInterpreter {
                 tryShowWantedCourse(input, data);
                 break;
             case "filter":
-                tryFilterStudents(input, data);
+                tryPrintFilteredStudents(input, data);
                 break;
             case "order":
-                tryOrderStudents(input, data);
+                tryPrintOrderedStudents(input, data);
                 break;
             case "download":
                 tryDownloadFile(input, data);
@@ -118,6 +118,7 @@ public class CommandInterpreter {
         IOManager.changeCurrentDirRelativePath(relativePath);
     }
 
+    // Problem with splitting absolute path with space.
     private static void tryChangeAbsolutePath(String input, String[] data) {
         if (data.length != 2) {
             displayInvalidCommandMessage(input);
@@ -156,10 +157,46 @@ public class CommandInterpreter {
         }
     }
 
-    private static void tryFilterStudents(String input, String[] data) {
+    private static void tryPrintFilteredStudents(String input, String[] data) {
+        if (data.length != 3 && data.length != 4) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String course = data[1];
+        String filter = data[2];
+
+        if (data.length == 3) {
+            StudentsRepository.printFilteredStudents(course, filter, null);
+            return;
+        }
+
+        Integer numberOfStudents = Integer.valueOf(data[3]);
+
+        if (data.length == 4) {
+            StudentsRepository.printFilteredStudents(course, filter, numberOfStudents);
+        }
     }
 
-    private static void tryOrderStudents(String input, String[] data) {
+    private static void tryPrintOrderedStudents(String input, String[] data) {
+        if (data.length != 3 && data.length != 4) {
+            displayInvalidCommandMessage(input);
+            return;
+        }
+
+        String course = data[1];
+        String filter = data[2];
+
+        if (data.length == 3) {
+            StudentsRepository.printOrderedStudents(course, filter, null);
+            return;
+        }
+
+        Integer numberOfStudents = Integer.valueOf(data[3]);
+
+        if (data.length == 4) {
+            StudentsRepository.printOrderedStudents(course, filter, numberOfStudents);
+        }
     }
 
     private static void tryDownloadFile(String input, String[] data) {
