@@ -43,17 +43,16 @@ public class CubicAssault {
         regions.entrySet().stream()
                 .sorted((r1, r2) -> {
                     if (Long.compare(
-                            r2.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).mapToLong(Map.Entry::getValue).sum(),
-                            r1.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).mapToLong(Map.Entry::getValue).sum()) == 0) {
-                        if (((Integer) r1.getKey().length()).compareTo(r2.getKey().length()) == 0) {
+                            r2.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).findFirst().get().getValue(),
+                            r1.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).findFirst().get().getValue()) == 0) {
+                        if (Integer.compare(r1.getKey().length(), r2.getKey().length()) == 0) {
                             return r1.getKey().compareTo(r2.getKey());
-                        } else {
-                            return ((Integer) r1.getKey().length()).compareTo(r2.getKey().length());
                         }
+                        return ((Integer) r1.getKey().length()).compareTo(r2.getKey().length());
                     }
                     return Long.compare(
-                            r2.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).mapToLong(Map.Entry::getValue).sum(),
-                            r1.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).mapToLong(Map.Entry::getValue).sum());
+                            r2.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).findFirst().get().getValue(),
+                            r1.getValue().entrySet().stream().filter(m -> m.getKey().equals("Black")).findFirst().get().getValue());
                 })
                 .forEach(r -> {
                     System.out.println(r.getKey());
@@ -62,7 +61,8 @@ public class CubicAssault {
                                 if (Long.compare(m2.getValue(), m1.getValue()) == 0) {
                                     return m1.getKey().compareTo(m2.getKey());
                                 }
-                                return Long.compare(m2.getValue(), m1.getValue());})
+                                return Long.compare(m2.getValue(), m1.getValue());
+                            })
                             .forEach(m -> {
                                 System.out.println("-> " + m.getKey() + " : " + m.getValue());
                             });
