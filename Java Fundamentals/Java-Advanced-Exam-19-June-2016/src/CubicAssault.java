@@ -16,28 +16,29 @@ public class CubicAssault {
             String meteorType = input[1];
             Long amount = Long.parseLong(input[2]);
 
-            regions.putIfAbsent(region, new HashMap<>());
-            regions.get(region).putIfAbsent(meteorType, 0L);
+            if (!regions.containsKey(region)) {
+                Map<String, Long> meteors = new HashMap<>();
+                meteors.put("Green", 0L);
+                meteors.put("Red", 0L);
+                meteors.put("Black", 0L);
+                regions.put(region, meteors);
+
+            }
+
             regions.get(region).put(meteorType, regions.get(region).get(meteorType) + amount);
 
+            if (regions.get(region).get("Green") >= 1000000) {
+                regions.get(region).put("Red", regions.get(region).get("Red") + regions.get(region).get("Green") / 1000000);
+                regions.get(region).put("Green", regions.get(region).get("Green") % 1000000);
+                regions.get(region).put("Green", regions.get(region).get("Green") % 1000000);
+            }
+
+            if (regions.get(region).get("Red") >= 1000000) {
+                regions.get(region).put("Black", regions.get(region).get("Black") + regions.get(region).get("Red") / 1000000);
+                regions.get(region).put("Red", regions.get(region).get("Red") % 1000000);
+            }
+
             input = reader.readLine().split(" -> ");
-        }
-
-        for (String region : regions.keySet()) {
-
-            regions.get(region).putIfAbsent("Green", 0L);
-            regions.get(region).putIfAbsent("Red", 0L);
-            regions.get(region).putIfAbsent("Black", 0L);
-
-            while (regions.get(region).get("Green") >= 1000000) {
-                regions.get(region).put("Green", regions.get(region).get("Green") - 1000000);
-                regions.get(region).put("Red", regions.get(region).get("Red") + 1);
-            }
-
-            while (regions.get(region).get("Red") >= 1000000) {
-                regions.get(region).put("Red", regions.get(region).get("Red") - 1000000);
-                regions.get(region).put("Black", regions.get(region).get("Black") + 1);
-            }
         }
 
         regions.entrySet().stream()
