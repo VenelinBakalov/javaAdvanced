@@ -1,3 +1,5 @@
+import IO.InputReader;
+
 import java.io.IOException;
 
 public class Program {
