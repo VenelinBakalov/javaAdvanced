@@ -8,17 +8,23 @@ public class ExtractHyperlinks {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String regex = "<a\\s*(.*?)?href\\s*=\\s*(('.+')|(\".+\")|([a-z\\/:.]+)).*>";
+        //String regex = "<a\\s*(.*?)?href\\s*=\\s*(('.+')|(\".+\")|([a-z\\/:.]+)).*>";
+        //String regex = "<a.*?href\\s*?=\\s*(((\"+)|('*))(?<answer>.+?)\\2(\\s|>))";
+        String regex = "<a.*?href\\s*?=\\s*?(\"|')(?<answer>.+?)\\1.*?>";
         Pattern pattern = Pattern.compile(regex);
 
-        String htmlFragment = reader.readLine();
+        StringBuilder sb = new StringBuilder();
 
-        while (!"END".equals(htmlFragment)) {
-            Matcher matcher = pattern.matcher(htmlFragment);
+        String htmlFragment;
 
-            if (matcher.find()) {
+        while (!"END".equals(htmlFragment = reader.readLine())) {
+            sb.append(htmlFragment);
+        }
 
-            }
+        Matcher matcher = pattern.matcher(sb);
+
+        while (matcher.find()) {
+            System.out.println(matcher.group("answer"));
         }
     }
 }
