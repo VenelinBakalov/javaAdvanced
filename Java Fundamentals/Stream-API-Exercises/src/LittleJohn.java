@@ -13,20 +13,29 @@ public class LittleJohn {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String regex = "([>]{1,3})[-]{5}([>]{1,2})";
-        Pattern pattern = Pattern.compile(regex);
+       // Pattern pattern = Pattern.compile(regex);
 
+        Pattern pattern = Pattern.compile("(?<small>>-{5}>)|(?<medium>>>-{5}>)|(>>>-{5}>>)");
 
-        Map<String, Integer> arrows = new LinkedHashMap<>();
-        arrows.put(SMALL, 0);
-        arrows.put(MEDIUM, 0);
-        arrows.put(LARGE, 0);
+        int small = 0;
+        int medium = 0;
+        int large = 0;
 
         for (int i = 0; i < 4; i++) {
             String hay = reader.readLine();
             Matcher matcher = pattern.matcher(hay);
-            int start = 0;
 
-            while (matcher.find(start)) {
+            while (matcher.find()) {
+
+                if (matcher.group("small") != null) {
+                    small++;
+                } else if (matcher.group("medium") != null) {
+                    medium++;
+                } else {
+                    large++;
+                }
+
+                /*
                 int leftSize = matcher.group(1).length();
                 int rightSize = matcher.group(2).length();
 
@@ -44,16 +53,15 @@ public class LittleJohn {
                 } else {
                     start = matcher.start() + matcher.group(1).length();
                 }
+                */
             }
         }
 
-        StringBuilder sb = new StringBuilder();
+        String arrows = "" + small + medium + large;
 
-        arrows.values().forEach(sb::append);
-
-        String binary = Integer.toBinaryString(Integer.valueOf(sb.toString()));
-        String concatenatedBinary = binary + new StringBuilder(binary).reverse();
-        int result = Integer.parseInt(concatenatedBinary, 2);
+        String binary = Integer.toBinaryString(Integer.valueOf(arrows));
+        String reversedBinary = binary + new StringBuilder(binary).reverse();
+        int result = Integer.parseInt(reversedBinary, 2);
 
         System.out.println(result);
     }
