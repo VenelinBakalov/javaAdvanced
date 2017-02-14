@@ -23,7 +23,18 @@ public class SemanticHtmlRetry {
                 String beforeTag = openingMatch.group(1);
                 String afterTag = openingMatch.group(5);
                 currentTag.append("<").append(openingMatch.group("tag")).append(beforeTag).append(afterTag).append(">");
-                System.out.println(currentTag);
+
+                String spaceRegex = "(\\s)+";
+                Pattern spacePattern = Pattern.compile(spaceRegex);
+                Matcher spaceMatch = spacePattern.matcher(currentTag);
+                String result = currentTag.toString();
+
+                if (spaceMatch.find()) {
+                    result = spaceMatch.replaceAll("$1");
+                }
+
+
+                System.out.println(result);
             } else if (closingMatch.find()) {
                 currentTag.append("</").append(closingMatch.group("tag")).append(">");
                 System.out.println(currentTag);
