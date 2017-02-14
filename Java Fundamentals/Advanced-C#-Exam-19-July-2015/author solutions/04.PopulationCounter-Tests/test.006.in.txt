@@ -1,0 +1,45 @@
+Yokohama|France|835333378
+Cordoba|Russia|1517452839
+Winnipeg|Austria|324648545
+Sydney|Bulgaria|1649305083
+Rennes|Italy|1681052740
+Marseille|Italy|182014960
+Montpellier|Argentina|1997119705
+Albury|Canada|1145595724
+Toronto|United States|196605932
+Burgas|Argentina|1573071787
+Kawasaki|Italy|941664435
+Buenos Aires|Russia|1821467395
+Nagoya|Canada|1776977313
+Ruse|Bulgaria|214664911
+Bari|Australia|462040122
+Toulon|France|1554317743
+Naples|Argentina|1667073864
+Strasbourg|United Kingdom|1223526238
+Modena|Canada|126188360
+Rimini|United Kingdom|1584615829
+Le Havre|Argentina|335888235
+Sapporo|Argentina|1271660155
+Osaka|Japan|1746374976
+Kobe|United Kingdom|543669520
+Lyon|Austria|1458385182
+Verona|Germany|499132218
+Florence|France|1054034134
+Pleven|United Kingdom|1947300751
+Kyoto|Germany|1494891164
+Brescia|Australia|718868388
+Catania|France|915765576
+Varna|Japan|399781003
+Bologna|Austria|174436641
+Bordeaux|Canada|1516253730
+Genoa|Canada|328406426
+Nice|Bulgaria|1303854765
+Grenoble|United States|1757437817
+Reims|Germany|848903863
+Paris|Canada|424252169
+Ottawa|France|1116303256
+Saint-Etienne|Germany|1029426732
+Pernik|Australia|887196608
+Lille|Australia|1075515372
+Rome|United States|636425816
+report

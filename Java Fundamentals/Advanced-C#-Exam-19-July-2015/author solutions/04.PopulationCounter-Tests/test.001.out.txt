@@ -1,0 +1,21 @@
+Canada (total population: 1884583444)
+=>Cordoba: 1884583444
+United Kingdom (total population: 1531927399)
+=>Grenoble: 1531927399
+Argentina (total population: 1501567638)
+=>Florence: 1501567638
+United States (total population: 1469715975)
+=>Toulouse: 782480507
+=>Catania: 687235468
+France (total population: 1269371373)
+=>Naples: 954101852
+=>Verona: 315269521
+Bulgaria (total population: 1228783889)
+=>Sofia: 773739884
+=>Toronto: 455044005
+Spain (total population: 783998291)
+=>Plovdiv: 783998291
+Russia (total population: 654521985)
+=>Albury: 654521985
+Japan (total population: 258548204)
+=>Pleven: 258548204

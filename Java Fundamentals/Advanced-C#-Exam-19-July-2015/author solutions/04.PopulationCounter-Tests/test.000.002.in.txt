@@ -1,0 +1,5 @@
+Sofia|Bulgaria|1
+Varna|Bulgaria|2
+London|UK|4
+Rome|Italy|3
+report

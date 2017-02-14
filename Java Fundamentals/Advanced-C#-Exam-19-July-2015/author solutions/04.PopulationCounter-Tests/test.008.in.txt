@@ -1,0 +1,15 @@
+Sofia|Italy|710802804
+Plovdiv|Russia|1945425908
+Lille|Bulgaria|1025141329
+Kaspichan|Spain|933420623
+Osaka|Spain|1726696842
+Bologna|Germany|747562594
+Catania|United Kingdom|1967802980
+Toulouse|Argentina|1296662998
+Nagoya|United Kingdom|1215423431
+Rennes|Russia|213855828
+Nantes|Argentina|821436292
+Le Havre|Australia|1142323970
+Albury|Canada|541920718
+Sydney|Australia|632572118
+report

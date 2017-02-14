@@ -1,0 +1,23 @@
+United Kingdom (total population: 3183226411)
+=>Catania: 1967802980
+=>Nagoya: 1215423431
+Spain (total population: 2660117465)
+=>Osaka: 1726696842
+=>Kaspichan: 933420623
+Russia (total population: 2159281736)
+=>Plovdiv: 1945425908
+=>Rennes: 213855828
+Argentina (total population: 2118099290)
+=>Toulouse: 1296662998
+=>Nantes: 821436292
+Australia (total population: 1774896088)
+=>Le Havre: 1142323970
+=>Sydney: 632572118
+Bulgaria (total population: 1025141329)
+=>Lille: 1025141329
+Germany (total population: 747562594)
+=>Bologna: 747562594
+Italy (total population: 710802804)
+=>Sofia: 710802804
+Canada (total population: 541920718)
+=>Albury: 541920718

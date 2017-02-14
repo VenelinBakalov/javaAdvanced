@@ -1,0 +1,24 @@
+Montpellier|Australia|495606858
+Burgas|Spain|772145448
+Naples|United States|1878853670
+Ottawa|France|655721435
+Toulouse|Canada|584844774
+Varna|Italy|1477720896
+Kobe|France|67501948
+Pleven|Canada|458982123
+Florence|Spain|1099855936
+Rennes|Spain|1013021950
+Plovdiv|Russia|364161185
+Bordeaux|Australia|1835641221
+Kyoto|Spain|1209210297
+Kaspichan|United States|584627853
+Sydney|United Kingdom|578332653
+Toronto|Russia|1394126076
+Marseille|Germany|584058382
+Reims|Germany|1148876322
+Pernik|Austria|1595152873
+Buenos Aires|Spain|1982662003
+Rimini|Japan|276015753
+Nice|Argentina|1340640720
+Paris|Russia|489726432
+report

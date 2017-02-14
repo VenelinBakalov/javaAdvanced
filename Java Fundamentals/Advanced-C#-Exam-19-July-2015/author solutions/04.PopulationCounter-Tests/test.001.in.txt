@@ -1,0 +1,13 @@
+Albury|Russia|654521985
+Grenoble|United Kingdom|1531927399
+Naples|France|954101852
+Toulouse|United States|782480507
+Toronto|Bulgaria|455044005
+Sofia|Bulgaria|773739884
+Cordoba|Canada|1884583444
+Verona|France|315269521
+Florence|Argentina|1501567638
+Catania|United States|687235468
+Plovdiv|Spain|783998291
+Pleven|Japan|258548204
+report

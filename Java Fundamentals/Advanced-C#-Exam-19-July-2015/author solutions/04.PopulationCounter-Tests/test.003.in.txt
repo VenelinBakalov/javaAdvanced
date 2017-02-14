@@ -1,0 +1,32 @@
+Toulouse|Bulgaria|1681169054
+Montpellier|France|1621943700
+Lyon|Germany|1373592125
+Genoa|Russia|1396104875
+Nantes|France|148031054
+Toulon|Canada|649131721
+Bordeaux|Russia|1085945055
+Modena|Argentina|1639876145
+Sapporo|Germany|1649401846
+Toronto|Germany|1017589270
+Pernik|Austria|1628726701
+Sofia|Russia|1068182372
+Yokohama|Australia|1605202015
+Ruse|Spain|40710212
+Kobe|Austria|786943621
+Ottawa|Argentina|1154915368
+Sydney|Austria|1581589671
+Rimini|United States|878443390
+Albury|France|442892311
+Buenos Aires|Australia|1836849553
+Kawasaki|Argentina|113613160
+Paris|Canada|1105795084
+Bologna|France|1378045328
+Strasbourg|Canada|540850078
+Nice|Austria|1951259823
+Bari|United States|1608116661
+Nagoya|Bulgaria|935830041
+Milan|Austria|508251358
+Saint-Etienne|Japan|487832085
+Florence|Argentina|695816147
+Naples|Canada|13987623
+report

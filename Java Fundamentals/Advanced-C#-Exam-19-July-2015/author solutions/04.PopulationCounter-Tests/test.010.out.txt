@@ -1,0 +1,29 @@
+Italy (total population: 3593835447)
+=>Sydney: 1552200708
+=>Toulouse: 1333560996
+=>Montpellier: 708073743
+Spain (total population: 3417820691)
+=>Rennes: 1780332372
+=>Nice: 1637488319
+Russia (total population: 2765064155)
+=>Reims: 1519176013
+=>Rimini: 1245888142
+Canada (total population: 2725285097)
+=>Yokohama: 1693131324
+=>Paris: 1032153773
+Argentina (total population: 1827615036)
+=>Grenoble: 1514161857
+=>Albury: 313453179
+Japan (total population: 1822438494)
+=>Lille: 1822438494
+Austria (total population: 1647213845)
+=>Kobe: 1647213845
+France (total population: 1104840614)
+=>Naples: 1104840614
+Australia (total population: 839250654)
+=>Winnipeg: 823119710
+=>Milan: 16130944
+United Kingdom (total population: 557622716)
+=>Pleven: 557622716
+United States (total population: 466762961)
+=>Burgas: 466762961

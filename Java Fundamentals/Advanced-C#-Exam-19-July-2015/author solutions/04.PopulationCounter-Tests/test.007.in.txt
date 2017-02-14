@@ -1,0 +1,35 @@
+Verona|Italy|42444719
+Marseille|Spain|525910616
+Plovdiv|United States|952165984
+Ruse|United States|281274510
+Sydney|Germany|815625727
+Ottawa|Spain|1334638266
+Rimini|Japan|1636932720
+Florence|Argentina|950418014
+Buenos Aires|Italy|627160781
+Milan|Japan|624150377
+Osaka|Germany|1000540153
+Fukuoka|United Kingdom|1715660823
+Kawasaki|United States|1873289107
+Saint-Etienne|Australia|391835969
+Toulouse|Russia|653588520
+Nagoya|Italy|1559255360
+Winnipeg|Australia|1918407180
+Catania|Spain|919801596
+Genoa|Italy|1173171043
+Montpellier|Bulgaria|398321044
+Kobe|United Kingdom|605516562
+Toronto|Australia|1030308946
+Palermo|Australia|1273433341
+Nantes|Australia|1661817001
+Reims|Australia|925609507
+Bordeaux|Australia|482416584
+Varna|Japan|19466462
+Nice|Australia|1155042017
+Yokohama|Germany|1419948281
+Cordoba|Australia|554379342
+Naples|France|1439020657
+Toulon|Spain|580557305
+Bologna|Australia|1331648244
+Grenoble|Russia|1010054894
+report

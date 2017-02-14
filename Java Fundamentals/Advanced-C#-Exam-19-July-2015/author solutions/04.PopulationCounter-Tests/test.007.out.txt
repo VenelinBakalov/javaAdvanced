@@ -1,0 +1,45 @@
+Australia (total population: 10724898131)
+=>Winnipeg: 1918407180
+=>Nantes: 1661817001
+=>Bologna: 1331648244
+=>Palermo: 1273433341
+=>Nice: 1155042017
+=>Toronto: 1030308946
+=>Reims: 925609507
+=>Cordoba: 554379342
+=>Bordeaux: 482416584
+=>Saint-Etienne: 391835969
+Italy (total population: 3402031903)
+=>Nagoya: 1559255360
+=>Genoa: 1173171043
+=>Buenos Aires: 627160781
+=>Verona: 42444719
+Spain (total population: 3360907783)
+=>Ottawa: 1334638266
+=>Catania: 919801596
+=>Toulon: 580557305
+=>Marseille: 525910616
+Germany (total population: 3236114161)
+=>Yokohama: 1419948281
+=>Osaka: 1000540153
+=>Sydney: 815625727
+United States (total population: 3106729601)
+=>Kawasaki: 1873289107
+=>Plovdiv: 952165984
+=>Ruse: 281274510
+United Kingdom (total population: 2321177385)
+=>Fukuoka: 1715660823
+=>Kobe: 605516562
+Japan (total population: 2280549559)
+=>Rimini: 1636932720
+=>Milan: 624150377
+=>Varna: 19466462
+Russia (total population: 1663643414)
+=>Grenoble: 1010054894
+=>Toulouse: 653588520
+France (total population: 1439020657)
+=>Naples: 1439020657
+Argentina (total population: 950418014)
+=>Florence: 950418014
+Bulgaria (total population: 398321044)
+=>Montpellier: 398321044

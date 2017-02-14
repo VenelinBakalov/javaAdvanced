@@ -1,0 +1,23 @@
+Italy (total population: 2057192074)
+=>Kobe: 1579983847
+=>Ruse: 477208227
+Japan (total population: 1945788068)
+=>Fukuoka: 1167955089
+=>Sofia: 777832979
+Germany (total population: 1907994060)
+=>Rimini: 1784669833
+=>Nagoya: 123324227
+United States (total population: 1549636645)
+=>Reims: 1549636645
+Argentina (total population: 978455057)
+=>Rome: 771688701
+=>Kyoto: 127693479
+=>Toulouse: 79072877
+Australia (total population: 927628276)
+=>Buenos Aires: 460455041
+=>Genoa: 455122537
+=>Brescia: 12050698
+Canada (total population: 364875192)
+=>Osaka: 364875192
+United Kingdom (total population: 252292726)
+=>Pleven: 252292726

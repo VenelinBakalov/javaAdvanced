@@ -1,0 +1,19 @@
+Sydney|Italy|1552200708
+Burgas|United States|466762961
+Grenoble|Argentina|1514161857
+Winnipeg|Australia|823119710
+Milan|Australia|16130944
+Montpellier|Italy|708073743
+Albury|Argentina|313453179
+Pleven|United Kingdom|557622716
+Reims|Russia|1519176013
+Paris|Canada|1032153773
+Nice|Spain|1637488319
+Naples|France|1104840614
+Rennes|Spain|1780332372
+Toulouse|Italy|1333560996
+Yokohama|Canada|1693131324
+Lille|Japan|1822438494
+Kobe|Austria|1647213845
+Rimini|Russia|1245888142
+report

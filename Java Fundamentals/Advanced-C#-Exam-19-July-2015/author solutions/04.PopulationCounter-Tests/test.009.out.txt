@@ -1,0 +1,31 @@
+United States (total population: 3369185175)
+=>Saint-Etienne: 1977413473
+=>Varna: 1391771702
+Austria (total population: 3205338095)
+=>Paris: 1783799296
+=>Strasbourg: 805939943
+=>Bordeaux: 615598856
+United Kingdom (total population: 3158593120)
+=>Pleven: 1407355326
+=>Nagoya: 1150081604
+=>Grenoble: 601156190
+Australia (total population: 2242506409)
+=>Kaspichan: 1764041692
+=>Florence: 478464717
+Canada (total population: 1768426721)
+=>Sydney: 1768426721
+Spain (total population: 1588549228)
+=>Milan: 1588549228
+Argentina (total population: 1573812829)
+=>Reims: 1377726115
+=>Rennes: 196086714
+Russia (total population: 1153685879)
+=>Brescia: 1153685879
+France (total population: 1005967037)
+=>Fukuoka: 1005967037
+Japan (total population: 398271352)
+=>Naples: 398271352
+Bulgaria (total population: 44987423)
+=>Sofia: 44987423
+Germany (total population: 43353551)
+=>Buenos Aires: 43353551

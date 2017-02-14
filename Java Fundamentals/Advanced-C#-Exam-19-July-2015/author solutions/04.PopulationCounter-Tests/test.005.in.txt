@@ -1,0 +1,16 @@
+Rimini|Germany|1784669833
+Pleven|United Kingdom|252292726
+Ruse|Italy|477208227
+Kobe|Italy|1579983847
+Osaka|Canada|364875192
+Nagoya|Germany|123324227
+Brescia|Australia|12050698
+Kyoto|Argentina|127693479
+Sofia|Japan|777832979
+Buenos Aires|Australia|460455041
+Reims|United States|1549636645
+Fukuoka|Japan|1167955089
+Toulouse|Argentina|79072877
+Rome|Argentina|771688701
+Genoa|Australia|455122537
+report

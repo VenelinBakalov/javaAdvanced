@@ -1,0 +1,14 @@
+Pernik|United Kingdom|1153523021
+Cordoba|Bulgaria|899369979
+Rimini|France|1600378510
+Reims|Russia|434059958
+Sydney|France|26170099
+Bordeaux|Italy|187931875
+Palermo|Canada|313884804
+Genoa|Spain|1639663550
+Grenoble|United States|1295694
+Sapporo|Japan|1179355114
+Yokohama|Japan|579616388
+Toronto|France|117036690
+Paris|Australia|1536964913
+report

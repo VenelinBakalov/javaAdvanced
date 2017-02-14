@@ -1,0 +1,23 @@
+Japan (total population: 1758971502)
+=>Sapporo: 1179355114
+=>Yokohama: 579616388
+France (total population: 1743585299)
+=>Rimini: 1600378510
+=>Toronto: 117036690
+=>Sydney: 26170099
+Spain (total population: 1639663550)
+=>Genoa: 1639663550
+Australia (total population: 1536964913)
+=>Paris: 1536964913
+United Kingdom (total population: 1153523021)
+=>Pernik: 1153523021
+Bulgaria (total population: 899369979)
+=>Cordoba: 899369979
+Russia (total population: 434059958)
+=>Reims: 434059958
+Canada (total population: 313884804)
+=>Palermo: 313884804
+Italy (total population: 187931875)
+=>Bordeaux: 187931875
+United States (total population: 1295694)
+=>Grenoble: 1295694

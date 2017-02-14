@@ -1,0 +1,20 @@
+Reims|Argentina|1377726115
+Saint-Etienne|United States|1977413473
+Nagoya|United Kingdom|1150081604
+Sofia|Bulgaria|44987423
+Naples|Japan|398271352
+Paris|Austria|1783799296
+Sydney|Canada|1768426721
+Strasbourg|Austria|805939943
+Bordeaux|Austria|615598856
+Buenos Aires|Germany|43353551
+Fukuoka|France|1005967037
+Milan|Spain|1588549228
+Brescia|Russia|1153685879
+Rennes|Argentina|196086714
+Florence|Australia|478464717
+Varna|United States|1391771702
+Grenoble|United Kingdom|601156190
+Pleven|United Kingdom|1407355326
+Kaspichan|Australia|1764041692
+report

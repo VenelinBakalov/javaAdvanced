@@ -68,6 +68,7 @@ public class BunkerBuster {
             return;
         }
         matrix[impactRow][impactCol] -= damage;
+
         // try {
         //     matrix[impactRow][impactCol] -= damage;
         // } catch (IndexOutOfBoundsException ex) {
