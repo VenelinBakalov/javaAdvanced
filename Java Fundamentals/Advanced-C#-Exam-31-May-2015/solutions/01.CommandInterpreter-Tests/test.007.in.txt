@@ -1,0 +1,14 @@
+tuka e frash s nevalidni komandi...
+sort from -1 count 5
+sort from 0 count 0
+sort from 0 count 7
+sort from 6 count 1
+sort from 5 count 3
+reverse from -1 count 5
+reverse from 0 count 0
+reverse from 0 count 7
+reverse from 6 count 1
+reverse from 5 count 3
+rollLeft -1
+rollRight -10
+end

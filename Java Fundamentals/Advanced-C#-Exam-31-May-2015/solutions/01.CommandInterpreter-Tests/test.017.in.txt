@@ -1,0 +1,4 @@
+q a z w s x e d c r f v t g b y h n u j m i k o l p
+sort from 0 count 26
+rollRight 13
+end

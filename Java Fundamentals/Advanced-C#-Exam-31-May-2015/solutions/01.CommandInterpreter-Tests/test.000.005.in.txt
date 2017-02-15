@@ -1,0 +1,5 @@
+1 2 3 4 5
+sort from -1 count 2
+sort from 0 count -1
+reverse from 5 count 1
+end

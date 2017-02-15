@@ -1,0 +1,3 @@
+1 2 5 8 7 3 10 6 4 9
+reverse from 2 count 4
+end

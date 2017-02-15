@@ -1,0 +1,13 @@
+iorjg 89urgj 9j98 uihg89 huig nh98hg iun98ni nun2h28g infij892jf n0rgv
+sort from 5 count 3
+sort from 9 count 2
+sort from 333 count 5
+sort from 1 count -10
+reverse from 0 count 10
+rollLeft 4
+rollRight 5
+rollRight -10101
+rollLeft -333222
+end
+iorjg n0rgv infij892jf nun2h28g nh98hg iun98ni huig uihg89 9j98 89urgj
+invalid 1,2 3 ,4,5

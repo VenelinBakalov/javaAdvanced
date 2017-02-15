@@ -1,0 +1,7 @@
+ala bala 3 49 10 vdjw ih ijf nweij egi jef qfq AAAA za ewee zzz
+sort from 2 count 3
+reverse from 8 count 5
+sort from 11 count 5
+rollLeft 1
+rollLeft 5
+end

@@ -1,0 +1,20 @@
+We thought you'd like a preview of what we have in store for CodeConf 2015 in June before discounted ticket sales end on May 25th. We're beyond excited to be welcoming speakers from all over the globe and from companies and organizations of all sizes, who work on every facet
+sort from 48 count 1
+reverse from 0 count 49
+reverse from 0 count 50
+sort from 5 count 46
+rollLeft 78
+rollRight 68
+sort from 17 count 11
+sort from 42 count 3
+rollLeft 0
+rollRight 0
+reverse from 4 count 9
+sort from 12 count 2
+rollLeft -2929282
+reverse from 0 count 49
+reverse from 25 count 24
+reverse from 25 count 25
+rollRight -9393
+sort from 3 count 3
+end

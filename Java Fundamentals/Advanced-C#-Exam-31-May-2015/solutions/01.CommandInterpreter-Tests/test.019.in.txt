@@ -1,0 +1,6 @@
+a A b B c C d D
+reverse from 0 count 8
+sort from 2 count 6
+rollLeft 81
+rollRight 45
+end
