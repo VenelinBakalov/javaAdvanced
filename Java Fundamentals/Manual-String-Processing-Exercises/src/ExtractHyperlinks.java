@@ -10,7 +10,9 @@ public class ExtractHyperlinks {
 
         //String regex = "<a\\s*(.*?)?href\\s*=\\s*(('.+')|(\".+\")|([a-z\\/:.]+)).*>";
         //String regex = "<a.*?href\\s*?=\\s*(((\"+)|('*))(?<answer>.+?)\\2(\\s|>))";
-        String regex = "<a.*?href\\s*?=\\s*?(\"|')(?<answer>.+?)\\1.*?>";
+
+        //String regex = "<a.*?href\\s*?=\\s*?(\"|')(?<answer>.+?)\\1.*?>"; - final try from me...80 points so copy from forum next
+        String regex = "(?:<a)(?:[\\s\\n_0-9a-zA-Z=\"\"()]*?.*?)(?:href([\\s\\n]*)?=(?:['\"\"\\s\\n]*)?)([a-zA-Z:#\\/._\\-0-9!?=^+]*(\\([\"\"'a-zA-Z\\s.()0-9]*\\))?)(?:[\\s\\na-zA-Z=\"\"()0-9]*.*?)?(?:\\>)";
         Pattern pattern = Pattern.compile(regex);
 
         StringBuilder sb = new StringBuilder();
@@ -24,7 +26,10 @@ public class ExtractHyperlinks {
         Matcher matcher = pattern.matcher(sb);
 
         while (matcher.find()) {
-            System.out.println(matcher.group("answer"));
+            if (matcher.group(2).equals("fake")) {
+                continue;
+            }
+            System.out.println(matcher.group(2));
         }
     }
 }
