@@ -1,0 +1,5 @@
+.B...
+BBB..
+BBBB.
+BBB..
+dead: 3 1

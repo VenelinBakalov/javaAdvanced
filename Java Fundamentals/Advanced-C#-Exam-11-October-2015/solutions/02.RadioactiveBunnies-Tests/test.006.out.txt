@@ -1,0 +1,6 @@
+..BBB
+.BBBB
+BBBBB
+.BBBB
+..BBB
+dead: 1 2
