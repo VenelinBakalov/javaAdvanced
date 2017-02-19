@@ -1,0 +1,11 @@
+17 16 15 14 13 12 11
+max even
+min odd
+first 3 even
+exchange 2
+first 3 odd
+exchange 2
+first 3 odd
+last 3 odd
+max odd
+end

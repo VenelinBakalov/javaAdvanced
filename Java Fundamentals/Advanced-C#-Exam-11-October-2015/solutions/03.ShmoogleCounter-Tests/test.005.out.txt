@@ -1,0 +1,2 @@
+Doubles: leftWall, limit, lowerWall, radius, radius, rightWall, step, step, upperWall, wall, x, x, y, y
+Ints: count

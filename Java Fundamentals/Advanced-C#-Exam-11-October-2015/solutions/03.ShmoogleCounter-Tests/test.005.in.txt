@@ -1,0 +1,60 @@
+using System;
+
+namespace KophNamespace
+{
+    public class Koph
+    {
+        private static void Main()
+        {
+            string lowerLeft = Console.ReadLine();
+            string lowerRight = Console.ReadLine();
+            string upperRight = Console.ReadLine();
+            string upperLeft = Console.ReadLine();
+
+            double radius = double.Parse(Console.ReadLine());
+            double step = double.Parse(Console.ReadLine());
+
+            double upperWall = GetWallLimit(double.Parse(upperRight.Split()[1]), step);
+            double lowerWall = GetWallLimit(double.Parse(lowerLeft.Split()[1]), step);
+            double leftWall = GetWallLimit(double.Parse(lowerLeft.Split()[0]), step);
+            double rightWall = GetWallLimit(double.Parse(upperRight.Split()[0]), step);
+
+            int count = 0;
+            for (double y = lowerWall; y <= upperWall; y += step)
+            {
+                for (double x = leftWall; x <= rightWall; x += step)
+                {
+                    if (IsValidPoint(x, y, radius, lowerLeft, lowerRight, upperRight))
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            Console.WriteLine(count);
+
+        }
+
+        static double GetWallLimit(double wall, double step)
+        {
+            double limit = 0;
+            while (limit < Math.Abs(wall) - step)
+            {
+                limit += step;
+            }
+
+            return wall >= 0 ? limit : -limit;
+        }
+
+        static bool IsValidPoint(double x, double y, double radius,
+            string a, string b, string c)
+        {
+            bool inCircle = x*x + y*y <= radius*radius;
+            bool notInRoomWall = x != double.Parse(a.Split()[0]) && x != double.Parse(b.Split()[0]);
+            bool yNotInRoomWall = x != double.Parse(a.Split()[1]) && y != double.Parse(c.Split()[1]);
+
+            return inCircle && notInRoomWall && yNotInRoomWall;
+        }
+    }
+}
+//END_OF_CODE

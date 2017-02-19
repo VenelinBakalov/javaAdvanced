@@ -1,0 +1,6 @@
+1 2 3 4 5
+exchange 10
+exchange -1
+first 8 even
+last 12 odd
+end

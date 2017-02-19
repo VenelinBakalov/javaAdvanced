@@ -1,0 +1,9 @@
+0
+0
+Invalid index
+Invalid index
+[10]
+Invalid count
+[]
+Invalid count
+[10]

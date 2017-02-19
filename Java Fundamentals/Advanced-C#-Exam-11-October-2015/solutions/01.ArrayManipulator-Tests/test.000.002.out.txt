@@ -1,0 +1,7 @@
+3
+Invalid count
+Invalid index
+0
+2
+0
+[10, 100, 1000, 1]

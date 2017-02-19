@@ -1,0 +1,2 @@
+Doubles: None
+Ints: count, counter, counterNum

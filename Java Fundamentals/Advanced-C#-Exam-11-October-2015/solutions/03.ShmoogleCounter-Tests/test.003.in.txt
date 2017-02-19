@@ -1,0 +1,62 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace UppercaseEvenCharacters
+{
+    class UppercaseChars
+    {
+        static void Main()
+        {
+            decimal startingMoney = decimal.Parse(Console.ReadLine());
+
+            string[] allTeams =
+            {
+                "Arsenal", "Chelsea", "Everton", "Liverpool", "ManchesterCity", "ManchesterUnited",
+                "Southampton", "Tottenham"
+            };
+ 
+            int[] teamPoints = new int[8];
+
+            int countMatches = 0;
+
+            string input = Console.ReadLine();
+            while (input != "End of the league.")
+            {
+                countMatches++;
+                string[] teams = input.Split(new char[] {}, StringSplitOptions.RemoveEmptyEntries);
+                int indexFirstTeam = Array.IndexOf(allTeams, teams[0]);
+                int indexSecondTeam = Array.IndexOf(allTeams, teams[2]);
+
+                switch (teams[1])
+                {
+                    case "X":
+                        teamPoints[indexFirstTeam] += 1;
+                        teamPoints[indexSecondTeam] += 1;
+                        break;
+                    case "2":
+                        teamPoints[indexSecondTeam] += 3;
+                        break;
+                    case "1":
+                        teamPoints[indexFirstTeam] += 3;
+                        break;
+                }
+
+                input = Console.ReadLine();
+            }
+
+            double total = (double)startingMoney * countMatches * 1.94d;
+
+            Console.WriteLine("{0:F2}lv.", total);
+            Console.WriteLine("Arsenal - {0} points.", teamPoints[0]);
+            Console.WriteLine("Chelsea - {0} points.", teamPoints[1]);
+            Console.WriteLine("Everton - {0} points.", teamPoints[2]);
+            Console.WriteLine("Liverpool - {0} points.", teamPoints[3]);
+            Console.WriteLine("Manchester City - {0} points.", teamPoints[4]);
+            Console.WriteLine("Manchester United - {0} points.", teamPoints[5]);
+            Console.WriteLine("Southampton - {0} points.", teamPoints[6]);
+            Console.WriteLine("Tottenham - {0} points.", teamPoints[7]);
+        }
+
+    }
+}
+//END_OF_CODE

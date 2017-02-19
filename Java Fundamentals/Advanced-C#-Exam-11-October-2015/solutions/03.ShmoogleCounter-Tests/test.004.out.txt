@@ -1,0 +1,2 @@
+Doubles: None
+Ints: bestSequenceEndIndex, bestSequenceLength, bestSequenceStartIndex, currentSequenceLength, i, i

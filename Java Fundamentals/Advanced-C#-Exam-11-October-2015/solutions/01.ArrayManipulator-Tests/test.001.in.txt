@@ -1,0 +1,9 @@
+0 0 0 5 0 0 5
+min even
+max odd
+exchange 6
+min even
+max odd
+first 1 even
+last 5 odd
+end

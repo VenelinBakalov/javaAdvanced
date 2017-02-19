@@ -1,0 +1,17 @@
+class MegaCode
+{
+    private static int gosho = 6;
+    private static int pesho = 12;
+    private static void Main()
+    {
+        string intAsString = "500";
+        int first = int.Parse(intAsString);
+        double second = double.Parse(intAsString);
+        int third = int.Parse(intAsString);
+        double fourth = double.Parse(intAsString);
+        int fifth = int.Parse(intAsString);
+
+        double total = (first + second + third + fourth + fifth) / 2.0;
+    }
+}
+//END_OF_CODE

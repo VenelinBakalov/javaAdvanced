@@ -1,0 +1,25 @@
+using System;
+
+class MegaCode
+{
+    static void Main()
+    {
+        double pointless = 2.0;
+        int end = 5;
+        for (int index = 0; index < end; index++)
+        {
+            Console.WriteLine("Pork you, Google!");
+        }
+        int useful = (int) pointless;
+    }
+
+    static void MegaOptimize(int megaInt)
+    {
+        double end = 8;
+        for (int index = 0; index < (int)end; index++)
+        {
+            megaInt++;
+        }
+    }
+}
+//END_OF_CODE

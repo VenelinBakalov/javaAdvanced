@@ -1,0 +1,13 @@
+class MegaCode
+{
+    private static void Main()
+    {
+        double percentage = 0.5;
+        while (percentage < 100)
+        {
+            int inc = 8;
+            percentage += inc;
+        }
+    }
+}
+//END_OF_CODE

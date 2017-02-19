@@ -1,0 +1,11 @@
+using System;
+
+class MegaCode
+{
+    private static void Main()
+    {
+        string output = "Sick my duck, Google";
+        Console.WriteLine(output);
+    }
+}
+//END_OF_CODE

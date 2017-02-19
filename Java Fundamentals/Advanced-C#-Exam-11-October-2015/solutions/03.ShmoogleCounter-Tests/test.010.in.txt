@@ -1,0 +1,10 @@
+class MegaCode
+{
+    private static void Main()
+    {
+        int counter;
+        int count;
+        int counterNum;
+    }
+}
+//END_OF_CODE

@@ -1,0 +1,2 @@
+Doubles: None
+Ints: compare, counter, score

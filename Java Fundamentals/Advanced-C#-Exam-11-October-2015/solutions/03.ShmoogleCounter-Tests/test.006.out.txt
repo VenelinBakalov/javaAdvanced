@@ -1,0 +1,2 @@
+Doubles: percentage
+Ints: inc

@@ -1,0 +1,25 @@
+class MegaCode
+{
+    private static void Main()
+    {
+        double percentage = 0.5;
+        while (percentage < 100)
+        {
+            int inc = 8;
+            percentage += inc;
+        }
+        var dob = new DoubleHolder(percentage);
+        int count;
+    }
+}
+
+class DoubleHolder
+{
+    private double ratio;
+
+    public DoubleHolder(double num)
+    {
+        this.ratio = num;
+    }
+}
+//END_OF_CODE

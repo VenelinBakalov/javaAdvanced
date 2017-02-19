@@ -1,0 +1,10 @@
+1 1 1 2 2 2
+min even
+max odd
+exchange 2
+min even
+max odd
+first 4 odd
+last 4 even
+first 8 even
+end

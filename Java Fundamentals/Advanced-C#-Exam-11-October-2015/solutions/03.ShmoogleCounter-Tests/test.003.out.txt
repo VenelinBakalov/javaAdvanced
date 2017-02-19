@@ -1,0 +1,2 @@
+Doubles: total
+Ints: countMatches, indexFirstTeam, indexSecondTeam

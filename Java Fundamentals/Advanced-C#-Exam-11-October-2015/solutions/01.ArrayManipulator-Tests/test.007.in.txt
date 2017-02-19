@@ -1,0 +1,7 @@
+176 188 191 188 19
+first 3 odd
+exchange 2
+first 3 odd
+max odd
+max even
+end

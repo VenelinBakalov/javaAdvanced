@@ -1,0 +1,8 @@
+1 3 5 7 9
+exchange 1
+max odd
+min even
+first 2 odd
+last 2 even
+exchange 3
+end

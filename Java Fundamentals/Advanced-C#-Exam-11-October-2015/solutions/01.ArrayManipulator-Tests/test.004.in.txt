@@ -1,0 +1,6 @@
+1 1 1 1 1
+first 3 odd
+last 2 even
+min even
+max odd
+end

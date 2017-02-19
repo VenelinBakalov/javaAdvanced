@@ -1,0 +1,11 @@
+10
+min even
+max even
+exchange 0
+exchange 1
+exchange -1
+first 1 even
+first 2 even
+last 1 odd
+last 2 odd
+end

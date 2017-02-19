@@ -1,0 +1,15 @@
+using System;
+
+class MegaCode
+{
+    static void Main()
+    {
+        double pointless;
+        int end = 5;	
+        for (int index = 0; index < end; index++)
+        {
+            Console.WriteLine("Pork you, Google!");
+        }
+    }
+}
+//END_OF_CODE

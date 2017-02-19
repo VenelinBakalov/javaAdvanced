@@ -1,0 +1,15 @@
+class MegaCode
+{
+    private static void Main()
+    {
+        string intAsString = "500";
+        int first = int.Parse(intAsString);
+        int second = int.Parse(intAsString);
+        int third = int.Parse(intAsString);
+        int fourth = int.Parse(intAsString);
+        int fifth = int.Parse(intAsString);
+
+        double total = (first + second + third + fourth + fifth) / 2.0;
+    }
+}
+//END_OF_CODE

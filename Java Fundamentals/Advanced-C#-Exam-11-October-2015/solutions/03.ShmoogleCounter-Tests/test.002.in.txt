@@ -1,0 +1,218 @@
+using System;
+using System.Linq;
+
+namespace Scoreboard
+{
+    using System.Collections.Generic;
+    using Wintellect.PowerCollections;
+
+    public class Scoreboard
+    {
+        static void Main()
+        {
+            var scoreboard = new ScoreboardStructure();
+
+            string input = Console.ReadLine();
+
+            while (input != "End")
+            {
+                scoreboard.ParseInput(input);
+                input = Console.ReadLine();
+            }
+        }
+    }
+
+    public class ScoreboardStructure
+    {
+        private Dictionary<string, string> users;
+        private Dictionary<string, string> games;
+        private Dictionary<string, OrderedBag<UserScore>> scoreboard;
+        private Dictionary<char, SortedSet<string>> gameNames; 
+
+        public ScoreboardStructure()
+        {
+            this.users = new Dictionary<string, string>();
+            this.games = new Dictionary<string, string>();
+            this.scoreboard = new Dictionary<string, OrderedBag<UserScore>>();
+            this.gameNames = new Dictionary<char, SortedSet<string>>();
+        }
+
+        public string RegisterUser(string userName, string userPass)
+        {
+            if (this.users.ContainsKey(userName))
+            {
+                return "Duplicated user";
+            }
+
+            this.users[userName] = userPass;
+
+            return "User registered";
+        }
+
+        public string RegisterGame(string gameName, string gamePass)
+        {
+            if (this.games.ContainsKey(gameName))
+            {
+                return "Duplicated game";
+            }
+
+            this.games[gameName] = gamePass;
+            this.scoreboard[gameName] = new OrderedBag<UserScore>();
+
+            char key = gameName[0];
+            if (!gameNames.ContainsKey(key))
+            {
+                gameNames[key] = new SortedSet<string>();
+            }
+
+            gameNames[key].Add(gameName);
+
+            return "Game registered";
+        }
+
+        public string AddScore(string username, string userpass, string gamename, string gamepass, int score)
+        {
+            bool isInvalidUser = !this.users.ContainsKey(username) || this.users[username] != userpass;
+            bool isInvalidGame = !this.games.ContainsKey(gamename) || this.games[gamename] != gamepass;
+            if (isInvalidUser || isInvalidGame)
+            {
+                return "Cannot add score";
+            }
+
+            var newScore = new UserScore { Name = username, Score = score };
+
+            if (!this.scoreboard.ContainsKey(gamename))
+            {
+                this.scoreboard[gamename] = new OrderedBag<UserScore>();
+            }
+
+            this.scoreboard[gamename].Add(newScore);
+
+            return "Score added";
+        }
+
+        public void ShowScoreBoard(string gamename)
+        {
+            if (!this.scoreboard.ContainsKey(gamename))
+            {
+                Console.WriteLine("Game not found");
+                return;
+            }
+
+
+            if (this.scoreboard[gamename].Count == 0)
+            {
+                Console.WriteLine("No score");
+                return;
+            }
+
+            int counter = 1;
+            foreach (var score in this.scoreboard[gamename])
+            {
+                Console.WriteLine("#{0} {1} {2}", counter, score.Name, score.Score);
+                counter++;
+                if (counter > 10)
+                {
+                    return;
+                }
+            }
+        }
+
+        public string ListGamesByPrefix(string prefix)
+        {
+            char key = prefix[0];
+            if (gameNames.ContainsKey(key))
+            {
+                List<string> gamesToReturn = new List<string>();
+                foreach (string name in gameNames[key])
+                {
+                    if (name.StartsWith(prefix))
+                    {
+                        gamesToReturn.Add(name);
+                    }
+                    if (gamesToReturn.Count == 10)
+                    {
+                        break;
+                    }
+                }
+                if (gamesToReturn.Count == 0)
+                {
+                    return "No matches";
+                }
+                return string.Join(", ", gamesToReturn);
+            }
+
+            return "No matches";
+        }
+
+        public string DeleteGame(string gamename, string gamepass)
+        {
+            if (!this.games.ContainsKey(gamename) || this.games[gamename] != gamepass)
+            {
+                return "Cannot delete game";
+            }
+
+            this.games.Remove(gamename);
+            this.scoreboard.Remove(gamename);
+
+            char key = gamename[0];
+            this.gameNames[key].Remove(gamename);
+
+            return "Game deleted";
+        }
+
+        public void ParseInput(string input)
+        {
+            var args = input.Split(new[] {' '}, 2);
+            string[] tokens;
+            switch (args[0])
+            {
+                case "RegisterUser":
+                    tokens = args[1].Split();                 
+                    Console.WriteLine(this.RegisterUser(tokens[0], tokens[1]));
+                    break;
+                case "RegisterGame":
+                    tokens = args[1].Split();               
+                    Console.WriteLine(this.RegisterGame(tokens[0], tokens[1]));
+                    break;
+                case "AddScore":
+                    tokens = args[1].Split();
+                    Console.WriteLine(this.AddScore(tokens[0], tokens[1],
+                        tokens[2], tokens[3], int.Parse(tokens[4])));
+                    break;
+                case "ShowScoreboard":
+                    this.ShowScoreBoard(args[1]);
+                    break;
+                case "ListGamesByPrefix":
+                    Console.WriteLine(this.ListGamesByPrefix(args[1]));
+                    break;
+                case "DeleteGame":
+                    tokens = args[1].Split();
+                    Console.WriteLine(this.DeleteGame(tokens[0], tokens[1]));
+                    break;
+                default:
+                    break;
+            }
+        }
+     }
+
+    public class UserScore : IComparable<UserScore>
+    {
+        public string Name { get; set; }
+
+        public int Score { get; set; }
+
+        public int CompareTo(UserScore other)
+        {
+            int compare = this.Score.CompareTo(other.Score);
+
+            if (compare == 0)
+            {
+                return this.Name.CompareTo(other.Name);
+            }
+
+            return compare * -1;
+        }
+    }
+}
+//END_OF_CODE

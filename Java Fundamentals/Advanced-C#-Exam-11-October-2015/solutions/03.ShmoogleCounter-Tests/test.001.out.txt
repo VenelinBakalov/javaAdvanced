@@ -1,0 +1,2 @@
+Doubles: None
+Ints: i, width
