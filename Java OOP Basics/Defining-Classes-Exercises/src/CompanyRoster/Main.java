@@ -1,4 +1,4 @@
-package CompanyRoster;
+package companyRoster;
 
 
 import java.io.BufferedReader;

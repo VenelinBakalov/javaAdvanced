@@ -1,4 +1,4 @@
-package SpeedRacing;
+package speedRacing;
 
 
 import java.io.BufferedReader;
@@ -24,7 +24,7 @@ public class Main {
             double fuelAmount = Double.parseDouble(carArgs[1]);
             double fuelCostPerKm = Double.parseDouble(carArgs[2]);
 
-            SpeedRacing.Car car = new SpeedRacing.Car(model, fuelAmount, fuelCostPerKm);
+            speedRacing.Car car = new speedRacing.Car(model, fuelAmount, fuelCostPerKm);
             cars.put(car.getModel(), car);
         }
 
@@ -35,7 +35,7 @@ public class Main {
             String model = commandArgs[1];
             int distance = Integer.parseInt(commandArgs[2]);
 
-            SpeedRacing.Car car = cars.get(model);
+            speedRacing.Car car = cars.get(model);
             car.drive(distance);
         }
 

@@ -1,4 +1,4 @@
-package PersonTasks;
+package personTasks;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class Main {
             String[] information = reader.readLine().split(" ");
             String name = information[0];
             int age = Integer.parseInt(information[1]);
-            PersonTasks.Person person = new PersonTasks.Person(name, age);
+            personTasks.Person person = new personTasks.Person(name, age);
             people.add(person);
         }
 
@@ -28,23 +28,12 @@ public class Main {
                 .forEach(p -> System.out.println(p.getName() + " - " + p.getAge()));
     }
 
-
-
-    /*
-    1.	Define Class PersonTasks.Person
-    public static void main(String[] args) {
-        Class person = PersonTasks.Person.class;
-        Field[] fields = person.getDeclaredFields();
-        System.out.println(fields.length);
-    }
-     */
-
     /*
     2.	Creating Constructors
      public static void main(String[] args) throws NoSuchMethodException, IOException, IllegalAccessException, InvocationTargetException, InstantiationException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(isr);
-        Class personClass = PersonTasks.Person.class;
+        Class personClass = personTasks.Person.class;
 
         Constructor emptyCtor = personClass.getDeclaredConstructor();
         Constructor ageCtor = personClass.getDeclaredConstructor(int.class);
@@ -53,9 +42,9 @@ public class Main {
         String name = reader.readLine();
         int age = Integer.parseInt(reader.readLine());
 
-        PersonTasks.Person basePerson = (PersonTasks.Person) emptyCtor.newInstance();
-        PersonTasks.Person personWithAge = (PersonTasks.Person) ageCtor.newInstance(age);
-        PersonTasks.Person personFull = (PersonTasks.Person) nameAgeCtor.newInstance(name, age);
+        personTasks.Person basePerson = (personTasks.Person) emptyCtor.newInstance();
+        personTasks.Person personWithAge = (personTasks.Person) ageCtor.newInstance(age);
+        personTasks.Person personFull = (personTasks.Person) nameAgeCtor.newInstance(name, age);
 
         System.out.printf("%s %s%n", basePerson.name, basePerson.age);
         System.out.printf("%s %s%n", personWithAge.name, personWithAge.age);

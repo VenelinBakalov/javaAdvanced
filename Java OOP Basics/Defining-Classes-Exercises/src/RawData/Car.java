@@ -1,4 +1,4 @@
-package RawData;
+package rawData;
 
 
 import java.util.Set;

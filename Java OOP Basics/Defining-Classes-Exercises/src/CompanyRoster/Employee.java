@@ -1,4 +1,4 @@
-package CompanyRoster;
+package companyRoster;
 
 public class Employee {
 

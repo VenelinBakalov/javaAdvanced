@@ -1,4 +1,4 @@
-package RawData;
+package rawData;
 
 
 import java.io.BufferedReader;
@@ -18,6 +18,7 @@ public class Main {
         Set<Car> cars = new LinkedHashSet<>();
 
         for (int i = 0; i < carsAmount; i++) {
+            Car car = null;
             String[] carInfo = reader.readLine().split(" ");
             String carModel = carInfo[0];
 
@@ -38,7 +39,7 @@ public class Main {
                 tires.add(tire);
             }
 
-            Car car = new Car(carModel, engine, cargo, tires);
+            car = new Car(carModel, engine, cargo, tires);
             cars.add(car);
         }
 

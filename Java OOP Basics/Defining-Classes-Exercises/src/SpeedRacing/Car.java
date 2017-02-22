@@ -1,4 +1,4 @@
-package SpeedRacing;
+package speedRacing;
 
 public class Car {
     private static final int INITIAL_DISTANCE_TRAVELLED = 0;
