@@ -15,7 +15,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return String.format("%s:%n%s%nWeight: %s%nColor: %s", this.model, this.engine, this.weight, this.color);
+        return String.format("%s:%n%s%n  Weight: %s%n  Color: %s", this.model, this.engine, this.weight, this.color);
     }
 
     public void setWeight(String weight) {

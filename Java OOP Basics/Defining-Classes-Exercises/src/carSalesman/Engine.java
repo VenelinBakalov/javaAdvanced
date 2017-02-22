@@ -31,7 +31,7 @@ public class Engine {
 
     @Override
     public String toString() {
-        return String.format("%s:%nPower: %d%nDisplacement: %s%nEfficiency: %s",
+        return String.format("  %s:    %nPower: %d%n    Displacement: %s%n    Efficiency: %s",
                 this.model, this.power, this.displacement, this.efficiency);
     }
 }
