@@ -1,0 +1,38 @@
+ADT - abstract data type
+ADT дава независимост от езика, на който пишем.
+Класът е конкретна имплементация на ADT.
+Класът дава структурата, по която описваме и създаваме конкретен обект.
+При наименоване на класа - PascalCase, descriptive nouns.
+Class - state(fields) + behaviour(methods).
+Variable saves reference to the object.
+Declaring a variable creates a reference in the stack.
+В променливата се пази само адрес към позиция в heap-а, която вече пази обекта, защото няма как да знаем по време на компилацията на програмата колко голям ще стане този обект.
+Reference has a fixed size.
+Stack-а пази инфо за локалните променливи.
+Object - single instance of a class.
+UML диаграма - начин на описване на класове.
+
+ВСИЧКИ ПОЛЕТА В КЛАСА ТРЯБВА ДА БЪДАТ private!
+Methods store executable code(algorithm) that manipulates state.
+
+Accessors and mutators (getters and setters).
+
+this - референция към текущия обект от класа.
+
+По конвенция полето се задава с долна черта пред него????
+
+this в класа подобрява четимостта на кода
+
+В UML диаграмата + значи public, - значи private.
+
+Chaining constructors - this();
+this(name, age, new ArrayList());
+
+Конструктура гарантира създаване на начално състояние на обекта.
+
+Static - общ за класа. Не може да бъде достъпено от конкретен обект е с името на класа + . Примерно променлива за броя на банковите акаунти или лихвен процент.
+Math.PI статична променлива
+
+В UML диаграмите статичните полета и методи са подчертани.
+
+КОНВЕНЦИЯ - в класа КОНСТАНТИ, СТАТИЧНИ и после всички останали
