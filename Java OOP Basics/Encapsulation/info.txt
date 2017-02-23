@@ -1,0 +1,8 @@
+Енкапсулация – криене на ИМПЛЕМЕНТАЦИЯ!
+Ако ни трябва protected оставаме полетата private, а правим getters and setters protected.
+Private и Protected НЕ МОГАТ ДА СЕ ИЗПОЛЗВАТ за класове и интерфейси.
+Main метода винаги е PUBLIC
+
+Задължение на класа е само да бъде във валиден стейт. Задължение на user-а на класа е да хендълва exception!
+
+Collections.unmodifiableList()
