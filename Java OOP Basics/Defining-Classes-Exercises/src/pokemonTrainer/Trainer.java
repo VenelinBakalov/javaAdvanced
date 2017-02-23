@@ -1,4 +1,4 @@
-package pokémonTrainer;
+package pokemonTrainer;
 
 
 import java.util.HashSet;
@@ -39,5 +39,10 @@ public class Trainer {
 
     public void setPokemons(Set<Pokemon> pokemons) {
         this.pokemons = pokemons;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %d %d", this.name, this.badgeCount, this.pokemons.size());
     }
 }
