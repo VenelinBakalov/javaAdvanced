@@ -16,4 +16,5 @@ public class Company {
     public String toString() {
         return String.format("%s %s %.2f", this.name, this.department, this.salary);
     }
+
 }
