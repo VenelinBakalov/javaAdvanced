@@ -1,0 +1,1 @@
+string == null || string.trim().length == 0

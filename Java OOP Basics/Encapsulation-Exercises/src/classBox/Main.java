@@ -20,7 +20,14 @@ public class Main {
         Double width = Double.parseDouble(reader.readLine());
         Double height = Double.parseDouble(reader.readLine());
 
-        Box box = new Box(length, width, height);
+        Box box = null;
+
+        try {
+            box = new Box(length, width, height);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+            return;
+        }
 
         System.out.println(String.format("Surface Area - %.2f", box.getSurfaceArea()));
         System.out.println(String.format("Lateral Surface Area - %.2f", box.getLateralSurfaceArea()));
