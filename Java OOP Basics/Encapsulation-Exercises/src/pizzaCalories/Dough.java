@@ -2,7 +2,7 @@ package pizzaCalories;
 
 
 public class Dough {
-    private static final Double DEFAULT_DOUGHT_MODIFIER = 2.0;
+    private static final Double DEFAULT_DOUGH_MODIFIER = 2.0;
 
     private String flourType;
     private String bakingTechnique;
@@ -15,11 +15,11 @@ public class Dough {
     }
 
     public Double getCalories() {
-        return this.DEFAULT_DOUGHT_MODIFIER* this.getWeight() * this.getTypeModifier() * this.getTechniqueModifier();
+        return DEFAULT_DOUGH_MODIFIER* this.getWeight() * this.getTypeModifier() * this.getTechniqueModifier();
     }
 
     private Double getTypeModifier() {
-        String type = this.getFlourType();
+        String type = this.getFlourType().toLowerCase();
         switch (type) {
             case "white":
                 return 1.5;
@@ -31,13 +31,13 @@ public class Dough {
     }
 
     private Double getTechniqueModifier() {
-        String technique = this.getBakingTechnique();
+        String technique = this.getBakingTechnique().toLowerCase();
         switch (technique) {
-            case "Crispy":
+            case "crispy":
                 return 0.9;
-            case "Chewy":
+            case "chewy":
                 return 1.1;
-            case "Homemade":
+            case "homemade":
                 return 1.0;
             default:
                 return null;
@@ -57,14 +57,15 @@ public class Dough {
     }
 
     private void setFlourType(String flourType) {
-        if (flourType == null || !"White".equals(flourType) || !"Wholegrain".equals(flourType)) {
+        if (flourType == null || (!"white".equals(flourType.toLowerCase()) && !"wholegrain".equals(flourType.toLowerCase()))) {
             throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.flourType = flourType;
     }
 
     private void setBakingTechnique(String bakingTechnique) {
-        if (bakingTechnique == null || !"Crispy".equals(bakingTechnique) || !"Chewy".equals(bakingTechnique)) {
+        if (bakingTechnique == null || (!"crispy".equals(bakingTechnique.toLowerCase())
+                && !"chewy".equals(bakingTechnique.toLowerCase()) && !"homemade".equals(bakingTechnique.toLowerCase()))) {
             throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.bakingTechnique = bakingTechnique;

@@ -7,20 +7,25 @@ public class Topping {
     private String type;
     private Double weight;
 
+    public Topping(String type, Double weight) {
+        this.setType(type);
+        this.setWeight(weight);
+    }
+
     public Double getCalories() {
-        return this.DEFAULT_TOPPING_MODIFIER * this.getWeight() * this.getTypeModifier();
+        return DEFAULT_TOPPING_MODIFIER * this.getWeight() * this.getTypeModifier();
     }
 
     private Double getTypeModifier() {
-        String type = this.getType();
+        String type = this.getType().toLowerCase();
         switch (type) {
-            case "Meat":
+            case "meat":
                 return 1.2;
-            case "Veggies":
+            case "veggies":
                 return 0.8;
-            case "Cheese":
+            case "cheese":
                 return 1.1;
-            case "Sauce":
+            case "sauce":
                 return 0.9;
             default:
                 return null;
@@ -36,7 +41,8 @@ public class Topping {
     }
 
     private void setType(String type) {
-        if (type == null || !"Meat".equals(type) || !"Veggies".equals(type) || !"Cheese".equals(type) || !"Sauce".equals(type)) {
+        if (type == null || (!"meat".equals(type.toLowerCase()) && !"veggies".equals(type.toLowerCase())
+                && !"cheese".equals(type.toLowerCase()) && !"sauce".equals(type.toLowerCase()))) {
             throw new IllegalArgumentException(String.format("Cannot place %s on top of your pizza.", type));
         }
         this.type = type;
