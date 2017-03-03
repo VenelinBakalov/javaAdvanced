@@ -1,0 +1,30 @@
+Animal person = new Person();
+Animal - reference type, какъв тип е референцията, която се пази в RAM паметта.
+В дясно какъв тип е конкретния обект
+Променливите се пазят в reference type-a. Реално ние достъпваме методите на ref type-a 
+if (person instanceof Person) {       - NOT OK. Problem with design!
+((Person) person).getSalary();
+}
+if person.getClass() == Person.class  - NOT OK
+
+Shape shape = new Circle(); - runtime poly. По време на компилация ако тук има проблем компилатора не ни предупреждава и после
+runtime хвърля ексепшъни. Залага на method override
+
+Compile time poly - method overloading. Също познат като СТАТИЧЕН полиморфизъм. Метод с едно и също име в един и същи клас
+Параметрите не трябва да са еднакви - тип, брой или поредица.Когато извикваме метода самия компилатор си показва опциите за параметри
+Return type-а може да е еднакъв или различен. Един вид метода си сменя формата спрямо твоето повикване. 
+
+В повечето случаи става въпрос за runtime/ DYNAMIC polymorphism. Rect sq = new Square(); - override square area method
+this a * this a. sq.area() - в повечето случаи така премахваме instanceof проверката
+Argument list-а трябва да бъде СЪЩИЯТ! Return type също! Private static final не могат да бъдат.
+!!! Ако метода хвърля exception - override трябва да хвърля само exception-и които вече сме хванали!
+
+При грешен overload компилатора веднага гърми и казва - НЕ СТАА! Compiletime въобще не се компилира
+Runtime се компилира и си променя формата
+
+Main event, който кара да направим един клас абстрактен е наличие на поне 1 абстрактен метод
+
+АБСТРАКТНИЯТ клас МОЖЕ да има полета! Може да си има и конструктор. Може да си имаме имплементирани методи.
+Абстрактен метод трябва да бъде override-нат при наследяване.
+
+В UML абстрактните елементи са itallic!!!!
