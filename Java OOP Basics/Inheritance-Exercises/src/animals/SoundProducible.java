@@ -5,5 +5,5 @@ package animals;
  */
 public interface SoundProducible {
 
-    void produceSound();
+    String produceSound();
 }

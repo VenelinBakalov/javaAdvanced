@@ -17,11 +17,15 @@ public class Main {
 
         for (int i = 0; i < songCount; i++) {
             String[] songArgs = reader.readLine().split(";");
-            String artistName = songArgs[0];
-            String songName = songArgs[1];
-            String duration = songArgs[2];
-
             try {
+                if (songArgs.length != 3) {
+                    throw new InvalidSongException("Invalid song.");
+                }
+                String artistName = songArgs[0];
+                String songName = songArgs[1];
+                String duration = songArgs[2];
+
+
                 Song song = new Song(artistName, songName, duration);
                 songs.add(song);
                 System.out.println("Song added.");

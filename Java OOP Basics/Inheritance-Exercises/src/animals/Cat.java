@@ -10,7 +10,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void produceSound() {
-        System.out.println("MiauMiau");
+    public String produceSound() {
+        return "MiauMiau";
     }
 }

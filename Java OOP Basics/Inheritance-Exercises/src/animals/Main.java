@@ -18,38 +18,28 @@ public class Main {
             Integer age = Integer.parseInt(animalArgs[1]);
 
             try {
+                Animal animal = null;
                 switch (animalType.toLowerCase()) {
                     case "dog":
-                        Dog dog = new Dog(name, age, animalArgs[2]);
-                        System.out.println(dog);
-                        dog.produceSound();
+                        animal = new Dog(name, age, animalArgs[2]);
                         break;
                     case "cat":
-                        Cat cat = new Cat(name, age, animalArgs[2]);
-                        System.out.println(cat);
-                        cat.produceSound();
+                        animal = new Cat(name, age, animalArgs[2]);
                         break;
                     case "frog":
-                        Frog frog = new Frog(name, age, animalArgs[2]);
-                        System.out.println(frog);
-                        frog.produceSound();
+                        animal = new Frog(name, age, animalArgs[2]);
                         break;
                     case "kitten":
-                        Kitten kitten = new Kitten(name, age);
-                        System.out.println(kitten);
-                        kitten.produceSound();
+                        animal = new Kitten(name, age);
                         break;
                     case "tomcat":
-                        Tomcat tomcat = new Tomcat(name, age);
-                        System.out.println(tomcat);
-                        tomcat.produceSound();
+                        animal = new Tomcat(name, age);
                         break;
-                    case "animal":
-                        Animal animal = new Animal(name, age, animalArgs[2]);
-                        System.out.println(animal);
-                        animal.produceSound();
-                        break;
+                    default:
+                        throw new IllegalArgumentException("Invalid input!");
                 }
+                System.out.println(animal);
+                System.out.println(animal.produceSound());
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }

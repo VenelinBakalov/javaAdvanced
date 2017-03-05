@@ -21,8 +21,8 @@ public class Animal implements SoundProducible {
     }
 
     @Override
-    public void produceSound() {
-        System.out.println("Not implemented!");
+    public String produceSound() {
+        return "Not implemented!";
     }
 
     private void setName(String name) {
