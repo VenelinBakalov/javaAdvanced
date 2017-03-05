@@ -1,0 +1,6 @@
+is-a -> inheritance. Car is-a Vehicle.
+has-a -> composition. Car has-a Engine. private Engine engine;
+Composition - engine is entirely encapsulated in Car and the outside world has no access to it.
+Also it is final inside the car.
+Aggregation - like composition but the engine is known to the outside world and can be changed
+to another engine with a setter.
