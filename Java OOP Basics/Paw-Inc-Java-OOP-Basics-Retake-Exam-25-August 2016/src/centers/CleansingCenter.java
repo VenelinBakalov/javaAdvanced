@@ -1,5 +1,10 @@
 package centers;
 
+import animals.Animal;
+
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by Venelin on 6.3.2017 г..
  */
@@ -10,7 +15,13 @@ public class CleansingCenter extends Center {
         super(name);
     }
 
-    public void cleanse(){
-        this.getStoredAnimals().forEach(a -> a.setCleansingStatus(CLEANSED_STATUS));
+    public void cleanse(List<Animal> cleansedAnimals, Map<String, AdoptionCenter> adoptionCenters){
+        super.getStoredAnimals().forEach(a -> a.setCleansingStatus(CLEANSED_STATUS));
+        super.getStoredAnimals().forEach(a -> {
+            AdoptionCenter adoptionCenter = adoptionCenters.get(a.getAdoptionCenter());
+            adoptionCenter.addAnimal(a);
+        });
+        cleansedAnimals.addAll(super.getStoredAnimals());
+        super.getStoredAnimals().clear();
     }
 }

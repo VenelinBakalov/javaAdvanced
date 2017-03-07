@@ -20,6 +20,7 @@ public class Main {
     private static Map<String, CastrationCenter> castrationCenters = new HashMap<>();
     private static List<Animal> cleansedAnimals = new ArrayList<>();
     private static List<Animal> adoptedAnimals = new ArrayList<>();
+    private static List<Animal> castratedAnimals = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -57,6 +58,12 @@ public class Main {
                 case "SendForCastration":
                     sendForCastration(commandArgs);
                     break;
+                case "Castrate":
+                    castrate(commandArgs);
+                    break;
+                case "CastrationStatistics":
+                    printCastrationStatistics();
+                    break;
             }
         }
 
@@ -89,6 +96,20 @@ public class Main {
                 .filter(a -> a.getCleansingStatus().equals("UNCLEANSED")).count()).reduce((a1, a2) -> a1 + a2).get());
     }
 
+    private static void printCastrationStatistics() {
+        List<String> castratedAnimalsAsStrings = castratedAnimals.stream().map(Animal::getName).collect(Collectors.toList());
+        Collections.sort(castratedAnimalsAsStrings);
+        System.out.println("Paw Inc. Regular Castration Statistics");
+        System.out.println("Castration Centers: " + castrationCenters.size());
+        System.out.println("Castrated Animals: " + String.join(", ", castratedAnimalsAsStrings));
+    }
+
+    private static void castrate(String[] commandArgs) {
+        String castrationCenterName = commandArgs[1];
+        CastrationCenter center = castrationCenters.get(castrationCenterName);
+        center.castrate(castratedAnimals, adoptionCenters);
+    }
+
     private static void sendForCastration(String[] commandArgs) {
         String adoptionCenterName = commandArgs[1];
         String castrationCenterName = commandArgs[2];
@@ -112,14 +133,7 @@ public class Main {
     private static void cleanse(String[] commandArgs) {
         String cleansingCenterName = commandArgs[1];
         CleansingCenter center = cleansingCenters.get(cleansingCenterName);
-        center.cleanse();
-        List<Animal> currentCenterCleansedAnimals = center.getStoredAnimals();
-        currentCenterCleansedAnimals.forEach(a -> {
-            AdoptionCenter adoptionCenter = adoptionCenters.get(a.getAdoptionCenter());
-            adoptionCenter.addAnimal(a);
-        });
-        cleansedAnimals.addAll(currentCenterCleansedAnimals);
-        currentCenterCleansedAnimals.clear();
+        center.cleanse(cleansedAnimals, adoptionCenters);
     }
 
     private static void sendForCleansing(String[] commandArgs) {

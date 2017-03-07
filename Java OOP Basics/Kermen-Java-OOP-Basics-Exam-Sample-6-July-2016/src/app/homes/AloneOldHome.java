@@ -1,3 +1,7 @@
+package app.homes;
+
+import app.Room;
+
 /**
  * Created by Venelin on 6.3.2017 г..
  */
