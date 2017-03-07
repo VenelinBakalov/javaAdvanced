@@ -18,6 +18,10 @@ public class Animal {
         this.setAdoptionCenter(centerName);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getCleansingStatus() {
         return cleansingStatus;
     }

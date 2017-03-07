@@ -31,7 +31,7 @@ public class Center {
         this.storedAnimals = storedAnimals;
     }
 
-    protected List<Animal> getStoredAnimals() {
+    public List<Animal> getStoredAnimals() {
         return storedAnimals;
     }
 
