@@ -1,6 +1,6 @@
-package centers;
+package pawInc.centers;
 
-import animals.Animal;
+import pawInc.animals.Animal;
 
 import java.util.List;
 import java.util.stream.Collectors;

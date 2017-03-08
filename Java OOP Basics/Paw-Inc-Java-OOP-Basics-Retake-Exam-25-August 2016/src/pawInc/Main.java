@@ -1,9 +1,11 @@
-import animals.Animal;
-import animals.Cat;
-import animals.Dog;
-import centers.AdoptionCenter;
-import centers.CastrationCenter;
-import centers.CleansingCenter;
+package pawInc;
+
+import pawInc.animals.Animal;
+import pawInc.animals.Cat;
+import pawInc.animals.Dog;
+import pawInc.centers.AdoptionCenter;
+import pawInc.centers.CastrationCenter;
+import pawInc.centers.CleansingCenter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

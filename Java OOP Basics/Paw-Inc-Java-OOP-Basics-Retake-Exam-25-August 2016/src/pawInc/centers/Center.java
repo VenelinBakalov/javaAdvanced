@@ -1,9 +1,8 @@
-package centers;
+package pawInc.centers;
 
-import animals.Animal;
+import pawInc.animals.Animal;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

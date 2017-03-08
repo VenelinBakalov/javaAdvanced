@@ -1,9 +1,9 @@
-package animals;
+package pawInc.animals;
 
 /**
  * Created by Venelin on 6.3.2017 г..
  */
-public class Animal {
+public abstract class Animal {
     private static final String DEFAULT_CLEANSING_STATUS = "UNCLEANSED";
 
     private String name;
@@ -16,6 +16,12 @@ public class Animal {
         this.setAge(age);
         this.setCleansingStatus(DEFAULT_CLEANSING_STATUS);
         this.setAdoptionCenter(centerName);
+    }
+
+    public Animal(String name, int age) {
+        this.setName(name);
+        this.setAge(age);
+        this.setCleansingStatus(DEFAULT_CLEANSING_STATUS);
     }
 
     public String getName() {

@@ -1,4 +1,4 @@
-package animals;
+package pawInc.animals;
 
 /**
  * Created by Venelin on 6.3.2017 г..
