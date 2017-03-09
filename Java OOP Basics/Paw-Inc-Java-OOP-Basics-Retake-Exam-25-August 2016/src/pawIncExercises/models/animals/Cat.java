@@ -11,4 +11,8 @@ public class Cat extends Animal {
         super(name, age, adoptionCenter);
         this.intelligence = intelligence;
     }
+
+    public Cat(String name, int age) {
+        super(name, age);
+    }
 }

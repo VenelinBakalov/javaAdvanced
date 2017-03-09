@@ -1,15 +1,29 @@
 package app.homes;
 
-import app.Room;
+import app.items.Device;
+import app.people.Child;
+import app.people.Person;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Venelin on 6.3.2017 г..
  */
-public class YoungCoupleWithChildrenHome extends Home {
-    private static final double ROOM_ELECTRICITY_COST = 30;
-    private static final int ROOM_COUNT = 2;
+public class YoungCoupleWithChildrenHome extends YoungCoupleHome {
+    private static final int ROOMS_COUNT = 2;
+    private static final int ROOMS_CONSUMPTION = 30;
 
-    public YoungCoupleWithChildrenHome() {
-        super(new Room(ROOM_ELECTRICITY_COST, ROOM_COUNT));
+    public YoungCoupleWithChildrenHome(Person male, Person female, Device tv, Device fridge, Device laptop, Child... children) {
+        super(male, female, tv, fridge, laptop);
+
+        this.children.addAll(Arrays.asList(children));
     }
+
+    @Override
+    public void addRooms() {
+        this.addRooms(ROOMS_COUNT, ROOMS_CONSUMPTION);
+    }
+
+
 }

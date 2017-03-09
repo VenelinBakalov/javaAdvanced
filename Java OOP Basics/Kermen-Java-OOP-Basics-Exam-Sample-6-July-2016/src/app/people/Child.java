@@ -2,7 +2,6 @@ package app.people;
 
 import app.items.Toy;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -11,6 +11,10 @@ public class Person {
         this.setIncome(income);
     }
 
+    public double getIncome() {
+        return this.income;
+    }
+
     private void setIncome(double income) {
         this.income = income;
     }

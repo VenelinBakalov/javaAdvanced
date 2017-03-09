@@ -14,36 +14,67 @@ import java.util.List;
 public abstract class Home {
 
     private List<Room> rooms;
-    private List<Device> devices;
-    private List<Person> people;
-    private List<Child> children;
-    double budget;
-    double bills;
+    protected List<Device> devices;
+    protected List<Person> people;
+    protected List<Child> children;
+    private double budget;
+    private double bills;
+    private double salaries;
 
-    public Home(Room room) {
-        this.room = room;
+    protected Home() {
+        this.rooms = new ArrayList<>();
         this.devices = new ArrayList<>();
         this.people = new ArrayList<>();
         this.children = new ArrayList<>();
     }
 
-    void payBills() {
-
+    public int getPeopleCount() {
+        return this.people.size();
     }
 
-    void receiveSalary() {
-
+    public double getConsumption() {
+        return this.bills;
     }
 
-    protected void addDevice(Device device) {
-        this.devices.add(device);
+    public abstract void addRooms();
+
+    protected void calculateSalaries() {
+        this.salaries = this.people.stream()
+                .mapToDouble(Person::getIncome)
+                .sum();
     }
 
-    protected void addPerson(Person person) {
-        this.people.add(person);
+    public boolean payBills() {
+        if (this.budget >= this.bills) {
+            this.budget -= this.bills;
+            return true;
+        }
+
+        return false;
     }
 
-    protected void addChild(Child child) {
-        this.children.add(child);
+    public void receiveSalary() {
+        this.budget += this.salaries;
     }
+
+    protected void calculateBills() {
+        this.bills = this.rooms.stream()
+                        .mapToDouble(Room::getConsumption)
+                        .sum()
+                +
+                this.devices.stream()
+                        .mapToDouble(Device::getConsumption)
+                        .sum()
+                +
+                this.children.stream()
+                        .mapToDouble(Child::getCost)
+                        .sum();
+    }
+
+    protected void addRooms(int roomCount, double roomConsumption) {
+        for (int i = 0; i < roomCount; i++) {
+            this.rooms.add(new Room(roomConsumption));
+        }
+    }
+
 }

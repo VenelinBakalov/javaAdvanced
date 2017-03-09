@@ -1,16 +1,28 @@
 package app.homes;
 
-import app.Room;
+import app.items.Device;
+import app.people.Person;
 
 /**
  * Created by Venelin on 6.3.2017 г..
  */
 public class YoungCoupleHome extends Home {
+    private static final int ROOMS_COUNT = 2;
+    private static final int ROOMS_CONSUMPTION = 20;
 
-    private static final double ROOM_ELECTRICITY_COST = 20;
-    private static final int ROOM_COUNT = 2;
+    public YoungCoupleHome(Person male, Person female, Device tv, Device fridge, Device laptop) {
+        super();
+        this.people.add(male);
+        this.people.add(female);
+        this.devices.add(tv);
+        this.devices.add(fridge);
+        this.devices.add(laptop);
+        this.devices.add(laptop);
 
-    public YoungCoupleHome() {
-        super(new Room(ROOM_ELECTRICITY_COST, ROOM_COUNT));
+    }
+
+    @Override
+    public void addRooms() {
+        this.addRooms(ROOMS_COUNT, ROOMS_CONSUMPTION);
     }
 }

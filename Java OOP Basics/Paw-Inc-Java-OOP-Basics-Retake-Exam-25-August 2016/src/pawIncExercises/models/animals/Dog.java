@@ -11,4 +11,8 @@ public class Dog extends Animal {
         super(name, age, adoptionCenter);
         this.commands = commands;
     }
+
+    public Dog(String name, int age) {
+        super(name, age);
+    }
 }

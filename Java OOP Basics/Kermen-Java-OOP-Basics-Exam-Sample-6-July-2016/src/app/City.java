@@ -2,6 +2,7 @@ package app;
 
 import app.homes.Home;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,14 +10,30 @@ import java.util.List;
  */
 public class City {
 
-    List<Home> homes;
+    private List<Home> homes;
+
+    public City() {
+        this.homes = new ArrayList<>();
+    }
+
+    public void addHome(Home home) {
+        this.homes.add(home);
+    }
+
+    public void removeHome(Home home) {
+        this.homes.remove(home);
+    }
 
     int getPopulation(){
-        return 0;
+        return this.homes.stream()
+                .mapToInt(Home::getPeopleCount)
+                .sum();
     }
 
     double getConsumption() {
-        return 0;
+        return this.homes.stream()
+                .mapToDouble(Home::getConsumption)
+                .sum();
     }
 
     void payBills() {

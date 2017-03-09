@@ -5,19 +5,18 @@ package app;
  */
 public class Room {
 
-    private double electricityCost;
-    private int count;
+    private double consumption;
 
-    public Room(double electricityCost, int count) {
-        this.setElectricityCost(electricityCost);
-        this.setCount(count);
+    public Room(double consumption) {
+        this.setConsumption(consumption);
     }
 
-    private void setElectricityCost(double electricityCost) {
-        this.electricityCost = electricityCost;
+    public double getConsumption() {
+        return consumption;
     }
 
-    private void setCount(int count) {
-        this.count = count;
+    private void setConsumption(double consumption) {
+        this.consumption = consumption;
     }
+
 }
