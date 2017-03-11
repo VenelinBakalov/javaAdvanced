@@ -49,11 +49,11 @@ public class Main {
                     system.dumpAnalyze();
                     break;
                 case "Analyze":
-                    system.analyze();
+                    System.out.println(system.analyze());
                     break;
             }
         }
 
-        system.split();
+        System.out.println(system.split());
     }
 }

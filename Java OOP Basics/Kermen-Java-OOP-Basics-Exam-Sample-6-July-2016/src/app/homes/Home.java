@@ -29,7 +29,7 @@ public abstract class Home {
     }
 
     public int getPeopleCount() {
-        return this.people.size();
+        return this.people.size() + this.children.size();
     }
 
     public double getConsumption() {

@@ -95,7 +95,7 @@ public class TheSystem {
         this.dump.remove(hardwareComponentName);
     }
 
-    public void analyze() {
+    public String analyze() {
         StringBuilder sb = new StringBuilder();
         sb.append("System Analysis\n");
         sb.append(String.format("Hardware Components: %d\n", this.hardwareComponents.size()));
@@ -103,10 +103,11 @@ public class TheSystem {
         sb.append(String.format("Total Operational Memory: %d / %d\n", getMemoryUsed() ,getTotalMemory()));
         sb.append(String.format("Total Capacity Taken: %d / %d", getCapacityUsed() ,getTotalCapacity()));
 
-        System.out.println(sb.toString());
+        return sb.toString();
     }
 
-    public void split() {
+    public String split() {
+        StringBuilder sb = new StringBuilder();
 
         hardwareComponents.values().stream().sorted((c1, c2) -> {
             if (c1.getType().equals("Power")) {
@@ -114,7 +115,6 @@ public class TheSystem {
             }
             return 1;
         }).forEach(c -> {
-            StringBuilder sb = new StringBuilder();
             sb.append(String.format("Hardware Component - %s\n", c.getName()));
             sb.append(String.format("Express Software Components - %d\n", getSoftwareComponentsCount(c, "Express")));
             sb.append(String.format("Light Software Components - %d\n", getSoftwareComponentsCount(c, "Light")));
@@ -123,8 +123,8 @@ public class TheSystem {
             sb.append(String.format("Type: %s\n", c.getType()));
             sb.append(String.format("Software Components: %s", getSoftwareComponents(c)));
 
-            System.out.println(sb.toString());
         });
+        return sb.toString();
     }
 
     private String getSoftwareComponents(HardwareComponent component) {

@@ -14,10 +14,10 @@ public class YoungCoupleWithChildrenHome extends YoungCoupleHome {
     private static final int ROOMS_COUNT = 2;
     private static final int ROOMS_CONSUMPTION = 30;
 
-    public YoungCoupleWithChildrenHome(Person male, Person female, Device tv, Device fridge, Device laptop, Child... children) {
+    public YoungCoupleWithChildrenHome(Person male, Person female, Device tv, Device fridge, Device laptop, List<Child> children) {
         super(male, female, tv, fridge, laptop);
 
-        this.children.addAll(Arrays.asList(children));
+        this.children.addAll(children);
     }
 
     @Override
