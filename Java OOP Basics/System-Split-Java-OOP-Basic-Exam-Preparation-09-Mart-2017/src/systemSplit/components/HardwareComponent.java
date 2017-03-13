@@ -19,6 +19,11 @@ public abstract class HardwareComponent extends Component {
         this.softwareComponents = new LinkedHashMap<>();
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public void registerSoftwareComponent(SoftwareComponent softwareComponent) {
         if (this.getCapacityTaken() + softwareComponent.getCapacity() <= this.getCapacity()) {
             this.softwareComponents.put(softwareComponent.getName(), softwareComponent);
@@ -57,4 +62,5 @@ public abstract class HardwareComponent extends Component {
     private void setCapacityTaken(int capacityTaken) {
         this.capacityTaken = capacityTaken;
     }
+
 }
