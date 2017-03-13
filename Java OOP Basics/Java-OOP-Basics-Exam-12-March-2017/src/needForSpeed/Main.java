@@ -36,13 +36,21 @@ public class Main {
                     System.out.println(manager.check(Integer.parseInt(commandArgs[1])));
                     break;
                 case "open":
-                    manager.open(Integer.parseInt(commandArgs[1]),
-                            commandArgs[2],
-                            Integer.parseInt(commandArgs[3]),
-                            commandArgs[4],
-                            Integer.parseInt(commandArgs[5]),
-                            commandArgs.length == 7 ? Integer.parseInt(commandArgs[6]) : 0
-                    );
+                    if (commandArgs.length == 6) {
+                        manager.open(Integer.parseInt(commandArgs[1]),
+                                commandArgs[2],
+                                Integer.parseInt(commandArgs[3]),
+                                commandArgs[4],
+                                Integer.parseInt(commandArgs[5]));
+                    } else {
+                        manager.open(Integer.parseInt(commandArgs[1]),
+                                commandArgs[2],
+                                Integer.parseInt(commandArgs[3]),
+                                commandArgs[4],
+                                Integer.parseInt(commandArgs[5]),
+                                commandArgs.length == 7 ? Integer.parseInt(commandArgs[6]) : 0
+                        );
+                    }
                     break;
                 case "participate":
                     manager.participate(Integer.parseInt(commandArgs[1]),

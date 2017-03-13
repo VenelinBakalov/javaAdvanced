@@ -1,0 +1,16 @@
+декларираните в интерфейс полета автоматично стават public static final, когато преминат през 
+компилатора!
+Всичките методи стават public abstract
+Това дава 100% абстракция! 
+От Java 8 в интерфейса може да има имплементирани методи!!!
+
+Generic спира compile time error, но може да предизвика runtime error
+T - class type, E - element, KV - key value, R - return type
+
+enum - Level level = Level.MEDIUM;
+switch(level) { case MEDIUM: ....}
+
+Анотациите дават информация за програмата, без да са част от нея. Например дават информация за
+компилатора
+
+Reflection inspects classes at runtime
