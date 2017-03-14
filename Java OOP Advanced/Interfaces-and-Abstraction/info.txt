@@ -11,6 +11,9 @@ Class extends class. Class implements interface. Interface extends interface.
 UML диаграмите използват прекъсната черта при implements
 Един интерфейс МОЖЕ да наследи 2 интерфейса
 
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+
 ЛЯВАТА СТРАНА ВИНАГИ Е МАКСИМАЛНО ГОЛЯМАТА АБСТРАКЦИЯ. Примерно 
 class Document implements Printable{}
 Printable doc = new Document();!!!!!!!!!!!
