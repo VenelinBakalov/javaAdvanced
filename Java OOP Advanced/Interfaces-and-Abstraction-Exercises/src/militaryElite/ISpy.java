@@ -5,5 +5,5 @@ package militaryElite;
  */
 public interface ISpy {
 
-    String getCodeNumber();
+    int getCodeNumber();
 }

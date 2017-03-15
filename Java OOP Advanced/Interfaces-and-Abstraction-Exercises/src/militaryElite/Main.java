@@ -51,7 +51,7 @@ public class Main {
                         soldier = new Commando(commandArgs[1], commandArgs[2], commandArgs[3], Double.parseDouble(commandArgs[4]), commandArgs[5], missions);
                         break;
                     case "Spy":
-                        soldier = new Spy(commandArgs[1], commandArgs[2], commandArgs[3], commandArgs[4]);
+                        soldier = new Spy(commandArgs[1], commandArgs[2], commandArgs[3], Integer.parseInt(commandArgs[4]));
                         break;
                     default:
                         continue;
