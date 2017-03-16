@@ -16,6 +16,11 @@ public abstract class Character<E, P extends Number> implements GameObject<E, P>
         this.specialPoints = specialPoints;
     }
 
+    @Override
+    public String toString() {
+        return String.format("\"%s\" | \"%s\" -> %s%n", this.getUsername(), this.getHashedPassword(),
+                this.getClass().getSimpleName());
+    }
 
     @Override
     public String getUsername() {
