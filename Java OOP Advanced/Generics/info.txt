@@ -15,6 +15,8 @@ Type erasure - информацията я имаме само при изпълнение на програмата.Generics с
 List<String> е инстанция на List, а не List<String>. Компилатора добавя едно кастване, 
 иначе отдолу си е List / List<Object>
 Информацията за типа runtime се губи.
+Generics are compile time illusion. Compiler deletes all angle bracket syntax.
+Adds type casts for us (present in byte-code)
 
 <T extends Class> - specifies upper bound. T extends Animal - приема Cat, Dog...
 Scale<T extends Comparable<T>> - за да приема само сравними обекти
@@ -38,3 +40,5 @@ Lower bounds - <? super Class> any supertype of class
 
 !!!!!
 Четене - горна граница, писане - долна!
+
+Generics are Invariant
