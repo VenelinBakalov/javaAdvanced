@@ -5,43 +5,37 @@ package customList;
  */
 public class CommandInterpreter {
 
-    private CustomList<String> list;
-
-    public CommandInterpreter() {
-        this.list = new CustomList<>();
-    }
-
-    public void readCommand(String[] commandArgs) {
+    public void readCommand(String[] commandArgs, CustomList list) {
         String type = commandArgs[0];
 
         switch (type) {
             case "Add":
-                this.list.add(commandArgs[1]);
+                list.add(commandArgs[1]);
                 break;
             case "Remove":
-                this.list.remove(Integer.parseInt(commandArgs[1]));
+                list.remove(Integer.parseInt(commandArgs[1]));
                 break;
             case "Contains":
-                if (this.list.contains(commandArgs[1])) {
+                if (list.contains(commandArgs[1])) {
                     System.out.println(true);
                 } else {
                     System.out.println(false);
                 }
                 break;
             case "Swap":
-                this.list.swap(Integer.parseInt(commandArgs[1]), Integer.parseInt(commandArgs[2]));
+                list.swap(Integer.parseInt(commandArgs[1]), Integer.parseInt(commandArgs[2]));
                 break;
             case "Greater":
-                System.out.println(this.list.countGreaterThan(commandArgs[1]));
+                System.out.println(list.countGreaterThan(commandArgs[1]));
                 break;
             case "Max":
-                System.out.println(this.list.getMax());
+                System.out.println(list.getMax());
                 break;
             case "Min":
-                System.out.println(this.list.getMin());
+                System.out.println(list.getMin());
                 break;
             case "Print":
-                this.list.getData().forEach(System.out::println);
+                list.getData().forEach(System.out::println);
                 break;
         }
     }

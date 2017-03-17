@@ -25,7 +25,7 @@ public class CustomList<T extends Comparable> {
 
     public boolean contains(T element) {
         for (T currentElement : data) {
-            if (currentElement == element) {
+            if (currentElement.compareTo(element) == 0) {
                 return true;
             }
         }
