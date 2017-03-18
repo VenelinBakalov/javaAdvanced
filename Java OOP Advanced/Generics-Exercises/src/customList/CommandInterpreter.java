@@ -34,6 +34,9 @@ public class CommandInterpreter {
             case "Min":
                 System.out.println(list.getMin());
                 break;
+            case "Sort":
+                Sorter.sort(list);
+                break;
             case "Print":
                 list.getData().forEach(System.out::println);
                 break;

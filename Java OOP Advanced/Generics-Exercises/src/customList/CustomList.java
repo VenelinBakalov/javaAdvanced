@@ -71,6 +71,6 @@ public class CustomList<T extends Comparable> {
     }
 
     public List<T> getData() {
-        return Collections.unmodifiableList(this.data);
+        return this.data;
     }
 }
