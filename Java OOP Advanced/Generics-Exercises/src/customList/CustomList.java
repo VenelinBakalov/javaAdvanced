@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by Venelin on 17.3.2017 г..
  */
-public class CustomList<T extends Comparable>{
+public class CustomList<T extends Comparable> implements Iterable<T>{
 
     private List<T> data;
 
@@ -77,5 +77,10 @@ public class CustomList<T extends Comparable>{
         StringBuilder sb = new StringBuilder();
         this.data.forEach(e -> sb.append(e).append(System.lineSeparator()));
         return sb.toString().trim();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return this.data.iterator();
     }
 }

@@ -16,11 +16,7 @@ public class CommandInterpreter {
                 list.remove(Integer.parseInt(commandArgs[1]));
                 break;
             case "Contains":
-                if (list.contains(commandArgs[1])) {
-                    System.out.println(true);
-                } else {
-                    System.out.println(false);
-                }
+                System.out.println(list.contains(commandArgs[1]));
                 break;
             case "Swap":
                 list.swap(Integer.parseInt(commandArgs[1]), Integer.parseInt(commandArgs[2]));
@@ -38,8 +34,7 @@ public class CommandInterpreter {
                 Sorter.sort(list);
                 break;
             case "Print":
-//                list.forEach(System.out::println);
-                System.out.println(list);
+                list.forEach(System.out::println);
                 break;
         }
     }
