@@ -5,24 +5,24 @@ package customList;
  */
 public class CommandInterpreter {
 
-    public void readCommand(String[] commandArgs, CustomList list) {
+    public <T extends Comparable<T>> void readCommand(String[] commandArgs, CustomList<T> list) {
         String type = commandArgs[0];
 
         switch (type) {
             case "Add":
-                list.add(commandArgs[1]);
+                list.add((T)commandArgs[1]);
                 break;
             case "Remove":
                 list.remove(Integer.parseInt(commandArgs[1]));
                 break;
             case "Contains":
-                System.out.println(list.contains(commandArgs[1]));
+                System.out.println(list.contains((T)commandArgs[1]));
                 break;
             case "Swap":
                 list.swap(Integer.parseInt(commandArgs[1]), Integer.parseInt(commandArgs[2]));
                 break;
             case "Greater":
-                System.out.println(list.countGreaterThan(commandArgs[1]));
+                System.out.println(list.countGreaterThan((T)commandArgs[1]));
                 break;
             case "Max":
                 System.out.println(list.getMax());
