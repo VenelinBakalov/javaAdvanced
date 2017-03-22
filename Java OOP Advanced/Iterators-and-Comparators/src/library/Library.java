@@ -19,7 +19,11 @@ public class Library<Book> implements Iterable<Book> {
     }
 
     private final class LibraryIterator implements Iterator<Book> {
-        private int counter = 0;
+        private int counter;
+
+        private LibraryIterator() {
+            this.counter = 0;
+        }
 
         @Override
         public boolean hasNext() {
@@ -28,8 +32,7 @@ public class Library<Book> implements Iterable<Book> {
 
         @Override
         public Book next() {
-            counter++;
-            return books[counter - 1];
+            return books[this.counter++];
         }
     }
 }
