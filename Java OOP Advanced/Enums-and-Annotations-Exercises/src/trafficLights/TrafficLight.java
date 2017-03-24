@@ -12,18 +12,23 @@ public class TrafficLight {
     }
 
     public String update() {
+
         int currentOrdinal = this.signal.ordinal();
-        if (currentOrdinal == Signal.values().length - 1) {
-            this.signal = Signal.RED;
-            return this.signal.name();
-        }
-        for (Signal tempSignal : Signal.values()) {
-            if (tempSignal.ordinal() == currentOrdinal + 1) {
-                this.signal = tempSignal;
-                return tempSignal.name();
-            }
-        }
-        return null;
+        Signal[] signals = Signal.values();
+        this.signal = signals[(currentOrdinal + 1) % 3];
+        return signal.name();
+
+//  if (currentOrdinal == Signal.values().length - 1) {
+//      this.signal = Signal.RED;
+//      return this.signal.name();
+//  }
+//  for (Signal tempSignal : Signal.values()) {
+//      if (tempSignal.ordinal() == currentOrdinal + 1) {
+//          this.signal = tempSignal;
+//          return tempSignal.name();
+//      }
+//  }
+//  return null;
     }
 
     @Override

@@ -16,6 +16,14 @@ public enum WeaponType {
         this.socketsCount = socketsCount;
     }
 
+    public int getMinDamage() {
+        return minDamage;
+    }
+
+    public int getMaxDamage() {
+        return maxDamage;
+    }
+
     public int getSocketsCount() {
         return this.socketsCount;
     }

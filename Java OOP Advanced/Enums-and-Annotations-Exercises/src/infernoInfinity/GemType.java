@@ -15,4 +15,16 @@ public enum GemType {
         this.agility = agility;
         this.vitality = vitality;
     }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getAgility() {
+        return agility;
+    }
+
+    public int getVitality() {
+        return vitality;
+    }
 }
