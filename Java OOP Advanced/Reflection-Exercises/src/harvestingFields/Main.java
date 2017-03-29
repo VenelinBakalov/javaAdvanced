@@ -50,7 +50,7 @@ public class Main {
     private static void executePrintCommand(List<Field> fields) {
         for (Field field : fields) {
             System.out.println(String.format("%s %s %s", Modifier.toString(field.getModifiers()),
-                    field.getType(), field.getName()));
+                    field.getType().getSimpleName(), field.getName()));
         }
     }
 }
