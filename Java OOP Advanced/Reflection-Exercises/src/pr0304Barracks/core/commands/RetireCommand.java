@@ -8,7 +8,7 @@ import pr0304Barracks.contracts.UnitFactory;
  */
 public class RetireCommand extends Command {
 
-    protected RetireCommand(String[] data, Repository repository, UnitFactory unitFactory) {
+    public RetireCommand(String[] data, Repository repository, UnitFactory unitFactory) {
         super(data, repository, unitFactory);
     }
 

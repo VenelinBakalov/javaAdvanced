@@ -8,7 +8,7 @@ import pr0304Barracks.contracts.UnitFactory;
  */
 public class ReportCommand extends Command {
 
-    protected ReportCommand(String[] data, Repository repository, UnitFactory unitFactory) {
+    public ReportCommand(String[] data, Repository repository, UnitFactory unitFactory) {
         super(data, repository, unitFactory);
     }
 

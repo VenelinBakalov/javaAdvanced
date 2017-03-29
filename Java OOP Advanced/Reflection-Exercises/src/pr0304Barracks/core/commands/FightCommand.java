@@ -8,7 +8,7 @@ import pr0304Barracks.contracts.UnitFactory;
  */
 public class FightCommand extends Command {
 
-    protected FightCommand(String[] data, Repository repository, UnitFactory unitFactory) {
+    public FightCommand(String[] data, Repository repository, UnitFactory unitFactory) {
         super(data, repository, unitFactory);
     }
 
