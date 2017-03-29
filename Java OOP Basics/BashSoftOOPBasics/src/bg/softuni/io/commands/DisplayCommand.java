@@ -55,6 +55,16 @@ public class DisplayCommand extends Command {
 
     }
 
+    private Comparator<Course> createCourseComparator(String sortType) {
+        if (sortType.equalsIgnoreCase("ascending")) {
+            return Comparable::compareTo;
+        } else if (sortType.equalsIgnoreCase("descending")) {
+            return (o1, o2) -> o2.compareTo(o1);
+        } else {
+            throw new InvalidInputException(this.getInput());
+        }
+    }
+
     private Comparator<Student> createStudentComparator(String sortType) {
         if (sortType.equalsIgnoreCase("ascending")) {
             return Comparable::compareTo;

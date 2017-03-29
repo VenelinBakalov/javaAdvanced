@@ -78,6 +78,25 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
     }
 
 
+    @Override
+    public Iterator<E> iterator() {
+        Iterator<E> iterator = new Iterator<E>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return this.index < size();
+            }
+
+            @Override
+            public E next() {
+                return innerCollection[this.index++];
+            }
+        };
+
+        return iterator;
+    }
+
     @SuppressWarnings("unchecked")
     private void initializeInnerCollection(Class<E> type, int capacity) {
         if (capacity < 0) {
@@ -102,22 +121,16 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
         this.innerCollection = newCollection;
     }
 
-    @Override
-    public Iterator<E> iterator() {
-        Iterator<E> iterator = new Iterator<E>() {
-            private int index = 0;
-
-            @Override
-            public boolean hasNext() {
-                return this.index < size();
+    private void bubbleSort() {
+        for (int i = 0; i <= this.size(); i++) {
+            for (int j = this.size() - 1; j >= i + 1; j--) {
+                E currentElement = innerCollection[j];
+                E previousElement = innerCollection[j - 1];
+                if (previousElement.compareTo(currentElement) > 0) {
+                    innerCollection[j - 1] = currentElement;
+                    innerCollection[j] = currentElement;
+                }
             }
-
-            @Override
-            public E next() {
-                return innerCollection[this.index++];
-            }
-        };
-
-        return iterator;
+        }
     }
 }

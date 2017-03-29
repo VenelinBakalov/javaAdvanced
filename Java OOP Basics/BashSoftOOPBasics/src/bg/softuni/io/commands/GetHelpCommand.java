@@ -52,6 +52,8 @@ public class GetHelpCommand extends Command {
                 .append(System.lineSeparator());
         helpBuilder.append("get help – help")
                 .append(System.lineSeparator());
+        helpBuilder.append("display data entities - display students/courses ascending/descending")
+                .append(System.lineSeparator());
         OutputWriter.writeMessage(helpBuilder.toString());
         OutputWriter.writeEmptyLine();
     }
