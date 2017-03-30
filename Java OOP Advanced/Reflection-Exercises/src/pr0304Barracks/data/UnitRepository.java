@@ -39,7 +39,7 @@ public class UnitRepository implements Repository {
 	}
 
 	public void removeUnit(String unitType) {
-		if (!this.amountOfUnits.containsKey(unitType)) {
+		if (!this.amountOfUnits.containsKey(unitType) || this.amountOfUnits.get(unitType) == 0) {
 			throw new IllegalArgumentException("No such units in repository.");
 		}
 

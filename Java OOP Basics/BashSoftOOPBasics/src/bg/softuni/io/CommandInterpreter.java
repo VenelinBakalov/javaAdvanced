@@ -92,6 +92,5 @@ public class CommandInterpreter {
                 fieldToSet.set(executable, thisField.get(this));
             }
         }
-
     }
 }

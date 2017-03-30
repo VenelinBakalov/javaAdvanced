@@ -67,7 +67,12 @@ public class Engine implements Runnable {
 
 	private String addUnitCommand(String[] data) {
 		String unitType = data[1];
-		Unit unitToAdd = this.unitFactory.createUnit(unitType);
+		Unit unitToAdd = null;
+		try {
+			unitToAdd = this.unitFactory.createUnit(unitType);
+		} catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+			e.printStackTrace();
+		}
 		this.repository.addUnit(unitToAdd);
 		String output = unitType + " added!";
 		return output;
