@@ -2,6 +2,7 @@ package pr0304Barracks.core;
 
 import pr0304Barracks.contracts.*;
 import pr0304Barracks.contracts.Runnable;
+import pr0304Barracks.core.commands.Command;
 import pr0304Barracks.core.factories.CommandInterpreterImpl;
 
 import java.io.BufferedReader;
