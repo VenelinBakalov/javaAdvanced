@@ -4,9 +4,6 @@ import bg.softuni.annotations.Alias;
 import bg.softuni.annotations.Inject;
 import bg.softuni.exceptions.InvalidInputException;
 import bg.softuni.io.IOManager;
-import bg.softuni.judge.Tester;
-import bg.softuni.network.DownloadManager;
-import bg.softuni.repository.StudentsRepository;
 
 @Alias("cdabs")
 public class ChangeAbsolutePathCommand extends Command {

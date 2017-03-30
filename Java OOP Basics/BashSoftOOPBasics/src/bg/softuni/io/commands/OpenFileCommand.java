@@ -1,24 +1,17 @@
 package bg.softuni.io.commands;
 
+import bg.softuni.annotations.Alias;
 import bg.softuni.exceptions.InvalidInputException;
-import bg.softuni.io.IOManager;
-import bg.softuni.judge.Tester;
-import bg.softuni.network.DownloadManager;
-import bg.softuni.repository.StudentsRepository;
 import bg.softuni.staticData.SessionData;
 
 import java.awt.*;
 import java.io.File;
 
+@Alias("open")
 public class OpenFileCommand extends Command {
 
-    public OpenFileCommand(String input,
-                           String[] data,
-                           Tester tester,
-                           StudentsRepository repository,
-                           DownloadManager downloadManager,
-                           IOManager ioManager) {
-        super(input, data, tester, repository, downloadManager, ioManager);
+    public OpenFileCommand(String input, String[] data) {
+        super(input, data);
     }
 
     @Override

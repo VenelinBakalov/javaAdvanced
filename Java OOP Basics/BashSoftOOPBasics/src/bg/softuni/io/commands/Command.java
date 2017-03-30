@@ -1,47 +1,15 @@
 package bg.softuni.io.commands;
 
+import bg.softuni.contracts.Executable;
 import bg.softuni.exceptions.InvalidInputException;
-import bg.softuni.io.IOManager;
-import bg.softuni.judge.Tester;
-import bg.softuni.network.DownloadManager;
-import bg.softuni.repository.StudentsRepository;
 
-public abstract class Command {
+public abstract class Command implements Executable {
     private String input;
     private String[] data;
-    private StudentsRepository repository;
-    private Tester tester;
-    private IOManager ioManager;
-    private DownloadManager downloadManager;
 
-    protected Command(String input,
-                      String[] data,
-                      Tester tester,
-                      StudentsRepository repository,
-                      DownloadManager downloadManager,
-                      IOManager ioManager) {
+    protected Command(String input, String[] data) {
         this.setInput(input);
         this.setData(data);
-        this.tester = tester;
-        this.repository = repository;
-        this.downloadManager = downloadManager;
-        this.ioManager = ioManager;
-    }
-
-    protected StudentsRepository getRepository() {
-        return repository;
-    }
-
-    protected Tester getTester() {
-        return tester;
-    }
-
-    protected IOManager getIoManager() {
-        return ioManager;
-    }
-
-    protected DownloadManager getDownloadManager() {
-        return downloadManager;
     }
 
     protected String getInput() {
@@ -65,6 +33,4 @@ public abstract class Command {
         }
         this.data = data;
     }
-
-    public abstract void execute() throws Exception;
 }
