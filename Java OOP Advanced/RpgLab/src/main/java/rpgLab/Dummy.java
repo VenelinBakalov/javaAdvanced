@@ -1,7 +1,6 @@
 package rpgLab;
 
 import java.util.List;
-import java.util.Random;
 
 public class Dummy implements Target {
 
@@ -35,7 +34,7 @@ public class Dummy implements Target {
         return this.experience;
     }
 
-    public Weapon giveWeapon(RandomProvider random) {
+    public Weapon dropLoot(RandomProvider random) {
         if (!isDead()) {
             throw new IllegalStateException("Target is not dead.");
         }

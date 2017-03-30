@@ -34,7 +34,7 @@ public class Hero {
 
         if (target.isDead()) {
             this.experience += target.giveExperience();
-            this.inventory.add(target.giveWeapon(random));
+            this.inventory.add(target.dropLoot(random));
         }
     }
 

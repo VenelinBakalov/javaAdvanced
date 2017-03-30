@@ -5,6 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 import rpgLab.Dummy;
 import rpgLab.Target;
+import rpgLab.Weapon;
+
+import java.util.ArrayList;
 
 /**
  * Created by Venelin on 30.3.2017 г..
@@ -20,7 +23,7 @@ public class DummyTests {
 
     @Before
     public void createDummy() {
-       this.target = new Dummy(HEALTH, EXPERIENCE);
+       this.target = new Dummy(HEALTH, EXPERIENCE, new ArrayList<Weapon>());
     }
 
     @Test

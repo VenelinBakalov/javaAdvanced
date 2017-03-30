@@ -10,7 +10,7 @@ public interface Target {
 
     int giveExperience();
 
-    Weapon giveWeapon(RandomProvider random);
+    Weapon dropLoot(RandomProvider random);
 
     boolean isDead();
 }

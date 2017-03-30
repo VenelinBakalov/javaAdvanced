@@ -5,10 +5,13 @@ package test;
  */
 public class TestChild extends TestAbstract {
 
-    private int age;
+    private static final int AGE = 15;
 
-    public TestChild(String name, int age) {
+    public TestChild(String name) {
         super(name);
-        this.age = age;
+    }
+
+    public String doSomeFinalTest() {
+        return "Initial value: 15; New value: " + TestChild.AGE;
     }
 }
