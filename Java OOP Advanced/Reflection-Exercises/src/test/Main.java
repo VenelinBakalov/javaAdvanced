@@ -18,12 +18,31 @@ public class Main {
         modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
         field.set(null, 1000);
+        System.out.println("Changed field value:");
         System.out.println(field.get(null));
 
+        System.out.println();
+        System.out.println("First child tests:");
         TestChild child = new TestChild("private static final field test");
         field.set(child, 1000);
         System.out.println(child.doSomeFinalTest());
+        System.out.println(field.get(child));
 
+        System.out.println();
+        System.out.println("Second child tests:");
+
+        TestChild secondChild = testChildClass.getConstructor(String.class).newInstance("Second test");
+        field.set(secondChild, 180);
+        System.out.println(secondChild.doSomeFinalTest());
+        System.out.println(field.get(secondChild));
+
+        System.out.println();
+        System.out.println("Static field test");
+        System.out.println(TestChild.AGE);
+
+        System.out.println();
+        System.out.println("Try class method:");
+        System.out.println(child.changeStaticFinalIntValue(1000));
 
     //  Class testClass = TestAbstract.class;
 
