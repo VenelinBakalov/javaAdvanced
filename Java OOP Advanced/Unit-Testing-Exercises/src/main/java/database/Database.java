@@ -27,6 +27,8 @@ public class Database {
         this.data[index++] = element;
     }
 
+    // assert [0] = null
+
     public Integer remove() throws OperationNotSupportedException {
         if (this.index == 0) {
             throw new OperationNotSupportedException();
