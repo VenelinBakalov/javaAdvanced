@@ -19,6 +19,7 @@ public class TestChild extends TestAbstract {
     }
 
     public String changeStaticFinalIntValue(int newValue) throws ReflectiveOperationException {
+        Field[] fields = this.getClass().getDeclaredFields();
         Field field = this.getClass().getDeclaredField("AGE");
         field.setAccessible(true);
         System.out.println("From within the class method");
@@ -30,7 +31,8 @@ public class TestChild extends TestAbstract {
         modifiersField.setAccessible(true);
         modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
-
+        Field[] newFields = this.getClass().getDeclaredFields();
+        System.out.println("field[] - " + newFields[0].get(this));
         int oldValue = (int) field.get(this);
         field.set(this, oldValue + newValue);
         System.out.println("Incrementing with the passed new value: " + newValue);
