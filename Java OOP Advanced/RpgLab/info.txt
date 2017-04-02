@@ -51,3 +51,5 @@ Mock - simulate behavior of real objects, supplies data for the test...
 Прави нещо, но винаги връща един зададен от нас резултат
 
 Mockito framework - създава обект от класа със всичките му методи, но празни
+
+Assert.assertArrayEquals

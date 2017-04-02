@@ -22,7 +22,7 @@ public class Database {
             throw new OperationNotSupportedException();
         }
         if (this.index >= CAPACITY) {
-            throw new OperationNotSupportedException("Database cannot store more than 16 elements");
+            throw new OperationNotSupportedException("DatabaseImpl cannot store more than 16 elements");
         }
         this.data[index++] = element;
     }
@@ -45,8 +45,9 @@ public class Database {
 
     private void setData(Integer... data) throws OperationNotSupportedException {
         if (data.length > CAPACITY) {
-            throw new OperationNotSupportedException("Database cannot store more than 16 elements");
+            throw new OperationNotSupportedException("DatabaseImpl cannot store more than 16 elements");
         }
+
         for (Integer integer : data) {
             if (integer == null) {
                 throw new OperationNotSupportedException();
@@ -54,6 +55,4 @@ public class Database {
         }
         this.data = Arrays.copyOf(data, CAPACITY);
     }
-
-
 }
