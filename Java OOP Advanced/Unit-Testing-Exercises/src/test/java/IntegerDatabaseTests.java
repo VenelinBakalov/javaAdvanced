@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.naming.OperationNotSupportedException;
-import javax.xml.crypto.Data;
 import java.lang.reflect.Field;
 
 /**
@@ -112,3 +111,4 @@ public class IntegerDatabaseTests {
         Assert.assertEquals(SECOND_TEST_ELEMENT, secondElement);
     }
 }
+
