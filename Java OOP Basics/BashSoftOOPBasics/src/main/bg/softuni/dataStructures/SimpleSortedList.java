@@ -37,6 +37,9 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
 
     @Override
     public boolean remove(E element) {
+        if (element == null) {
+            throw new IllegalArgumentException();
+        }
         boolean hasBeenRemoved = false;
         int indexOfRemovedElement = 0;
 
@@ -54,6 +57,7 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
                 this.innerCollection[i] = this.innerCollection[i + 1];
             }
             this.innerCollection[this.size() - 1] = null;
+            this.size--;
         }
 
         return hasBeenRemoved;
@@ -66,6 +70,9 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
 
     @Override
     public void add(E element) {
+        if (element == null) {
+            throw new IllegalArgumentException();
+        }
         if (this.size() >= this.innerCollection.length) {
             this.resize();
         }
@@ -82,6 +89,9 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
         }
 
         for (E element : elements) {
+            if (element == null) {
+                throw new IllegalArgumentException();
+            }
             this.innerCollection[this.size()] = element;
             this.size++;
         }
@@ -96,6 +106,9 @@ public class SimpleSortedList<E extends Comparable<E>> implements SimpleOrderedB
 
     @Override
     public String joinWith(String joiner) {
+        if (joiner == null) {
+            throw new IllegalArgumentException();
+        }
         StringBuilder output = new StringBuilder();
         for (E e : this) {
             output.append(e);

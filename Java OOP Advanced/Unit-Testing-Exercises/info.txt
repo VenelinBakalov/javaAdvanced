@@ -1,0 +1,13 @@
+Mocking static objects
+
+PowerMockito.mockStatic(MyObject.class);
+Mockito.when(MyObject.someInt()).thenReturn(10);
+
+
+int a = Reflection.getClassAccessFlags(....class);
+Modifier.toString(a ^ Modifiers.ABSTRACT)
+
+String generic = a.toGenericString();
+index = indexof<
+.....indexof>
+Class cls = Class.forName(generic.substring(index + 1,index))
