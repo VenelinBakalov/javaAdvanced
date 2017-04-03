@@ -2,6 +2,8 @@ package exercise.database;
 
 import javax.naming.OperationNotSupportedException;
 import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
 import java.util.Arrays;
 
 /**
@@ -39,7 +41,16 @@ public class DatabaseImpl<T extends Integer> implements Database<T> {
     }
 
     public T[] getElements() {
-        T[] buffer = (T[]) Array.newInstance(this.elements[0].getClass(), this.elementsCount);;
+        Field array = null;
+        try {
+            array = this.getClass().getDeclaredField("elements");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+        Class genericClass = array.getType().getComponentType(); // returns the type of the array instead of Integer[]
+
+        T[] buffer = (T[]) Array.newInstance(genericClass, this.elementsCount);;
         int bufferIndex = 0;
 
         for (T element : elements) {
@@ -66,5 +77,4 @@ public class DatabaseImpl<T extends Integer> implements Database<T> {
         
         this.index = elements.length - 1;
     }
-
 }

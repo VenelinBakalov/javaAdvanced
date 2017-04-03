@@ -54,11 +54,18 @@ public class DatabaseImplTests {
         Assert.assertEquals("Remove does not work correctly", 1, db.getElements().length);
     }
 
-    @Test(expected = NullPointerException.class)
-    public void testRemoveElementWithNoElements() throws OperationNotSupportedException {
+    @Test
+    public void testRemoveElementWithEmptyCollection() throws OperationNotSupportedException {
         Database<Integer> db = new DatabaseImpl<>(INITIAL_ONE_ELEMENT_TEST_REMOVE);
         db.remove();
-        db.getElements();
+        Assert.assertEquals("Remove does not work correctly", 0, db.getElements().length);
+    }
+
+    @Test(expected = OperationNotSupportedException.class)
+    public void testIncorrectRemoveInvoke() throws OperationNotSupportedException {
+        Database<Integer> db = new DatabaseImpl<>(INITIAL_ONE_ELEMENT_TEST_REMOVE);
+        db.remove();
+        db.remove();
     }
 }
 
