@@ -8,8 +8,8 @@ class Rectangle {
     }
 
     public Rectangle(int m_width, int m_height) {
-        this.m_width = m_width;
-        this.m_height = m_height;
+        this.setWidth(m_width);
+        this.setHeight(m_height);
     }
 
     protected void setWidth(int width) {
@@ -20,15 +20,15 @@ class Rectangle {
         m_height = height;
     }
 
-    protected int getWidth() {
+    public int getWidth() {
         return m_width;
     }
 
-    protected int getHeight() {
+    public int getHeight() {
         return m_height;
     }
 
-    protected int getArea() {
+    public int getArea() {
         return m_width * m_height;
     }
 }
