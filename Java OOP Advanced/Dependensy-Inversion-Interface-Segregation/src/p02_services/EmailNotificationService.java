@@ -1,6 +1,6 @@
 package p02_services;
 
-public class EmailNotificationService {
+public class EmailNotificationService implements NotificationService {
 
     private boolean isActive;
 

@@ -1,4 +1,4 @@
-package p03_employee_info;
+package p03_employee_info.models;
 
 public class Employee {
 
