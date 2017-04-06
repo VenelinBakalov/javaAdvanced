@@ -10,6 +10,6 @@ public interface Appender {
 
     void appendMessage(Message message);
 
-    void setReportLevel(ReportLevel... reportLevel);
+    void setReportLevel(ReportLevel reportLevel);
 
 }

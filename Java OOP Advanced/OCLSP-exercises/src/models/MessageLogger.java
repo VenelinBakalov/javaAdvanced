@@ -65,4 +65,14 @@ public class MessageLogger implements Logger {
         }
         this.appenders = Arrays.asList(appenders);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Logger info").append(System.lineSeparator());
+        for (Appender appender : appenders) {
+            sb.append(appender).append(System.lineSeparator());
+        }
+        return sb.toString();
+    }
 }
