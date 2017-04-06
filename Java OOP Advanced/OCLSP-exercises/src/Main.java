@@ -19,6 +19,18 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+
+        /*
+
+        TO DO !!!!!!
+
+        appender -> make a check - if starts with File -> (Fileappender).setFile(new LogFile(new StringBuilder)));
+
+        make command switch case work with reflection
+
+        */
+
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Controller controller = new Controller();
         List<Appender> appenders = new ArrayList<>();
