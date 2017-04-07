@@ -4,5 +4,10 @@ import interfaces.Attack;
 import models.Blob;
 
 public abstract class AbstractAttack implements Attack {
-    public abstract void execute(Blob attacker, Blob target);
+
+    protected void targetRespond(Blob target, int damage) {
+        int currentHealth = target.getHealth();
+        currentHealth -= damage;
+        target.setHealth(currentHealth);
+    }
 }

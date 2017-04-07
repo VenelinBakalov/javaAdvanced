@@ -2,15 +2,15 @@ package p05_security_system;
 
 public class PinCodeCheck extends SecurityCheck {
 
-    private SecurityUI securityUI;
+    private PinCodeUI pinCodeUI;
 
-    public PinCodeCheck(SecurityUI securityUI) {
-        this.securityUI = securityUI;
+    public PinCodeCheck(PinCodeUI pinCodeUI) {
+        this.pinCodeUI = pinCodeUI;
     }
 
     @Override
     public boolean validateUser() {
-        int pin = securityUI.requestPinCode();
+        int pin = pinCodeUI.requestPinCode();
         if (isValid(pin)) {
             return true;
         }

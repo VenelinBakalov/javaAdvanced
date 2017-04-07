@@ -1,4 +1,4 @@
-package p04_recharge;
+package p04_recharge_with_adapter;
 
 public class Employee extends Worker implements Sleeper {
 

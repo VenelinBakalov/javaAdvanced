@@ -2,15 +2,15 @@ package p05_security_system;
 
 public class KeyCardCheck extends SecurityCheck {
 
-    private SecurityUI securityUI;
+    private KeyCardUI keyCardUI;
 
-    public KeyCardCheck(SecurityUI securityUI) {
-        this.securityUI = securityUI;
+    public KeyCardCheck(KeyCardUI keyCardUI) {
+        this.keyCardUI = keyCardUI;
     }
 
     @Override
     public boolean validateUser() {
-        String code = securityUI.requestKeyCard();
+        String code = keyCardUI.requestKeyCard();
         if (isValid(code)) {
             return true;
         }

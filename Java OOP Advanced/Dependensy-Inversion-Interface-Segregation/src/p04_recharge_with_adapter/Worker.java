@@ -1,6 +1,6 @@
-package p04_recharge;
+package p04_recharge_with_adapter;
 
-public abstract class Worker {
+public abstract class Worker implements Sleeper {
 
     private String id;
     private int workingHours;

@@ -9,16 +9,18 @@ public class Aggressive extends AbstractBehavior {
 
     private int sourceInitialDamage;
 
-    public Aggressive() {
-        super();
-    }
-
+    @Override
     public void trigger(Blob source) {
-        this.sourceInitialDamage = source.getDamage();
-        super.setIsTriggered(true);
-        this.applyTriggerEffect(source);
+        if (!super.isTriggered()) {
+            this.sourceInitialDamage = source.getDamage();
+            super.setIsTriggered(true);
+            this.applyTriggerEffect(source);
+        } else {
+            this.applyRecurrentEffect(source);
+        }
     }
 
+    @Override
     public void applyRecurrentEffect(Blob source) {
         if (super.toDelayRecurrentEffect()) {
             super.setToDelayRecurrentEffect(false);
@@ -29,14 +31,6 @@ public class Aggressive extends AbstractBehavior {
                 source.setDamage(this.sourceInitialDamage);
             }
         }
-    }
-
-    public boolean toDelayRecurrentEffect() {
-        return super.toDelayRecurrentEffect;
-    }
-
-    public void setToDelayRecurrentEffect(boolean toDelayRecurrentEffect){
-        super.toDelayRecurrentEffect = toDelayRecurrentEffect;
     }
 
     private void applyTriggerEffect(Blob source) {

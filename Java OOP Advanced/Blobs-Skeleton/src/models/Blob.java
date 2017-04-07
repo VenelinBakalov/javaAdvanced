@@ -1,5 +1,7 @@
 package models;
 
+import interfaces.Attack;
+import interfaces.Behavior;
 import models.attacks.AbstractAttack;
 import models.attacks.PutridFart;
 import models.behavors.AbstractBehavior;
@@ -10,14 +12,14 @@ public class Blob {
     private String name;
     private int currentHealth;
     private int damage;
-    private AbstractBehavior behavior;
-    private AbstractAttack attack;
+    private Behavior behavior;
+    private Attack attack;
     private int triggerCount;
 
     private int initialHealth;
     private int initialDamage;
 
-    public Blob(String name, int health, int damage, AbstractBehavior behavior, AbstractAttack attack) {
+    public Blob(String name, int health, int damage, Behavior behavior, Attack attack) {
         this.name = name;
         this.currentHealth = health;
         this.damage = damage;
@@ -53,27 +55,14 @@ public class Blob {
     }
 
     public void attack(Blob target) {
-        if (this.attack instanceof PutridFart) {
-            this.attackAffectTarget(this, target);
-        }
-    }
-
-    public void respond(int damage) {
-        int currentHealth = this.getHealth();
-        currentHealth -= damage;
-        this.setHealth(currentHealth);
+        this.attack.execute(this, target);
     }
 
     public void triggerBehavior() {
-        if (this.behavior instanceof Aggressive) {
-            if (this.behavior.isTriggered()) {
-                ((Aggressive) this.behavior).setIsTriggered(true);
-                this.applyAgressiveTriggerEffect();
-            }
-        }
+        this.behavior.trigger(this);
     }
 
-    public AbstractBehavior getBehavior() {
+    public Behavior getBehavior() {
         return this.behavior;
     }
 
@@ -83,12 +72,7 @@ public class Blob {
 
     public void update() {
         if (this.behavior.isTriggered()) {
-            if (this.behavior instanceof Aggressive) {
-                if (this.behavior.isTriggered()) {
-                    ((Aggressive) this.behavior).setIsTriggered(true);
-                    this.applyAgressiveRecurrentEffect();
-                }
-            }
+            this.behavior.applyRecurrentEffect(this);
         }
     }
 
@@ -99,29 +83,5 @@ public class Blob {
         }
 
         return String.format("IBlob %s: %s HP, %s Damage", this.getName(), this.getHealth(), this.getDamage());
-    }
-
-    private void attackAffectSource(Blob source) {
-        source.setHealth(source.getHealth() - source.getHealth() / 2);
-    }
-
-    private void attackAffectTarget(Blob source, Blob target) {
-        target.respond(source.getDamage() * 2);
-    }
-
-    private void applyAgressiveTriggerEffect() {
-        this.setDamage(this.getDamage() * 2);
-    }
-
-    private void applyAgressiveRecurrentEffect() {
-        if (((Aggressive)this.behavior).toDelayRecurrentEffect()) {
-            ((Aggressive)this.behavior).setToDelayRecurrentEffect(false);
-        } else {
-            this.setDamage(this.getDamage() - 5);
-
-            if (this.getDamage() <= this.initialHealth) {
-                this.setDamage(this.initialDamage);
-            }
-        }
     }
 }

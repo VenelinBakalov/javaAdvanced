@@ -1,6 +1,8 @@
-package p04_recharge;
+package p04_recharge_with_adapter;
 
-public class Robot extends Worker implements Rechargeable {
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+public class Robot extends Worker {
 
     private int capacity;
     private int currentPower;
@@ -35,4 +37,8 @@ public class Robot extends Worker implements Rechargeable {
         this.currentPower = this.capacity;
     }
 
+    @Override
+    public void sleep() {
+        throw new NotImplementedException();
+    }
 }

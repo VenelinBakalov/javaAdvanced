@@ -4,7 +4,8 @@ import models.Blob;
 
 public class PutridFart extends AbstractAttack {
 
+    @Override
     public void execute(Blob source, Blob target) {
-        target.respond(source.getDamage());
+        super.targetRespond(target, source.getDamage());
     }
 }
