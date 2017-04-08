@@ -1,5 +1,6 @@
 package commandInterpreter.commands;
 
+import annotations.Alias;
 import annotations.Inject;
 import interfaces.OutputWriter;
 import models.BlobsRepository;
@@ -8,6 +9,7 @@ import models.Blob;
 /**
  * Created by Venelin on 8.4.2017 г..
  */
+@Alias(value = "attack")
 public class AttackCommand extends Command {
 
     @Inject private BlobsRepository repository;

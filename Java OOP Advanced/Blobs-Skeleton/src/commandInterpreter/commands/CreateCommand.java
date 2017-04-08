@@ -1,5 +1,6 @@
 package commandInterpreter.commands;
 
+import annotations.Alias;
 import annotations.Inject;
 import models.BlobsRepository;
 import factories.AttackFactory;
@@ -11,6 +12,7 @@ import models.Blob;
 /**
  * Created by Venelin on 8.4.2017 г..
  */
+@Alias(value = "create")
 public class CreateCommand extends Command {
 
     @Inject private BehaviorFactory behaviorFactory;

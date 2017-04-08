@@ -1,5 +1,6 @@
 package commandInterpreter.commands;
 
+import annotations.Alias;
 import annotations.Inject;
 import models.BlobsRepository;
 import interfaces.OutputWriter;
@@ -7,6 +8,7 @@ import interfaces.OutputWriter;
 /**
  * Created by Venelin on 8.4.2017 г..
  */
+@Alias(value = "status")
 public class StatusCommand extends Command {
 
     @Inject private BlobsRepository repository;
