@@ -5,7 +5,7 @@ import models.Blob;
 /**
  * Created by Venelin on 7.4.2017 г..
  */
-public class Blobplode extends AbstractAttack {
+public class BlobplodeAttack extends AbstractAttack {
 
     private static final int BLOBPLODE_ATTACK_DAMAGE_MULTIPLIER = 2;
     private static final int BLOBPLODE_ATTACK_HEALTH_REDUCE_RATE = 2;
@@ -13,6 +13,9 @@ public class Blobplode extends AbstractAttack {
 
     @Override
     public void execute(Blob attacker, Blob target) {
+        if (attacker.getHealth() <= 0 || target.getHealth() <= 0) {
+            return;
+        }
         this.attackAffectSource(attacker);
         this.attackAffectTarget(attacker, target);
     }

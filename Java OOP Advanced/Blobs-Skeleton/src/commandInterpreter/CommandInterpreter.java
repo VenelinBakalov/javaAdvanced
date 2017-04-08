@@ -32,7 +32,15 @@ public class CommandInterpreter {
 
     public void interpretCommand(String input) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
         String[] data = input.split(" ");
-        String commandName = data[0].toUpperCase().charAt(0) + data[0].substring(1) + COMMAND_SUFFIX;
+        String[] commandTypeArgs = data[0].split("-");
+        String commandName;
+        if (commandTypeArgs.length == 1) {
+            commandName = commandTypeArgs[0].toUpperCase().charAt(0) + commandTypeArgs[0].substring(1) + COMMAND_SUFFIX;
+        } else {
+            commandName = commandTypeArgs[0].toUpperCase().charAt(0) + commandTypeArgs[0].substring(1)
+                    + commandTypeArgs[1].toUpperCase().charAt(0) + commandTypeArgs[1].substring(1)
+                    + COMMAND_SUFFIX;
+        }
 
         Executable command = parseCommand(data, commandName);
         command.execute();

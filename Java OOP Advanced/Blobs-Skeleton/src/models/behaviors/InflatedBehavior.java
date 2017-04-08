@@ -5,12 +5,12 @@ import models.Blob;
 /**
  * Created by Venelin on 7.4.2017 г..
  */
-public class Inflated extends AbstractBehavior {
+public class InflatedBehavior extends AbstractBehavior {
 
     private static final int INFLATED_HEALTH_GAIN = 50;
     private static final int INFLATED_HEALTH_DECREMENT = 10;
 
-    public Inflated() {
+    public InflatedBehavior() {
     }
 
     @Override

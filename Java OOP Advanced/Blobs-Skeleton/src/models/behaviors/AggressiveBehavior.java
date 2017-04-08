@@ -2,7 +2,7 @@ package models.behaviors;
 
 import models.Blob;
 
-public class Aggressive extends AbstractBehavior {
+public class AggressiveBehavior extends AbstractBehavior {
 
     private static final int AGGRESSIVE_DAMAGE_MULTIPLY = 2;
     private static final int AGGRESSIVE_DAMAGE_DECREMENT = 5;

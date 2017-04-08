@@ -9,9 +9,11 @@ import java.util.Map;
 public class BlobsRepository {
 
     private Map<String, Blob> repository;
+    private boolean isEventReportTriggered;
 
     public BlobsRepository() {
         this.repository = new LinkedHashMap<>();
+        this.isEventReportTriggered = false;
     }
 
     public Blob find(String name) {
@@ -32,5 +34,13 @@ public class BlobsRepository {
             sb.append(blob).append(System.lineSeparator());
         }
         return sb.toString().trim();
+    }
+
+    public void triggerReportEvents() {
+        this.isEventReportTriggered = true;
+    }
+
+    public boolean isEventReportTriggered() {
+        return isEventReportTriggered;
     }
 }

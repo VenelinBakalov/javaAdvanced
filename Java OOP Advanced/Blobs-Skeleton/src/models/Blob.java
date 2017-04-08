@@ -10,10 +10,9 @@ public class Blob {
     private int damage;
     private Behavior behavior;
     private Attack attack;
-    private int triggerCount;
 
     private int initialHealth;
-    private int initialDamage;
+    private int triggerCount;
 
     public Blob(String name, int health, int damage, Behavior behavior, Attack attack) {
         this.name = name;
@@ -23,7 +22,6 @@ public class Blob {
         this.attack = attack;
 
         this.initialHealth = health;
-        this.initialDamage = damage;
     }
 
     public int getHealth() {
@@ -79,5 +77,13 @@ public class Blob {
         }
 
         return String.format("Blob %s: %s HP, %s Damage", this.getName(), this.getHealth(), this.getDamage());
+    }
+
+    public int getTriggerCount() {
+        return triggerCount;
+    }
+
+    public void setTriggerCount(int triggerCount) {
+        this.triggerCount = triggerCount;
     }
 }
