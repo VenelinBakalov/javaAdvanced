@@ -2,10 +2,6 @@ package models;
 
 import interfaces.Attack;
 import interfaces.Behavior;
-import models.attacks.AbstractAttack;
-import models.attacks.PutridFart;
-import models.behavors.AbstractBehavior;
-import models.behavors.Aggressive;
 
 public class Blob {
 
@@ -79,9 +75,9 @@ public class Blob {
     @Override
     public String toString() {
         if (this.getHealth() <= 0) {
-            return String.format("IBlob %s KILLED", this.getName());
+            return String.format("Blob %s KILLED", this.getName());
         }
 
-        return String.format("IBlob %s: %s HP, %s Damage", this.getName(), this.getHealth(), this.getDamage());
+        return String.format("Blob %s: %s HP, %s Damage", this.getName(), this.getHealth(), this.getDamage());
     }
 }

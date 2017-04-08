@@ -1,4 +1,4 @@
-package models.behavors;
+package models.behaviors;
 
 import models.Blob;
 
@@ -10,13 +10,14 @@ public class Inflated extends AbstractBehavior {
     private static final int INFLATED_HEALTH_GAIN = 50;
     private static final int INFLATED_HEALTH_DECREMENT = 10;
 
+    public Inflated() {
+    }
+
     @Override
     public void trigger(Blob source) {
         if (!super.isTriggered()) {
             super.setIsTriggered(true);
             this.applyTriggerEffect(source);
-        } else {
-            this.applyRecurrentEffect(source);
         }
     }
 

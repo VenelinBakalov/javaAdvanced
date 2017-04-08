@@ -1,4 +1,4 @@
-package models.behavors;
+package models.behaviors;
 
 import models.Blob;
 
@@ -15,8 +15,6 @@ public class Aggressive extends AbstractBehavior {
             this.sourceInitialDamage = source.getDamage();
             super.setIsTriggered(true);
             this.applyTriggerEffect(source);
-        } else {
-            this.applyRecurrentEffect(source);
         }
     }
 
