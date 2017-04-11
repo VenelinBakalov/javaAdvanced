@@ -7,13 +7,13 @@ public class Constants {
 
     public static final String INCORRECT_PROPERTY_VALUE_MESSAGE = "%s must be a positive integer.";
 
-    public static final String INCORRECT_SAIL_EFFICIANCY_MESSAGE = "Sail Effectiveness must be between [1...100].";
+    public static final String INCORRECT_SAIL_EFFICIENCY_MESSAGE = "Sail Effectiveness must be between [1...100].";
 
-    public static final String IncorrectEngineTypeMessage = "Incorrect engine type.";
+    public static final String INCORRECT_ENGINE_TYPE_MESSAGE = "Incorrect engine type.";
 
-    public static final String DuplicateModelMessage = "An entry for the given model already exists.";
+    public static final String DUPLICATE_MODEL_MESSAGE = "An entry for the given model already exists.";
 
-    public static final String NonExistantModelMessage = "The specified model does not exist.";
+    public static final String NON_EXISTENT_MODEL_MESSAGE = "The specified model does not exist.";
 
     public static final String RaceAlreadyExistsMessage = "The current race has already been set.";
 

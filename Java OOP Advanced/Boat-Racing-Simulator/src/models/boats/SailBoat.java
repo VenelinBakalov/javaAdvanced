@@ -1,6 +1,7 @@
 package models.boats;
 
 import Utility.Constants;
+import contracts.Race;
 
 /**
  * Created by Venelin on 10.4.2017 г..
@@ -20,8 +21,13 @@ public class SailBoat extends Boat {
 
     private void setSailEfficiency(int sailEfficiency) {
         if (sailEfficiency < MINIMUM_SAIL_EFFICIENCY || sailEfficiency > MAXIMUM_SAIL_EFFICIENCY) {
-            throw new IllegalArgumentException(Constants.INCORRECT_SAIL_EFFICIANCY_MESSAGE);
+            throw new IllegalArgumentException(Constants.INCORRECT_SAIL_EFFICIENCY_MESSAGE);
         }
         this.sailEfficiency = sailEfficiency;
+    }
+
+    @Override
+    public double calculateRaceSpeed(Race race) {
+        return 0;
     }
 }

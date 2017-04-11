@@ -1,6 +1,7 @@
 package models.boats;
 
 import Utility.Validator;
+import contracts.Race;
 
 /**
  * Created by Venelin on 9.4.2017 г..
@@ -17,5 +18,10 @@ public class RowBoat extends Boat {
     private void setOars(int oars) {
         Validator.validatePropertyValue(oars, "Oars");
         this.oars = oars;
+    }
+
+    @Override
+    public double calculateRaceSpeed(Race race) {
+        return 0;
     }
 }

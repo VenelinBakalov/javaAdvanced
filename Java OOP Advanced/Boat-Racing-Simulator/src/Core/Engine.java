@@ -1,8 +1,8 @@
-package Core;
+package core;
 
 import contracts.IBoatSimulatorController;
-import contracts.ICommandHandler;
-import contracts.IRace;
+import contracts.CommandHandler;
+import contracts.Race;
 import database.BoatSimulatorDatabase;
 import exeptions.*;
 
@@ -13,19 +13,19 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Engine {
-    private CommandHandler commandHandler;
+    private CommandHandlerImpl commandHandler;
 
-    public Engine(CommandHandler commandHandler)
+    public Engine(CommandHandlerImpl commandHandler)
     {
         this.commandHandler = commandHandler;
     }
 
     public Engine()
     {
-        this.commandHandler = new CommandHandler();
+        this.commandHandler = new CommandHandlerImpl();
     }
 
-    public ICommandHandler getCommandHandler;
+    public CommandHandler getCommandHandler;
 
     public void Run()
     {
@@ -61,7 +61,7 @@ public class Engine {
     public static void main(String[] args) {
         IBoatSimulatorController ctrl = new IBoatSimulatorController() {
             @Override
-            public IRace getCurrentRace() {
+            public Race getCurrentRace() {
                 return null;
             }
 
@@ -117,7 +117,7 @@ public class Engine {
             }
         };
 
-        CommandHandler commandHandler = new CommandHandler(ctrl);
+        CommandHandlerImpl commandHandler = new CommandHandlerImpl(ctrl);
         Engine engine = new Engine();
         engine.Run();
     }

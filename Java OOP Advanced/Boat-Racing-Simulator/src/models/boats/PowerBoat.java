@@ -1,6 +1,7 @@
 package models.boats;
 
 import contracts.BoatEngine;
+import contracts.Race;
 
 /**
  * Created by Venelin on 10.4.2017 г..
@@ -28,5 +29,10 @@ public class PowerBoat extends Boat {
             throw new IllegalArgumentException();
         }
         this.secondEngine = secondEngine;
+    }
+
+    @Override
+    public double calculateRaceSpeed(Race race) {
+        return 0;
     }
 }

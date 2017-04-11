@@ -41,6 +41,6 @@ public class BlobsRepository {
     }
 
     public boolean isEventReportTriggered() {
-        return isEventReportTriggered;
+        return this.isEventReportTriggered;
     }
 }

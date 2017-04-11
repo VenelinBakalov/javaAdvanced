@@ -1,11 +1,10 @@
 package contracts;
 
-import Core.Engine;
 import database.BoatSimulatorDatabase;
 import exeptions.*;
 
 public interface IBoatSimulatorController {
-    IRace getCurrentRace();
+    Race getCurrentRace();
 
     BoatSimulatorDatabase getDatabase();
 

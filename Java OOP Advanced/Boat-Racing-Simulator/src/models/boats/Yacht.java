@@ -2,6 +2,7 @@ package models.boats;
 
 import Utility.Validator;
 import contracts.BoatEngine;
+import contracts.Race;
 
 /**
  * Created by Venelin on 10.4.2017 г..
@@ -27,5 +28,10 @@ public class Yacht extends Boat {
             throw new IllegalArgumentException();
         }
         this.boatEngine = boatEngine;
+    }
+
+    @Override
+    public double calculateRaceSpeed(Race race) {
+        return 0;
     }
 }
