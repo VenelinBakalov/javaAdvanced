@@ -1,0 +1,42 @@
+Design Pattern - 3 категории
+-Structural - class and object composition - inheritance, composition.....
+-Creational - creation mechanisms - factory....
+-Behavioral - object communication
+
+Chain of responsibility - верига от обекти, които обработват някаква заявка. Прилича на 
+Linked List като графика. Единия обект проверява дали може да обработи обекта, ако не - 
+пуска надолу по веригата. Всеки пази референция към следващия.
+Decouples sender and reciever. Chains multiple recievers that can handle a request. Supports
+undoable requests. requestLogger.next(messageLogger)....
+interface Handler, void handle(LogType, String); void setSuccessor(Handler);
+if (type == ).... else successor.handle(...)
+public abstract class Logger implements Handler{
+
+    private Handler successor;
+
+    @Override
+    public void setSuccessor(Handler successor) {
+        this.successor = successor;
+    }
+
+    protected void passToSuccessor(LogType type, String message) {
+        if (this.successor != null) {
+            this.successor.handle(type, message);
+        }
+    }
+}
+
+ромба в диаграма показва, че може да съдържа няколко обекта от даден тип.
+
+Command Pattern - encapsulate requests as an Objects. Callbacks (methods/functions) are now 
+object oriented. callback.execute();. Decouples invoker from reciever. Също можем да си пазим
+някакво history от команди и да го използваме за undo. примерно метод storeAndExecute
+
+Mediator - handling groups of colleagues. Encapsulate how a set of objects interact. Colleagues
+are decoupled to one another.
+Пример - AttackGroup. addMember, groupTarger, groupAttack.
+Връзката може да е many to many
+
+Observer - handle events. обекта известява всички observer-и, че дадено събитие се е случило.
+Връзката винаги е 1 към много.
+Update observers once an event in the subject occurs. Обекта държи референция към всички observer
