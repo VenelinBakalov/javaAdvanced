@@ -5,8 +5,6 @@ package app.logger;
  */
 public class EventLogger extends Logger {
 
-    private Handler successor;
-
     @Override
     public void handle(LogType type, String message) {
         if (type == LogType.EVENT) {
@@ -14,10 +12,5 @@ public class EventLogger extends Logger {
         } else {
             super.passToSuccessor(type, message);
         }
-    }
-
-    @Override
-    public void setSuccessor(Handler successor) {
-        this.successor = successor;
     }
 }
