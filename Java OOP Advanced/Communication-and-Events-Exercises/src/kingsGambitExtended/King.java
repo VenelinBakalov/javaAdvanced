@@ -1,4 +1,4 @@
-package kingsGambit;
+package kingsGambitExtended;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -29,5 +29,9 @@ public class King extends BaseUnit implements Attackable {
     public void respondToAttack() {
         System.out.println(String.format("King %s is under attack!", super.getName()));
         defenders.values().forEach(Defender::respond);
+    }
+
+    public Defender getDefender(String name) {
+        return this.defenders.get(name);
     }
 }
