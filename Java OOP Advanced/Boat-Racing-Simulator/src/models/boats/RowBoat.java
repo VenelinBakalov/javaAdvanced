@@ -1,6 +1,6 @@
 package models.boats;
 
-import Utility.Validator;
+import utility.Validator;
 import contracts.Race;
 
 /**
@@ -10,8 +10,8 @@ public class RowBoat extends Boat {
 
     private int oars;
 
-    public RowBoat(String model, int weight, int oars) {
-        super(model, weight);
+    public RowBoat(String model, int weight, boolean isMotorBoat, int oars) {
+        super(model, weight, isMotorBoat);
         this.setOars(oars);
     }
 
@@ -22,6 +22,8 @@ public class RowBoat extends Boat {
 
     @Override
     public double calculateRaceSpeed(Race race) {
-        return 0;
+        double result = (this.oars * 100D) - super.getWeight() + race.getOceanCurrentSpeed();
+
+        return result;
     }
 }

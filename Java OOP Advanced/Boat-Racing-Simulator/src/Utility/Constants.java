@@ -1,4 +1,4 @@
-package Utility;
+package utility;
 
 public class Constants {
 
@@ -21,7 +21,7 @@ public class Constants {
 
     public static final String InsufficientContestantsMessage = "Not enough contestants for the race.";
 
-    public static final String IncorrectBoatTypeMessage = "The specified boat does not meet the race constraints.";
+    public static final String INCORRECT_BOAT_TYPE_MESSAGE = "The specified boat does not meet the race constraints.";
 
     public static final int MIN_BOAT_MODEL_LENGTH = 5;
 

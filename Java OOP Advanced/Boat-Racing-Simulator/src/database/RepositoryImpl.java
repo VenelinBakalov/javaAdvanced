@@ -1,8 +1,7 @@
 package database;
 
-import Utility.Constants;
+import utility.Constants;
 import contracts.Modelable;
-import contracts.Raceable;
 import contracts.Repository;
 import exeptions.DuplicateModelException;
 import exeptions.NonExistantModelException;
@@ -15,8 +14,7 @@ public class RepositoryImpl<T extends Modelable> implements Repository<T> {
 
     private Map<String, T> itemsByModel;
 
-    public RepositoryImpl()
-    {
+    public RepositoryImpl() {
         this.itemsByModel = new HashMap<>();
     }
 
@@ -31,8 +29,7 @@ public class RepositoryImpl<T extends Modelable> implements Repository<T> {
 
     @Override
     public T getItem(String model) throws NonExistantModelException {
-        if (!this.itemsByModel.containsKey(model))
-        {
+        if (!this.itemsByModel.containsKey(model)) {
             throw new NonExistantModelException(Constants.NON_EXISTENT_MODEL_MESSAGE);
         }
 

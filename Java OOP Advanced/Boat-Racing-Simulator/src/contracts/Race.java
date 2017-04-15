@@ -11,7 +11,11 @@ public interface Race
 
     boolean getAllowsMotorboats();
 
+    int getOceanCurrentSpeed();
+
+    int getWindSpeed();
+
     void addParticipant(Raceable boat) throws DuplicateModelException;
 
-    Iterable<Raceable> getParticipants();
+    List<Raceable> getParticipants();
 }

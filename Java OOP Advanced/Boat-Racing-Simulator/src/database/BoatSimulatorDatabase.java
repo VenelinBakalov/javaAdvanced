@@ -1,24 +1,30 @@
 package database;
 
+import contracts.BoatEngine;
 import contracts.Repository;
 import models.boats.Boat;
-import models.engines.BoatEngineImpl;
 
 public class BoatSimulatorDatabase {
 
-    Repository<Boat> boats;
-    Repository<BoatEngineImpl> engines;
+    private static final BoatSimulatorDatabase INSTANCE = new BoatSimulatorDatabase();
 
-    public BoatSimulatorDatabase() {
+    private Repository<Boat> boats;
+    private Repository<BoatEngine> engines;
+
+    private BoatSimulatorDatabase() {
         this.boats = new RepositoryImpl<>();
         this.engines = new RepositoryImpl<>();
+    }
+
+    public static BoatSimulatorDatabase getInstance() {
+        return INSTANCE;
     }
 
     public Repository<Boat> getBoats() {
         return this.boats;
     }
 
-    public Repository<BoatEngineImpl> getEngines() {
+    public Repository<BoatEngine> getEngines() {
         return this.engines;
     }
 }

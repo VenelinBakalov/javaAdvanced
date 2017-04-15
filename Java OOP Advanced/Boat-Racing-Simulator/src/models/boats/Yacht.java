@@ -1,6 +1,6 @@
 package models.boats;
 
-import Utility.Validator;
+import utility.Validator;
 import contracts.BoatEngine;
 import contracts.Race;
 
@@ -12,10 +12,18 @@ public class Yacht extends Boat {
     private BoatEngine boatEngine;
     private int cargoWeight;
 
-    public Yacht(String model, int weight, BoatEngine boatEngine, int cargoWeight) {
-        super(model, weight);
+    public Yacht(String model, int weight, boolean isMotorBoat, BoatEngine boatEngine, int cargoWeight) {
+        super(model, weight, isMotorBoat);
         this.setBoatEngine(boatEngine);
         this.setCargoWeight(cargoWeight);
+    }
+
+    @Override
+    public double calculateRaceSpeed(Race race) {
+        double oceanSpeed = race.getOceanCurrentSpeed() / 2D;
+        double result = this.boatEngine.getOutput() - (super.getWeight() + this.cargoWeight) + oceanSpeed;
+
+        return result;
     }
 
     private void setCargoWeight(int cargoWeight) {
@@ -28,10 +36,5 @@ public class Yacht extends Boat {
             throw new IllegalArgumentException();
         }
         this.boatEngine = boatEngine;
-    }
-
-    @Override
-    public double calculateRaceSpeed(Race race) {
-        return 0;
     }
 }

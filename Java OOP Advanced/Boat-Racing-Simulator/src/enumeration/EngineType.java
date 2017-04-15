@@ -1,7 +1,6 @@
 package enumeration;
 
-public enum EngineType
-{
-    Jet,
-    Sterndrive
+public enum EngineType {
+    JET,
+    STERNDRIVE
 }

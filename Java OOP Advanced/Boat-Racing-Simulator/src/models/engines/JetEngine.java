@@ -1,8 +1,8 @@
 package models.engines;
 
-import models.engines.BoatEngineImpl;
 
 public class JetEngine extends BoatEngineImpl {
+
     private static final int MULTIPLIER = 5;
 
     public JetEngine(String model, int horsepower, int displacement) {

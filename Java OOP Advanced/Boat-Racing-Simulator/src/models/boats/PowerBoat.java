@@ -11,8 +11,8 @@ public class PowerBoat extends Boat {
     private BoatEngine firstEngine;
     private BoatEngine secondEngine;
 
-    public PowerBoat(String model, int weight, BoatEngine firstEngine, BoatEngine secondEngine) {
-        super(model, weight);
+    public PowerBoat(String model, int weight, boolean isMotorBoat, BoatEngine firstEngine, BoatEngine secondEngine) {
+        super(model, weight, isMotorBoat);
         this.setFirstEngine(firstEngine);
         this.setSecondEngine(secondEngine);
     }
@@ -33,6 +33,10 @@ public class PowerBoat extends Boat {
 
     @Override
     public double calculateRaceSpeed(Race race) {
-        return 0;
+        double engineSum = (this.firstEngine.getOutput() + this.secondEngine.getOutput() * 1.0);
+        double oceanSpeed = race.getOceanCurrentSpeed() / 5D;
+        double result = (engineSum - super.getWeight() + oceanSpeed);
+
+        return result;
     }
 }

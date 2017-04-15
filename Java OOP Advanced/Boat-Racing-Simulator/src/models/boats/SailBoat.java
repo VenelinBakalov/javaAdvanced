@@ -1,6 +1,6 @@
 package models.boats;
 
-import Utility.Constants;
+import utility.Constants;
 import contracts.Race;
 
 /**
@@ -14,8 +14,8 @@ public class SailBoat extends Boat {
     private int sailEfficiency;
 
 
-    public SailBoat(String model, int weight, int sailEfficiency) {
-        super(model, weight);
+    public SailBoat(String model, int weight, boolean isMotorBoat, int sailEfficiency) {
+        super(model, weight, isMotorBoat);
         this.setSailEfficiency(sailEfficiency);
     }
 
@@ -28,6 +28,10 @@ public class SailBoat extends Boat {
 
     @Override
     public double calculateRaceSpeed(Race race) {
-        return 0;
+        double boatEfficiency = race.getWindSpeed() * (this.sailEfficiency / 100D);
+        double oceanSpeed = race.getOceanCurrentSpeed() / 2D;
+        double result = boatEfficiency - super.getWeight() + oceanSpeed;
+
+        return result;
     }
 }

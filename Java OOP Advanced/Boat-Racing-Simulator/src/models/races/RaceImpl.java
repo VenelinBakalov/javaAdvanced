@@ -1,7 +1,7 @@
 package models.races;
 
-import Utility.Constants;
-import Utility.Validator;
+import utility.Constants;
+import utility.Validator;
 import contracts.Race;
 import contracts.Raceable;
 import exeptions.DuplicateModelException;
@@ -9,6 +9,7 @@ import exeptions.DuplicateModelException;
 import java.util.*;
 
 public class RaceImpl implements Race {
+
     private int distance;
     private int windSpeed;
     private int oceanCurrentSpeed;
@@ -25,7 +26,17 @@ public class RaceImpl implements Race {
 
     @Override
     public int getDistance() {
-        return distance;
+        return this.distance;
+    }
+
+    @Override
+    public int getOceanCurrentSpeed() {
+        return oceanCurrentSpeed;
+    }
+
+    @Override
+    public int getWindSpeed() {
+        return windSpeed;
     }
 
     @Override
@@ -42,8 +53,8 @@ public class RaceImpl implements Race {
     }
 
     @Override
-    public Iterable<Raceable> getParticipants() {
-        return this.registeredBoats.values();
+    public List<Raceable> getParticipants() {
+        return new ArrayList<>(this.registeredBoats.values());
     }
 
     private void setDistance(int distance) {
