@@ -1,4 +1,4 @@
-package workForce;
+package workForce.repositories;
 
 import workForce.employees.Employee;
 

@@ -1,5 +1,11 @@
 package kingsGambitExtended;
 
+import kingsGambitExtended.abstractions.Defender;
+import kingsGambitExtended.models.Footman;
+import kingsGambitExtended.models.KillDefenderEvent;
+import kingsGambitExtended.models.King;
+import kingsGambitExtended.models.RoyalGuard;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

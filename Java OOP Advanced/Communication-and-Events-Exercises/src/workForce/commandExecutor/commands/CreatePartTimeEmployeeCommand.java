@@ -1,19 +1,19 @@
-package workForce.commands;
+package workForce.commandExecutor.commands;
 
-import workForce.EmployeeRepository;
+import workForce.annotations.Inject;
 import workForce.employees.Employee;
 import workForce.employees.PartTimeEmployee;
+import workForce.repositories.EmployeeRepository;
 
 /**
  * Created by Venelin on 14.4.2017 г..
  */
 public class CreatePartTimeEmployeeCommand extends BaseCommand {
 
-    private EmployeeRepository repository;
+    @Inject private EmployeeRepository repository;
 
-    public CreatePartTimeEmployeeCommand(String[] data, EmployeeRepository repository) {
+    public CreatePartTimeEmployeeCommand(String[] data) {
         super(data);
-        this.repository = repository;
     }
 
     @Override

@@ -1,4 +1,7 @@
-package kingsGambitExtended;
+package kingsGambitExtended.models;
+
+import kingsGambitExtended.abstractions.BaseUnit;
+import kingsGambitExtended.abstractions.Defender;
 
 /**
  * Created by Venelin on 13.4.2017 г..

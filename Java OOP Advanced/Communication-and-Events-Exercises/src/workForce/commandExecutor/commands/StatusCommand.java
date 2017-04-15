@@ -1,17 +1,17 @@
-package workForce.commands;
+package workForce.commandExecutor.commands;
 
-import workForce.JobRepository;
+import workForce.annotations.Inject;
+import workForce.repositories.JobRepository;
 
 /**
  * Created by Venelin on 14.4.2017 г..
  */
 public class StatusCommand extends BaseCommand {
 
-    private JobRepository repository;
+    @Inject private JobRepository repository;
 
-    public StatusCommand(String[] data, JobRepository repository) {
+    public StatusCommand(String[] data) {
         super(data);
-        this.repository = repository;
     }
 
     @Override

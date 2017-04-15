@@ -1,4 +1,8 @@
-package kingsGambitExtended;
+package kingsGambitExtended.models;
+
+import kingsGambitExtended.abstractions.Attackable;
+import kingsGambitExtended.abstractions.BaseUnit;
+import kingsGambitExtended.abstractions.Defender;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

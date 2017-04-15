@@ -1,8 +1,10 @@
-package workForce;
+package workForce.repositories;
 
+
+import workForce.jobs.Job;
+import workForce.jobs.Listener;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -11,24 +13,21 @@ import java.util.List;
 public class JobRepository {
 
     private List<Job> jobs;
+    private Listener listener;
 
-    public JobRepository() {
+    public JobRepository(Listener listener) {
         this.jobs = new ArrayList<>();
+        this.listener = listener;
     }
 
-    public void add(Job element) {
-        this.jobs.add(element);
-    }
-
-    public void remove(Job element) {
-        this.jobs.remove(element);
+    public void addJob(Job job) {
+        job.setListener(this.listener);
+        this.jobs.add(job);
     }
 
     public void update() {
-        Iterator<Job> jobIterator = this.jobs.iterator();
-        while (jobIterator.hasNext()) {
-            jobIterator.next().update();
-        }
+        this.jobs.forEach(Job::update);
+        this.jobs.removeIf(Job::isDone);
     }
 
     @Override

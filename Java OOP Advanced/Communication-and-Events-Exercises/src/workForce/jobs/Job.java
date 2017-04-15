@@ -1,4 +1,4 @@
-package workForce;
+package workForce.jobs;
 
 
 import workForce.employees.Employee;
@@ -11,22 +11,32 @@ public class Job {
     private String name;
     private int hoursOfWorkRequired;
     private Employee employee;
-    private JobRepository repository;
+    private Listener listener;
+    private boolean isDone;
 
-    public Job(String name, int hoursOfWorkRequired, Employee employee, JobRepository repository) {
+    public Job(String name, int hoursOfWorkRequired, Employee employee) {
         this.name = name;
         this.hoursOfWorkRequired = hoursOfWorkRequired;
         this.employee = employee;
-        this.repository = repository;
+        this.isDone = false;
+    }
+
+    public boolean isDone() {
+        return this.isDone;
+    }
+
+    public void setListener(Listener listener) {
+        this.listener = listener;
     }
 
     public void update() {
         this.hoursOfWorkRequired -= this.employee.getWorkHoursPerWeek();
 
-        if (this.hoursOfWorkRequired <= 0) {
-            System.out.println(String.format("Job %s done!", this.name));
-            this.repository.remove(this);
+        if (this.listener != null && this.hoursOfWorkRequired <= 0) {
+            this.listener.handle(new JobDoneEvent(this, this.name));
+            this.isDone = true;
         }
+
     }
 
     @Override

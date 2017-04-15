@@ -1,4 +1,4 @@
-package kingsGambitExtended;
+package kingsGambitExtended.abstractions;
 
 /**
  * Created by Venelin on 13.4.2017 г..

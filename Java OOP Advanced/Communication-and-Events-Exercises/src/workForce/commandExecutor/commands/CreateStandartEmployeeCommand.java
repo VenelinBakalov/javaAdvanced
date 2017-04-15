@@ -1,19 +1,19 @@
-package workForce.commands;
+package workForce.commandExecutor.commands;
 
-import workForce.EmployeeRepository;
+import workForce.annotations.Inject;
 import workForce.employees.Employee;
 import workForce.employees.StandartEmployee;
+import workForce.repositories.EmployeeRepository;
 
 /**
  * Created by Venelin on 14.4.2017 г..
  */
 public class CreateStandartEmployeeCommand extends BaseCommand {
 
-    private EmployeeRepository repository;
+    @Inject private EmployeeRepository repository;
 
-    public CreateStandartEmployeeCommand(String[] data, EmployeeRepository repository) {
+    public CreateStandartEmployeeCommand(String[] data) {
         super(data);
-        this.repository = repository;
     }
 
     @Override
