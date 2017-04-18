@@ -48,32 +48,32 @@ public class EmergencyManagementSystem implements ManagementSystem {
     }
 
     @Override
-    public String registerHealthEmergency() {
+    public String registerHealthEmergency(Emergency emergency) {
         return null;
     }
 
     @Override
-    public String registerOrderEmergency() {
+    public String registerOrderEmergency(Emergency emergency) {
         return null;
     }
 
     @Override
-    public String registerFireServiceCenter() {
+    public String registerFireServiceCenter(EmergencyCenter emergencyCenter) {
         return null;
     }
 
     @Override
-    public String registerMedicalServiceCenter() {
+    public String registerMedicalServiceCenter(EmergencyCenter emergencyCenter) {
         return null;
     }
 
     @Override
-    public String registerPoliceServiceCenter() {
+    public String registerPoliceServiceCenter(EmergencyCenter emergencyCenter) {
         return null;
     }
 
     @Override
-    public String processEmergencies() {
+    public String processEmergencies(String type) {
         return null;
     }
 
@@ -81,4 +81,5 @@ public class EmergencyManagementSystem implements ManagementSystem {
     public String emergencyReport() {
         return null;
     }
+
 }

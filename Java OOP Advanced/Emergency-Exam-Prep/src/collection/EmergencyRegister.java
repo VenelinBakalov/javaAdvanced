@@ -2,18 +2,18 @@ package collection;
 
 import models.emergencies.BaseEmergency;
 
-public class EmergencyRegister {
+public class EmergencyRegister<T> implements Register<T> {
 
     private static final Integer INITIAL_SIZE = 16;
 
-    private BaseEmergency[] emergencyQueue;
+    private T[] emergencyQueue;
 
     private Integer currentSize;
 
     private Integer nextIndex;
 
     public EmergencyRegister() {
-        this.emergencyQueue = new BaseEmergency[INITIAL_SIZE];
+        this.emergencyQueue = (T[]) new Object[INITIAL_SIZE];
         this.currentSize = 0;
         this.nextIndex = 0;
     }
@@ -35,13 +35,13 @@ public class EmergencyRegister {
     }
 
     private void checkIfResizeNeeded() {
-        if(this.currentSize == this.emergencyQueue.length) {
+        if (this.currentSize == this.emergencyQueue.length) {
             this.resize();
         }
     }
 
     private void resize() {
-        BaseEmergency[] newArray = new BaseEmergency[2 * this.currentSize];
+        T[] newArray = (T[]) new Object[2 * this.currentSize];
 
         for (int i = 0; i < this.currentSize; i++) {
             newArray[i] = this.emergencyQueue[i];
@@ -50,7 +50,8 @@ public class EmergencyRegister {
         this.emergencyQueue = newArray;
     }
 
-    public void enqueueEmergency(BaseEmergency emergency) {
+    @Override
+    public void enqueueEmergency(T emergency) {
         this.checkIfResizeNeeded();
 
         this.emergencyQueue[this.nextIndex] = emergency;
@@ -59,12 +60,11 @@ public class EmergencyRegister {
         this.incrementCurrentSize();
     }
 
-    public BaseEmergency dequeueEmergency() {
-        BaseEmergency removedElement = this.emergencyQueue[0];
+    @Override
+    public T dequeueEmergency() {
+        T removedElement = this.emergencyQueue[0];
 
-        for (int i = 0; i < this.currentSize - 1; i++) {
-            this.emergencyQueue[i] = this.emergencyQueue[i + 1];
-        }
+        System.arraycopy(this.emergencyQueue, 1, this.emergencyQueue, 0, this.currentSize - 1);
 
         this.decrementNextIndex();
         this.decrementCurrentSize();
@@ -72,11 +72,17 @@ public class EmergencyRegister {
         return removedElement;
     }
 
-    public BaseEmergency peekEmergency() {
-        BaseEmergency peekedElement = this.emergencyQueue[0];
+    @Override
+    public Integer count() {
+        return this.currentSize;
+    }
+
+    public T peekEmergency() {
+        T peekedElement = this.emergencyQueue[0];
         return peekedElement;
     }
 
+    @Override
     public Boolean isEmpty() {
         return this.currentSize == 0;
     }

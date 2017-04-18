@@ -9,5 +9,9 @@ public interface EmergencyCenter {
 
     Integer getAmountOfMaximumEmergencies();
 
+    Integer getProcessedEmergencies();
+
+    void processEmergency();
+
     Boolean isForRetirement();
 }

@@ -5,5 +5,7 @@ package io;
  */
 public interface Writer {
 
-    void writeLine(String line);
+    void write(String text);
+
+    void write(String text, Object... params);
 }

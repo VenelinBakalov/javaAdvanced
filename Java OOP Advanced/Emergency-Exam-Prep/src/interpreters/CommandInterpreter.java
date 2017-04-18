@@ -29,6 +29,7 @@ public class CommandInterpreter implements Interpreter {
 
         String params[] = line.split("\\|");
         String commandName = params[0];
+
         Class<Executable> executableClass = (Class<Executable>) Class.forName(PACKAGE + commandName + COMMAND_SUFFIX);
         Constructor<Executable> executableConstructor = executableClass.getDeclaredConstructor(ManagementSystem.class);
 

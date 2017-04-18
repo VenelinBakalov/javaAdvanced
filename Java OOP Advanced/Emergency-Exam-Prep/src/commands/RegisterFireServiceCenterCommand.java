@@ -3,18 +3,18 @@ package commands;
 import annotations.InjectArgs;
 import core.ManagementSystem;
 import models.centers.EmergencyCenter;
-import models.centers.MedicalServiceCenter;
+import models.centers.FiremanServiceCenter;
 
 /**
  * Created by Venelin on 18.4.2017 г..
  */
-public class RegisterMedicalServiceCenterCommand extends BaseCommand {
+public class RegisterFireServiceCenterCommand extends BaseCommand {
 
     @InjectArgs
     private String[] params;
     private EmergencyCenter emergencyCenter;
 
-    public RegisterMedicalServiceCenterCommand(ManagementSystem managementSystem) {
+    public RegisterFireServiceCenterCommand(ManagementSystem managementSystem) {
         super(managementSystem);
     }
 
@@ -23,7 +23,7 @@ public class RegisterMedicalServiceCenterCommand extends BaseCommand {
         String name = this.params[1];
         Integer amountOfEmergencies = Integer.valueOf(this.params[2]);
 
-        this.emergencyCenter = new MedicalServiceCenter(name, amountOfEmergencies);
-        return super.getManagementSystem().registerMedicalServiceCenter(this.emergencyCenter);
+        this.emergencyCenter = new FiremanServiceCenter(name, amountOfEmergencies);
+        return super.getManagementSystem().registerFireServiceCenter(this.emergencyCenter);
     }
 }

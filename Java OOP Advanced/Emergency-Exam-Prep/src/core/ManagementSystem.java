@@ -1,5 +1,6 @@
 package core;
 
+import models.centers.EmergencyCenter;
 import models.emergencies.Emergency;
 
 /**
@@ -9,17 +10,17 @@ public interface ManagementSystem {
 
     String registerPropertyEmergency(Emergency emergency);
 
-    String registerHealthEmergency();
+    String registerHealthEmergency(Emergency emergency);
 
-    String registerOrderEmergency();
+    String registerOrderEmergency(Emergency emergency);
 
-    String registerFireServiceCenter();
+    String registerFireServiceCenter(EmergencyCenter emergencyCenter);
 
-    String registerMedicalServiceCenter();
+    String registerMedicalServiceCenter(EmergencyCenter emergencyCenter);
 
-    String registerPoliceServiceCenter();
+    String registerPoliceServiceCenter(EmergencyCenter emergencyCenter);
 
-    String processEmergencies();
+    String processEmergencies(String type);
 
     String emergencyReport();
 }

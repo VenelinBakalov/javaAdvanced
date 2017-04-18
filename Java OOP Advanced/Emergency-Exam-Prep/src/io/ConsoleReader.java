@@ -11,7 +11,7 @@ public class ConsoleReader implements Reader {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     @Override
-    public String readLine() throws IOException {
+    public String read() throws IOException {
         return reader.readLine();
     }
 }

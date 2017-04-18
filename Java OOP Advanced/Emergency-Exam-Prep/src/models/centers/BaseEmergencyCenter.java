@@ -5,14 +5,15 @@ public abstract class BaseEmergencyCenter implements EmergencyCenter {
 
     private Integer amountOfMaximumEmergencies;
 
-    private Integer proccessedEmergencies;
+    private Integer processedEmergencies;
 
     protected BaseEmergencyCenter(String name, Integer amountOfMaximumEmergencies) {
         this.setName(name);
         this.setAmountOfMaximumEmergencies(amountOfMaximumEmergencies);
-        this.proccessedEmergencies = 0;
+        this.processedEmergencies = 0;
     }
 
+    @Override
     public String getName() {
         return name;
     }
@@ -21,6 +22,7 @@ public abstract class BaseEmergencyCenter implements EmergencyCenter {
         this.name = name;
     }
 
+    @Override
     public Integer getAmountOfMaximumEmergencies() {
         return this.amountOfMaximumEmergencies;
     }
@@ -29,7 +31,18 @@ public abstract class BaseEmergencyCenter implements EmergencyCenter {
         this.amountOfMaximumEmergencies = amountOfMaximumEmergencies;
     }
 
+    @Override
     public Boolean isForRetirement() {
-        return this.proccessedEmergencies >= this.amountOfMaximumEmergencies;
+        return this.processedEmergencies >= this.amountOfMaximumEmergencies;
+    }
+
+    @Override
+    public Integer getProcessedEmergencies() {
+        return this.processedEmergencies;
+    }
+
+    @Override
+    public void processEmergency() {
+        this.processedEmergencies++;
     }
 }

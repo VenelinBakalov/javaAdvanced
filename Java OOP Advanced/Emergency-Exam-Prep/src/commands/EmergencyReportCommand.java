@@ -1,6 +1,6 @@
-package core;
+package commands;
 
-import commands.BaseCommand;
+import core.ManagementSystem;
 
 /**
  * Created by Venelin on 18.4.2017 г..
@@ -12,7 +12,7 @@ public class EmergencyReportCommand extends BaseCommand {
     }
 
     @Override
-    public void execute() {
-
+    public String execute() {
+        return super.getManagementSystem().emergencyReport();
     }
 }

@@ -16,25 +16,30 @@ public abstract class BaseEmergency implements Emergency {
         this.setRegistrationTime(registrationTime);
     }
 
-
+    @Override
     public String getDescription() {
-        return description;
+        return this.description;
     }
+
+    @Override
+    public EmergencyLevel getEmergencyLevel() {
+        return this.emergencyLevel;
+    }
+
+    @Override
+    public RegistrationTime getRegistrationTime() {
+        return this.registrationTime;
+    }
+
+    @Override
+    public abstract Integer getResultAfterProcessing();
 
     private void setDescription(String description) {
         this.description = description;
     }
 
-    public EmergencyLevel getEmergencyLevel() {
-        return emergencyLevel;
-    }
-
     private void setEmergencyLevel(EmergencyLevel emergencyLevel) {
         this.emergencyLevel = emergencyLevel;
-    }
-
-    public RegistrationTime getRegistrationTime() {
-        return registrationTime;
     }
 
     private void setRegistrationTime(RegistrationTime registrationTime) {

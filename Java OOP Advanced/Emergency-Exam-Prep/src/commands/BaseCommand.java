@@ -13,7 +13,7 @@ public abstract class BaseCommand implements Executable {
         this.managementSystem = managementSystem;
     }
 
-    public ManagementSystem getManagementSystem() {
-        return managementSystem;
+    protected ManagementSystem getManagementSystem() {
+        return this.managementSystem;
     }
 }
