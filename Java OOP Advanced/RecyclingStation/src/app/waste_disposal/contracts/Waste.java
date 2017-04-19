@@ -1,4 +1,4 @@
-package wasteDisposal.Contracts;
+package app.waste_disposal.contracts;
 
 /**
  * Interface that Garbage objects should implement. Garbage objects for processing passed to the framework should implement this interface.

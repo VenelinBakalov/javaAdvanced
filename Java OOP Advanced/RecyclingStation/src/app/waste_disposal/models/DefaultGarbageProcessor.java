@@ -1,19 +1,16 @@
-package wasteDisposal;
+package app.waste_disposal.models;
 
-import wasteDisposal.Annotations.Disposable;
-import wasteDisposal.Contracts.*;
+import app.waste_disposal.annotations.Disposable;
+import app.waste_disposal.contracts.*;
 
 import java.lang.annotation.Annotation;
 
 public class DefaultGarbageProcessor implements GarbageProcessor {
+
     private StrategyHolder strategyHolder;
 
     public DefaultGarbageProcessor(StrategyHolder strategyHolder){
         this.setStrategyHolder(strategyHolder);
-    }
-
-    public DefaultGarbageProcessor(){
-        this(new DefaultStrategyHolder());
     }
 
     private void setStrategyHolder(StrategyHolder strategyHolder) {
@@ -31,7 +28,7 @@ public class DefaultGarbageProcessor implements GarbageProcessor {
         Annotation[] garbageAnnotations = type.getAnnotations();
         Class disposableAnnotation = null;
         for (Annotation annotation : garbageAnnotations) {
-            if(Disposable.class.isAnnotationPresent(annotation.annotationType())){
+            if(annotation.annotationType().isAnnotationPresent(Disposable.class)){
                 disposableAnnotation = annotation.annotationType();
                 break;
             }
@@ -43,7 +40,6 @@ public class DefaultGarbageProcessor implements GarbageProcessor {
             throw new IllegalArgumentException(
                     "The passed in garbage does not implement an annotation implementing the Disposable meta-annotation or is not supported by the StrategyHolder.");
         }
-
         currentStrategy = this.getStrategyHolder().getDisposalStrategies().get(disposableAnnotation);
         return currentStrategy.processGarbage(garbage);
     }

@@ -1,11 +1,15 @@
-package wasteDisposal.Annotations;
+package app.waste_disposal.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.ANNOTATION_TYPE)
+/**
+ * Created by Venelin on 19.4.2017 г..
+ */
+@Disposable
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Disposable {
+public @interface Recyclable {
 }

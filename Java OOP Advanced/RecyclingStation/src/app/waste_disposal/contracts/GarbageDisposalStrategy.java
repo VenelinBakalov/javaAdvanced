@@ -1,4 +1,4 @@
-package wasteDisposal.Contracts;
+package app.waste_disposal.contracts;
 
 /**
  * Interface that Garbage Disposal Strategies passed to the Waste Disposal Framework should implement.

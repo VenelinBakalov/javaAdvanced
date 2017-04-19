@@ -1,13 +1,14 @@
-package wasteDisposal;
+package app.waste_disposal.models;
 
-import wasteDisposal.Contracts.GarbageDisposalStrategy;
-import wasteDisposal.Contracts.StrategyHolder;
+import app.waste_disposal.contracts.GarbageDisposalStrategy;
+import app.waste_disposal.contracts.StrategyHolder;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-class DefaultStrategyHolder implements StrategyHolder {
+public class DefaultStrategyHolder implements StrategyHolder {
+
     private LinkedHashMap<Class,GarbageDisposalStrategy> strategies;
 
     public DefaultStrategyHolder(){
@@ -21,12 +22,19 @@ class DefaultStrategyHolder implements StrategyHolder {
 
     @Override
     public boolean addStrategy(Class annotationClass, GarbageDisposalStrategy strategy) {
+        if (this.strategies.containsKey(annotationClass)) {
+            return false;
+        }
+
         this.strategies.put(annotationClass,strategy);
         return true;
     }
 
     @Override
     public boolean removeStrategy(Class annotationClass) {
+        if (!this.strategies.containsKey(annotationClass)) {
+            return false;
+        }
         this.strategies.remove(annotationClass);
         return true;
     }

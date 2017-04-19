@@ -1,4 +1,4 @@
-package wasteDisposal.Contracts;
+package app.waste_disposal.contracts;
 
 /**
  * Interface that ProcessingData objects should implement.

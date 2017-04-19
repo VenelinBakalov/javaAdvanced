@@ -1,4 +1,4 @@
-package wasteDisposal.Contracts;
+package app.waste_disposal.contracts;
 
 /**
  * Interface that exposes the framework's Garbage Processor's members.
