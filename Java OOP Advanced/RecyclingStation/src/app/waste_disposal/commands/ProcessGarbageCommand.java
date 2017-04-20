@@ -10,6 +10,10 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class ProcessGarbageCommand implements Executable {
 
+    public static final String GARBAGE_SUFFIX = "Garbage";
+    public static final String EMPTY_STRING = "";
+    public static final String RESULT_MESSAGE = "%.2f kg of %s successfully processed!";
+    public static final String PROCESSING_DENIED_MESSAGE = "Processing Denied!";
     @Inject private GarbageProcessor processor;
     @Inject private GarbageFactory factory;
     @Inject private RecyclingStation station;
@@ -29,8 +33,19 @@ public class ProcessGarbageCommand implements Executable {
             e.printStackTrace();
         }
 
+        if (this.station.getManagementRequirement() != null) {
+            ManagementRequirement requirement = this.station.getManagementRequirement();
+            String garbageTypeRequirement = requirement.getWasteType();
+            String garbageType = waste.getClass().getSimpleName().replace(GARBAGE_SUFFIX, EMPTY_STRING);
+            if (garbageType.equals(garbageTypeRequirement)
+                    && (requirement.getMinEnergyBalance() > this.station.getEnergyBalance()
+                    || requirement.getMinCapitalBalance() > this.station.getCapitalBalance())) {
+                return PROCESSING_DENIED_MESSAGE;
+            }
+        }
+
         ProcessingData data = this.processor.processWaste(waste);
         this.station.processData(data);
-        return String.format("%.2f kg of %s successfully processed!", waste.getWeight(), waste.getName());
+        return String.format(RESULT_MESSAGE, waste.getWeight(), waste.getName());
     }
 }

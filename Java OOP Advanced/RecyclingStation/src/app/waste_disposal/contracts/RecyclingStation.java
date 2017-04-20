@@ -10,4 +10,8 @@ public interface RecyclingStation {
     double getCapitalBalance();
 
     void processData(ProcessingData data);
+
+    ManagementRequirement getManagementRequirement();
+
+    void setManagementRequirement(ManagementRequirement managementRequirement);
 }
