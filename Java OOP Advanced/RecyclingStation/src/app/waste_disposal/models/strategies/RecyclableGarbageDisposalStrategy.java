@@ -11,7 +11,7 @@ public class RecyclableGarbageDisposalStrategy extends BaseGarbageDisposalStrate
     @Override
     public ProcessingData processGarbage(Waste garbage) {
 
-        double totalGarbageVolume = super.getTotalGarbadgeVolume(garbage);
+        double totalGarbageVolume = super.getTotalGarbageVolume(garbage);
         super.setEnergyUsed(0.5 * totalGarbageVolume);
         super.setCapitalEarned(400 * garbage.getWeight());
 

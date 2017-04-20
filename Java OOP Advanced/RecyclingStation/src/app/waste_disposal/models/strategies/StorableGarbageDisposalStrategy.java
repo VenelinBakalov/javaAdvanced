@@ -9,7 +9,7 @@ import app.waste_disposal.contracts.Waste;
 public class StorableGarbageDisposalStrategy extends BaseGarbageDisposalStrategy {
     @Override
     public ProcessingData processGarbage(Waste garbage) {
-        double totalGarbageVolume = super.getTotalGarbadgeVolume(garbage);
+        double totalGarbageVolume = super.getTotalGarbageVolume(garbage);
         super.setEnergyUsed(0.13 * totalGarbageVolume);
         super.setCapitalUsed(0.65 * totalGarbageVolume);
 

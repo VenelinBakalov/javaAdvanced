@@ -1,6 +1,5 @@
 package app.waste_disposal.factories;
 
-import app.waste_disposal.contracts.GarbageFactory;
 import app.waste_disposal.contracts.Waste;
 import app.waste_disposal.models.waste.BaseWaste;
 

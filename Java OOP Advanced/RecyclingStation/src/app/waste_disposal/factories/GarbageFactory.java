@@ -1,4 +1,6 @@
-package app.waste_disposal.contracts;
+package app.waste_disposal.factories;
+
+import app.waste_disposal.contracts.Waste;
 
 import java.lang.reflect.InvocationTargetException;
 

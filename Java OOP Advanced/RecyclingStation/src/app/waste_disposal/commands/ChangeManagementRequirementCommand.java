@@ -1,17 +1,16 @@
 package app.waste_disposal.commands;
 
 import app.waste_disposal.annotations.Inject;
-import app.waste_disposal.contracts.Executable;
-import app.waste_disposal.contracts.ManagementRequirement;
-import app.waste_disposal.contracts.RecyclingStation;
-import app.waste_disposal.models.ManagementRequirementImpl;
+import app.waste_disposal.models.managementRequirement.ManagementRequirement;
+import app.waste_disposal.models.recyclingStation.RecyclingStation;
+import app.waste_disposal.models.managementRequirement.ManagementRequirementImpl;
 
 /**
  * Created by Venelin on 20.4.2017 г..
  */
 public class ChangeManagementRequirementCommand implements Executable {
 
-    public static final String MANAGEMENT_REQUIREMENT_CHANGED_MESSAGE = "Management requirement changed!";
+    private static final String MANAGEMENT_REQUIREMENT_CHANGED_MESSAGE = "Management requirement changed!";
     @Inject private String[] data;
     @Inject private RecyclingStation recyclingStation;
 

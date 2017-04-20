@@ -1,6 +1,4 @@
-package app.waste_disposal.models;
-
-import app.waste_disposal.contracts.ManagementRequirement;
+package app.waste_disposal.models.managementRequirement;
 
 /**
  * Created by Venelin on 20.4.2017 г..

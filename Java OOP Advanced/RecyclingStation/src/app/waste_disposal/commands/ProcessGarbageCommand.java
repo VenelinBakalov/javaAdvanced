@@ -2,6 +2,9 @@ package app.waste_disposal.commands;
 
 import app.waste_disposal.annotations.Inject;
 import app.waste_disposal.contracts.*;
+import app.waste_disposal.factories.GarbageFactory;
+import app.waste_disposal.models.managementRequirement.ManagementRequirement;
+import app.waste_disposal.models.recyclingStation.RecyclingStation;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,14 +13,19 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class ProcessGarbageCommand implements Executable {
 
-    public static final String GARBAGE_SUFFIX = "Garbage";
-    public static final String EMPTY_STRING = "";
-    public static final String RESULT_MESSAGE = "%.2f kg of %s successfully processed!";
-    public static final String PROCESSING_DENIED_MESSAGE = "Processing Denied!";
-    @Inject private GarbageProcessor processor;
-    @Inject private GarbageFactory factory;
-    @Inject private RecyclingStation station;
-    @Inject private String[] commandArgs;
+    private static final String GARBAGE_SUFFIX = "Garbage";
+    private static final String EMPTY_STRING = "";
+    private static final String RESULT_MESSAGE = "%.2f kg of %s successfully processed!";
+    private static final String PROCESSING_DENIED_MESSAGE = "Processing Denied!";
+
+    @Inject
+    private GarbageProcessor processor;
+    @Inject
+    private GarbageFactory factory;
+    @Inject
+    private RecyclingStation station;
+    @Inject
+    private String[] commandArgs;
 
     @Override
     public String execute() {

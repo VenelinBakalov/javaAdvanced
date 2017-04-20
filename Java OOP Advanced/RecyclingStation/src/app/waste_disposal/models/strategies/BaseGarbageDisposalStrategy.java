@@ -15,7 +15,7 @@ public abstract class BaseGarbageDisposalStrategy implements GarbageDisposalStra
     private double capitalEarned;
     private double capitalUsed;
 
-    protected double getTotalGarbadgeVolume(Waste garbage) {
+    protected double getTotalGarbageVolume(Waste garbage) {
         return garbage.getWeight() * garbage.getVolumePerKg();
     }
 

@@ -1,4 +1,4 @@
-package app.waste_disposal.contracts;
+package app.waste_disposal.commands;
 
 /**
  * Created by Venelin on 20.4.2017 г..

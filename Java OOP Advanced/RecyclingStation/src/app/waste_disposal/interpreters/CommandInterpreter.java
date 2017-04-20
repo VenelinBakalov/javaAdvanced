@@ -1,7 +1,10 @@
 package app.waste_disposal.interpreters;
 
 import app.waste_disposal.annotations.Inject;
+import app.waste_disposal.commands.Executable;
 import app.waste_disposal.contracts.*;
+import app.waste_disposal.factories.GarbageFactory;
+import app.waste_disposal.models.recyclingStation.RecyclingStation;
 
 import java.lang.reflect.Field;
 import java.util.stream.Stream;
@@ -29,7 +32,7 @@ public class CommandInterpreter implements Interpreter {
     @SuppressWarnings("unchecked")
     public Executable interpretCommand(String commandInfo) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
-        String commandArgs[] = commandInfo.split("\\|| ");
+        String commandArgs[] = commandInfo.split("[|\\s]+");
         String commandName = commandArgs[0];
 
         this.data = Stream.of(commandArgs).skip(1).toArray(String[]::new);
@@ -54,7 +57,6 @@ public class CommandInterpreter implements Interpreter {
                 serviceField.setAccessible(true);
                 clientField.set(command, serviceField.get(this));
             }
-
         }
     }
 }

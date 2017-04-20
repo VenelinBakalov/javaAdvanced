@@ -10,7 +10,7 @@ public class BurnableGarbageDisposalStrategy extends BaseGarbageDisposalStrategy
 
     @Override
     public ProcessingData processGarbage(Waste garbage) {
-        double totalGarbageVolume = super.getTotalGarbadgeVolume(garbage);
+        double totalGarbageVolume = super.getTotalGarbageVolume(garbage);
         super.setEnergyProduced(totalGarbageVolume);
         super.setEnergyUsed(0.20 * totalGarbageVolume);
 
