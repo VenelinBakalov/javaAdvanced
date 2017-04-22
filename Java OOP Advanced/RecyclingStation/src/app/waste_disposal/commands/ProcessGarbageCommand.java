@@ -2,7 +2,7 @@ package app.waste_disposal.commands;
 
 import app.waste_disposal.annotations.Inject;
 import app.waste_disposal.contracts.*;
-import app.waste_disposal.factories.GarbageFactory;
+import app.waste_disposal.factories.Factory;
 import app.waste_disposal.models.managementRequirement.ManagementRequirement;
 import app.waste_disposal.models.recyclingStation.RecyclingStation;
 
@@ -21,7 +21,7 @@ public class ProcessGarbageCommand implements Executable {
     @Inject
     private GarbageProcessor processor;
     @Inject
-    private GarbageFactory factory;
+    private Factory<Waste> factory;
     @Inject
     private RecyclingStation station;
     @Inject
@@ -29,14 +29,14 @@ public class ProcessGarbageCommand implements Executable {
 
     @Override
     public String execute() {
-        String name = this.commandArgs[0];
-        double weight = Double.parseDouble(commandArgs[1]);
-        double volumePerKg = Double.parseDouble(commandArgs[2]);
-        String type = commandArgs[3];
+//        String name = this.commandArgs[0];
+//        double weight = Double.parseDouble(commandArgs[1]);
+//        double volumePerKg = Double.parseDouble(commandArgs[2]);
+//        String type = commandArgs[3];
         Waste waste = null;
 
         try {
-            waste = this.factory.createGarbage(name, weight, volumePerKg, type);
+            waste = this.factory.create(this.commandArgs);
         } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }

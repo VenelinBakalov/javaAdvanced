@@ -12,6 +12,7 @@ public class EmergencyRegister<T> implements Register<T> {
 
     private Integer nextIndex;
 
+    @SuppressWarnings("unchecked")
     public EmergencyRegister() {
         this.emergencyQueue = (T[]) new Object[INITIAL_SIZE];
         this.currentSize = 0;
@@ -40,6 +41,7 @@ public class EmergencyRegister<T> implements Register<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void resize() {
         T[] newArray = (T[]) new Object[2 * this.currentSize];
 

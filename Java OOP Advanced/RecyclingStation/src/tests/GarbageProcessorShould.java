@@ -1,4 +1,4 @@
-package app.tests;
+package tests;
 
 import app.waste_disposal.contracts.StrategyHolder;
 import app.waste_disposal.models.DefaultGarbageProcessor;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 /**
- * Created by Dani on 20.4.2017 г..
+ * Created by Venelin on 20.4.2017 г..
  */
 public class GarbageProcessorShould {
 

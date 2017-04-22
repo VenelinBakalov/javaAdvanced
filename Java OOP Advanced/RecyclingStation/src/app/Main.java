@@ -2,7 +2,7 @@ package app;
 
 import app.waste_disposal.contracts.*;
 import app.waste_disposal.engines.Engine;
-import app.waste_disposal.factories.GarbageFactory;
+import app.waste_disposal.factories.Factory;
 import app.waste_disposal.factories.GarbageFactoryImpl;
 import app.waste_disposal.interpreters.CommandInterpreter;
 import app.waste_disposal.io.ConsoleReader;
@@ -23,7 +23,7 @@ public class Main {
         StrategyHolder strategyHolder = new DefaultStrategyHolder();
 
         GarbageProcessor garbageProcessor = new DefaultGarbageProcessor(strategyHolder);
-        GarbageFactory garbageFactory = new GarbageFactoryImpl();
+        Factory garbageFactory = new GarbageFactoryImpl();
         RecyclingStation station = new RecyclingStationImpl();
 
         Interpreter interpreter = new CommandInterpreter(garbageProcessor, garbageFactory, station);

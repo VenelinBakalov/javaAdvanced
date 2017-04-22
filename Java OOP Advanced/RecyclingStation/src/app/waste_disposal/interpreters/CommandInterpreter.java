@@ -3,7 +3,7 @@ package app.waste_disposal.interpreters;
 import app.waste_disposal.annotations.Inject;
 import app.waste_disposal.commands.Executable;
 import app.waste_disposal.contracts.*;
-import app.waste_disposal.factories.GarbageFactory;
+import app.waste_disposal.factories.Factory;
 import app.waste_disposal.models.recyclingStation.RecyclingStation;
 
 import java.lang.reflect.Field;
@@ -19,10 +19,10 @@ public class CommandInterpreter implements Interpreter {
 
     private String[] data;
     private GarbageProcessor garbageProcessor;
-    private GarbageFactory garbageFactory;
+    private Factory garbageFactory;
     private RecyclingStation recyclingStation;
 
-    public CommandInterpreter(GarbageProcessor garbageProcessor, GarbageFactory garbageFactory, RecyclingStation recyclingStation) {
+    public CommandInterpreter(GarbageProcessor garbageProcessor, Factory garbageFactory, RecyclingStation recyclingStation) {
         this.garbageProcessor = garbageProcessor;
         this.garbageFactory = garbageFactory;
         this.recyclingStation = recyclingStation;
