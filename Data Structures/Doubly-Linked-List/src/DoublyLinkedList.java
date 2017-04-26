@@ -14,27 +14,29 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     private int count;
 
     public void addFirst(T element) {
+        ListNode<T> newHead = new ListNode<>(element);
         if (this.count == 0) {
-            this.head = this.tail = new ListNode<>(element);
+            this.head = this.tail = newHead;
         } else {
-            ListNode<T> newHead = new ListNode<>(element);
             newHead.setNextNode(this.head);
             this.head.setPrevNode(newHead);
             this.head = newHead;
         }
         this.count++;
+//        return newHead;
     }
 
     public void addLast(T element) {
+        ListNode<T> newTail = new ListNode<>(element);
         if (this.count == 0) {
-            this.head = this.tail = new ListNode<>(element);
+            this.head = this.tail = newTail;
         } else {
-            ListNode<T> newTail = new ListNode<>(element);
             newTail.setPrevNode(this.tail);
             this.tail.setNextNode(newTail);
             this.tail = newTail;
         }
         this.count++;
+//        return newTail;
     }
 
     public T removeFirst() {
@@ -71,8 +73,33 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         return lastElement;
     }
 
+    public void addBefore(T element, ListNode<T> nextNode) {
+        ListNode<T> newNode = new ListNode<>(element);
+        ListNode<T> prevNode = nextNode.getPrevNode();
+
+        prevNode.setNextNode(newNode);
+        newNode.setPrevNode(prevNode);
+
+        newNode.setNextNode(nextNode);
+        nextNode.setPrevNode(newNode);
+    }
+
+    public void addAfter(T element, ListNode<T> prevNode) {
+        ListNode<T> newNode = new ListNode<>(element);
+        ListNode<T> nextNode = prevNode.getNextNode();
+
+        prevNode.setNextNode(newNode);
+        newNode.setPrevNode(prevNode);
+
+        newNode.setNextNode(nextNode);
+        nextNode.setPrevNode(newNode);
+    }
+
     @SuppressWarnings("unchecked")
     public T[] toArray() {
+        if (this.count == 0) {
+            throw new IllegalStateException("List empty");
+        }
         Class<?> elementsClass = this.head.getValue().getClass();
         T[] elementsArray = (T[]) Array.newInstance(elementsClass, this.count);
         int index = 0;
@@ -185,6 +212,12 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
         list.forEach(System.out::println);
         System.out.println("--------------------");
+
+        Integer[] integers = list.toArray();
+        System.out.println(integers[0]);
+
+        System.out.println("--------------------");
+
 
         list.removeFirst();
         list.removeLast();
