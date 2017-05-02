@@ -312,7 +312,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Emergency_Solution" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../DIFramework" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -756,15 +756,15 @@
       <workItem from="1492638777289" duration="2141000" />
       <workItem from="1492642008030" duration="67000" />
       <workItem from="1492682102248" duration="90000" />
-      <workItem from="1492850751100" duration="3257000" />
+      <workItem from="1492850751100" duration="3874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25583000" />
+    <option name="totallyTimeSpent" value="26200000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1448" height="864" extended-state="1" />
+    <frame x="-4" y="-4" width="1448" height="864" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
