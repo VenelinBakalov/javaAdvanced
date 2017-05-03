@@ -1,13 +1,14 @@
 package models.sorters;
 
 import contracts.Sorter;
+import models.SortableCollection;
 
 import java.util.List;
 
 /**
  * Created by Venelin on 2.5.2017 г..
  */
-public class Quicksorter<T extends Comparable<T>> implements Sorter<T> {
+public class QuickSorter<T extends Comparable<T>> implements Sorter<T> {
 
     @Override
     public void sort(List<T> collection) {
@@ -42,13 +43,12 @@ public class Quicksorter<T extends Comparable<T>> implements Sorter<T> {
                 left++;
             } while (items.get(left).compareTo(pivot) < 0);
 
-            if (left < right) {
-                this.swap(items, left, right);
+            if (left >= right) {
+                return right;
             }
 
-            return right;
+            this.swap(items, left, right);
         }
-
     }
 
     private void quicksortLomutoPartitioning(List<T> items, int start, int end) {
@@ -68,7 +68,7 @@ public class Quicksorter<T extends Comparable<T>> implements Sorter<T> {
         storeIndex--;
 
         this.swap(items, start, storeIndex);
-        this.quicksortLomutoPartitioning(items, start, storeIndex);
+        this.quicksortLomutoPartitioning(items, start, storeIndex - 1);
         this.quicksortLomutoPartitioning(items, storeIndex + 1, end);
     }
 
@@ -76,5 +76,13 @@ public class Quicksorter<T extends Comparable<T>> implements Sorter<T> {
         T temp = items.get(i);
         items.set(i, items.get(storeIndex));
         items.set(storeIndex, temp);
+    }
+
+    public static void main(String[] args) {
+        SortableCollection<Integer> collection = new SortableCollection<>(421, 1, 423, 423);
+        System.out.println(collection);
+
+        collection.sort(new QuickSorter<>());
+        System.out.println(collection);
     }
 }
