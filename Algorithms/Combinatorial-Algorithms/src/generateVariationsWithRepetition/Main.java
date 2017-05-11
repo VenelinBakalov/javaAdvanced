@@ -39,7 +39,6 @@ public class Main {
     private static void generateVariationsRecursive(int index) {
         if (index >= K) {
             print(arr);
-            return;
         } else {
             for (int i = 0; i < N; i++) {
                 arr[index] = i;

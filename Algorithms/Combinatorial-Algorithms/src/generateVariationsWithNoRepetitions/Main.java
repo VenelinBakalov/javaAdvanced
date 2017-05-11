@@ -20,6 +20,22 @@ public class Main {
         generateVariationsNoRepOptimized(0);
     }
 
+    private static void generateVariationsNoRep(int index) {
+        if (index >= K) {
+            print(arr);
+            return;
+        }
+
+        for (int i = 0; i < N; i++) {
+            if (! used[i]) {
+                used[i] = true;
+                arr[index] = i;
+                generateVariationsNoRep(index + 1);
+                used[i] = false;
+            }
+        }
+    }
+
     private static void generateVariationsNoRepOptimized(int index) {
         if (index >= K) {
             print(arr);
@@ -38,23 +54,6 @@ public class Main {
         int temp = free[i];
         free[i] = free[index];
         free[index] = temp;
-    }
-
-
-    private static void generateVariationsNoRep(int index) {
-        if (index >= K) {
-            print(arr);
-            return;
-        }
-
-        for (int i = 0; i < N; i++) {
-            if (! used[i]) {
-                used[i] = true;
-                arr[index] = i;
-                generateVariationsNoRep(index + 1);
-                used[i] = false;
-            }
-        }
     }
 
     private static void print(int[] arr) {
