@@ -25,6 +25,7 @@ public class Main {
         }
     }
 
+    // No repeats
     private static Map<Integer, Integer> calculatePossibleSums(int[] nums, int targetSum) {
 
         // sum -> what we added to obtain the sum
@@ -60,4 +61,5 @@ public class Main {
 
         return subset;
     }
+
 }
