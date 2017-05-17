@@ -11,3 +11,13 @@ Top-down - почваме от целия проблем и рекурсивно се спускаме по неговите подпроб
 има bottom-up.
 
 LIS - longest increasing subsequence
+
+При knapsack problem решението е псевдо-полиномиално. Скоростта зависи не толкова от размера
+на входните данни, колкото от размера на раницата. O (n * c)
+subset sum with repeats - също е псевдополиномиално - зависи от количеството nums, но и от 
+target sum, защото на база на него правим boolean[]
+
+Като цяло тези проблеми са NP hard/complete
+
+Top-down - recursive + memoization
+Bottom-up - iterative - обикновено пълнене на таблица или матрица
