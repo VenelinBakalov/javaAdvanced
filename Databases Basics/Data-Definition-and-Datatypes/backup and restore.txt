@@ -1,0 +1,5 @@
+cd\
+
+mysqldump -uroot -p soft_uni > softuni-backup.sql
+
+mysql -uroot -p soft_uni < softuni-backup.sql
