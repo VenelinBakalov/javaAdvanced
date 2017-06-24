@@ -13,3 +13,6 @@ ON a.town_id = ts.town_id
 	AND c.home_town_id = a.town_id
 	AND f.`status` = 'Departing'
 ORDER BY c.customer_id ASC;
+
+# OR INNER JOIN towns AS ts ON c.home_town_id = ts.town_id
+# AND c.home_town_id = a.town_id
