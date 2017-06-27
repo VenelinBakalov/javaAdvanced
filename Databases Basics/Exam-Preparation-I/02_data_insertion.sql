@@ -14,3 +14,6 @@ SELECT
 	a.airline_id	
 FROM `airlines` AS a
 WHERE a.`airline_id` BETWEEN 1 AND 10;
+
+## id: SELECT COUNT(*) FROM FLIGHTS + 1
+## SELECT a.airline_name FROM airlines AS a WHERE a.ailine_id = 1;
