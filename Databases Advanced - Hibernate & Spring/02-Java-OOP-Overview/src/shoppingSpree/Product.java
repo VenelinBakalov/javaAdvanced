@@ -8,7 +8,7 @@ public class Product {
     private String name;
     private double cost;
 
-    public Product() {
+    public Product(String name, double cost) {
         this.setName(name);
         this.setCost(cost);
     }
@@ -27,6 +27,11 @@ public class Product {
 
     public double getCost() {
         return cost;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
     }
 
     private void setCost(double cost) {
