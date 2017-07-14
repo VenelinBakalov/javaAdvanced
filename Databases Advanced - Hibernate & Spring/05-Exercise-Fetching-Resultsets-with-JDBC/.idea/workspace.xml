@@ -25,7 +25,7 @@
       <file leaf-file-name="RemoveVillain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RemoveVillain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="274">
               <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="52" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -40,10 +40,9 @@
       <file leaf-file-name="IncreaseAgeStoredProcedure.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IncreaseAgeStoredProcedure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="391">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <marker date="1499872197725" expanded="true" signature="694:743" ph="SELECT name,... minions" />
               </folding>
             </state>
@@ -117,6 +116,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,15 +153,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../05-DB-Apps-Introduction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -687,11 +686,13 @@
       <updated>1499791202499</updated>
       <workItem from="1499791209593" duration="11028000" />
       <workItem from="1499840453399" duration="16108000" />
+      <workItem from="1499956745502" duration="837000" />
+      <workItem from="1500041014101" duration="142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27136000" />
+    <option name="totallyTimeSpent" value="28115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1448" height="864" extended-state="0" />
@@ -699,13 +700,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,6 +720,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -746,6 +747,52 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/RemoveVillain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1499868184453" expanded="true" signature="623:672" ph="DELETE FROM " />
+            <marker date="1499868184453" expanded="true" signature="722:763" ph="DELETE FROM " />
+            <marker date="1499868184453" expanded="true" signature="799:842" ph="SELECT * FRO... villains" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncreaseAgeStoredProcedure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1499872197725" expanded="true" signature="694:743" ph="SELECT name,... minions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RemoveVillain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1499868184453" expanded="true" signature="623:672" ph="DELETE FROM " />
+            <marker date="1499868184453" expanded="true" signature="722:763" ph="DELETE FROM " />
+            <marker date="1499868184453" expanded="true" signature="799:842" ph="SELECT * FRO... villains" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IncreaseAgeStoredProcedure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1499872197725" expanded="true" signature="694:743" ph="SELECT name,... minions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InitialSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -784,7 +831,7 @@
         <state relative-caret-position="612">
           <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1499812117807" expanded="true" signature="648:703" ph="SELECT v.nam... villains" />
             <marker date="1499812117807" expanded="true" signature="741:928" ph="SELECT m.nam... minions" />
           </folding>
@@ -796,7 +843,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1499861952165" expanded="true" signature="858:892" ph="SELECT * FRO... towns" />
             <marker date="1499861952165" expanded="true" signature="933:970" ph="SELECT * FRO... villains" />
             <marker date="1499861952165" expanded="true" signature="1010:1046" ph="SELECT * FRO... minions" />
@@ -813,7 +860,7 @@
         <state relative-caret-position="646">
           <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1499861293530" expanded="true" signature="658:671" ph="UPDATE towns... " />
             <marker date="1499861293530" expanded="true" signature="658:714" ph="UPDATE towns... " />
             <marker date="1499861293530" expanded="true" signature="658:749" ph="UPDATE towns... " />
@@ -828,7 +875,7 @@
         <state relative-caret-position="17">
           <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1499812117807" expanded="true" signature="648:703" ph="SELECT v.nam... villains" />
             <marker date="1499812117807" expanded="true" signature="741:928" ph="SELECT m.nam... minions" />
           </folding>
@@ -872,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="1879" column="0" selection-start-line="1879" selection-start-column="0" selection-end-line="1879" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,15 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
           <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1499865744518" expanded="true" signature="717:731" ph="UPDATE minio... " />
-            <marker date="1499865744518" expanded="true" signature="717:826" ph="UPDATE minio... " />
-            <marker date="1499865744518" expanded="true" signature="717:867" ph="UPDATE minio... " />
-            <marker date="1499865744518" expanded="true" signature="717:869" ph="UPDATE minio... " />
-            <marker date="1499865744518" expanded="true" signature="717:871" ph="UPDATE minio... " />
-            <marker date="1499865744518" expanded="true" signature="1119:1148" ph="SELECT name,... minions" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -916,7 +952,7 @@
         <state relative-caret-position="285">
           <caret line="112" column="10" selection-start-line="112" selection-start-column="10" selection-end-line="118" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1499861952165" expanded="true" signature="858:892" ph="SELECT * FRO... towns" />
             <marker date="1499861952165" expanded="true" signature="933:970" ph="SELECT * FRO... villains" />
             <marker date="1499861952165" expanded="true" signature="1010:1046" ph="SELECT * FRO... minions" />
@@ -930,7 +966,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RemoveVillain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="274">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="52" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -945,29 +981,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="478" column="12" selection-start-line="478" selection-start-column="12" selection-end-line="478" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IncreaseAgeStoredProcedure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="391">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <marker date="1499872197725" expanded="true" signature="694:743" ph="SELECT name,... minions" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RemoveVillainWithInnerJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RemoveVillainWithInnerJoin.java" />
   </component>
   <component name="masterDetails">
     <states>
