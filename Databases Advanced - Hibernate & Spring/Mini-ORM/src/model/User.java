@@ -1,15 +1,26 @@
 package model;
 
+import persistence.Column;
+import persistence.Entity;
+import persistence.Id;
+
 import java.time.LocalDate;
 
 /**
  * Created by Venelin on 11.7.2017 г..
  */
+@Entity(name = "users")
 public final class User {
 
+    @Id
     private long id;
+
+    @Column(name = "first_name")
     private String name;
+
     private int age;
+
+    @Column(name = "registration_date")
     private LocalDate registrationDate;
 
     public User(String name, int age, LocalDate registrationDate) {
