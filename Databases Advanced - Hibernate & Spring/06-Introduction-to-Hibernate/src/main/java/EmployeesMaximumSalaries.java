@@ -1,6 +1,3 @@
-import entities.Department;
-import entities.Employee;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -16,10 +13,25 @@ public class EmployeesMaximumSalaries {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("PersistenceUnit");
         EntityManager em = emf.createEntityManager();
 
+        List<Object[]> results = em.createQuery("SELECT e.department.name, MAX(e.salary) AS max_salary FROM Employee AS e " +
+                "GROUP BY e.department " +
+                "HAVING MAX(e.salary) < 30000 OR MAX(e.salary) > 70000").getResultList();
+
+        results.forEach(department -> {
+            System.out.printf("%s - %s\n",
+                    department[0],
+                    department[1]);
+        });
+
+        /*
+        Alternative solution - getting the needed departments and the printing results using Stream API
+
         List<Department> departments = em
                 .createQuery("SELECT d FROM Department AS d INNER JOIN d.employees AS e " +
                         "GROUP BY d HAVING MAX (e.salary) < 30000 OR MAX (e.salary) > 70000")
                 .getResultList();
+
+
 
         departments.forEach(d -> {
             System.out.printf("%s - %.2f\n",
@@ -31,6 +43,9 @@ public class EmployeesMaximumSalaries {
                         .map(Employee::getSalary)
                         .findFirst().get());
         });
+
+                 */
+
 
         em.close();
         emf.close();
