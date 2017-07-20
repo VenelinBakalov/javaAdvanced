@@ -1,3 +1,5 @@
+import dependencyContainer.EntityManagerFactoryContainer;
+
 import javax.persistence.EntityManagerFactory;
 
 /**
@@ -5,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
  */
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory
+        EntityManagerFactory emf = EntityManagerFactoryContainer.getInstance();
+        emf.close();
     }
 }
