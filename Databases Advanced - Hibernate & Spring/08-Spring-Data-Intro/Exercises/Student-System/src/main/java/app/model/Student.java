@@ -69,10 +69,7 @@ public class Student {
         this.birthday = birthday;
     }
 
-    @ManyToMany
-    @JoinTable(name = "students_courses",
-    joinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"),
-    inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"))
+    @ManyToMany(mappedBy = "students")
     public Set<Course> getCourses() {
         return courses;
     }

@@ -38,4 +38,9 @@ public class StudentServiceImpl implements StudentService<Student, Long> {
     public void save(Student object) {
         dao.save(object);
     }
+
+    @Override
+    public List<Object[]> findAllStudentsAndHomeworkSubmissions() {
+        return dao.findAllStudentsAndHomeworkSubmissions();
+    }
 }

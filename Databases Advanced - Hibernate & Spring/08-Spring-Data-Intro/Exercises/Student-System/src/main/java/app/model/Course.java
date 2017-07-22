@@ -81,7 +81,11 @@ public class Course {
         this.price = price;
     }
 
-    @ManyToMany(mappedBy = "courses")
+    //    @ManyToMany(mappedBy = "courses")
+    @ManyToMany
+    @JoinTable(name = "courses_students",
+            joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id"))
     public Set<Student> getStudents() {
         return students;
     }
