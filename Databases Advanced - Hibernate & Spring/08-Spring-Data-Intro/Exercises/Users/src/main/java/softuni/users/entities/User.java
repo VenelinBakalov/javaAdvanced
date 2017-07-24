@@ -1,9 +1,8 @@
 package softuni.users.entities;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
-
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +22,15 @@ public class User {
     private Date lastTimeLoggedIn;
     private Integer age;
     private Boolean isDeleted;
+
+    private String firstName;
+    private String lastName;
+
+    private Town bornTown;
+    private Town currentlyLivingInTown;
+
+    private Set<User> friends;
+    private Set<Album> albums;
 
     public User() {
     }
@@ -153,5 +161,69 @@ public class User {
 
     public void setDeleted(Boolean deleted) {
         isDeleted = deleted;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "born_town_id", referencedColumnName = "id")
+    public Town getBornTown() {
+        return bornTown;
+    }
+
+    public void setBornTown(Town bornTown) {
+        this.bornTown = bornTown;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "living_in_town_id", referencedColumnName = "id")
+    public Town getCurrentlyLivingInTown() {
+        return currentlyLivingInTown;
+    }
+
+    public void setCurrentlyLivingInTown(Town currentlyLivingInTown) {
+        this.currentlyLivingInTown = currentlyLivingInTown;
+    }
+
+    @Column(name = "first_name")
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Column(name = "last_name")
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Transient
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_friends",
+    joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "friend_id", referencedColumnName = "id"))
+    public Set<User> getFriends() {
+        return friends;
+    }
+
+    public void setFriends(Set<User> friends) {
+        this.friends = friends;
+    }
+
+    @OneToMany(mappedBy = "owner")
+    public Set<Album> getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Set<Album> albums) {
+        this.albums = albums;
     }
 }
