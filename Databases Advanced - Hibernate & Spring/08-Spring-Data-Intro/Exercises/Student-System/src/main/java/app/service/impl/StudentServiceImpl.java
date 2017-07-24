@@ -43,4 +43,9 @@ public class StudentServiceImpl implements StudentService<Student, Long> {
     public List<Object[]> findAllStudentsAndHomeworkSubmissions() {
         return dao.findAllStudentsAndHomeworkSubmissions();
     }
+
+    @Override
+    public List<Object[]> findStudentInformation() {
+        return dao.findStudentInformation();
+    }
 }

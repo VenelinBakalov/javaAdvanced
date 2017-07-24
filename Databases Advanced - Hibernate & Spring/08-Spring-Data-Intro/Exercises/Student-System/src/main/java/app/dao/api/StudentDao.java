@@ -16,4 +16,9 @@ public interface StudentDao extends JpaRepository<Student, Long> {
 
     @Query("select s.name, h.content, h.contentType from Student as s inner join s.homeworkSubmissions as h")
     List<Object[]> findAllStudentsAndHomeworkSubmissions();
+
+    @Query("select s.name, count(c), sum(c.price), avg(c.price) from Student as s inner join s.courses as c " +
+            "group by s.name " +
+            "order by sum(c.price) desc, count(c) desc , s.name asc")
+    List<Object[]> findStudentInformation();
 }

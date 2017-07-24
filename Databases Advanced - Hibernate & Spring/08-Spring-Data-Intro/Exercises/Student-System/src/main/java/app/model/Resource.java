@@ -1,6 +1,7 @@
 package app.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by Venelin on 21.7.2017 г..
@@ -15,6 +16,7 @@ public class Resource {
     private String URL;
 
     private Course course;
+    private Set<License> licenses;
 
     public Resource() {
     }
@@ -64,5 +66,19 @@ public class Resource {
 
     public void setCourse(Course course) {
         this.course = course;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + ", Type: " + this.getTypeOfResource() + ", URL: " + this.getURL();
+    }
+
+    @OneToMany(mappedBy = "resource")
+    public Set<License> getLicenses() {
+        return licenses;
+    }
+
+    public void setLicenses(Set<License> licenses) {
+        this.licenses = licenses;
     }
 }

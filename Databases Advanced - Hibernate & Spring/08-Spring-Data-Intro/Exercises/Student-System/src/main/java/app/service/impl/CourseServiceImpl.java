@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,5 +38,20 @@ public class CourseServiceImpl implements CourseService<Course, Long> {
     @Override
     public void save(Course object) {
         dao.save(object);
+    }
+
+    @Override
+    public List<Object[]> findAllCoursesAndResources() {
+        return dao.findAllCoursesAndResources();
+    }
+
+    @Override
+    public List<String> findAllCoursesWithMoreThan5Resources() {
+        return dao.findAllCoursesWithMoreThan5Resources();
+    }
+
+    @Override
+    public List<Object[]> findAllCoursesActiveOnDate(Date date) {
+        return dao.findAllCoursesActiveOnDate(date);
     }
 }
