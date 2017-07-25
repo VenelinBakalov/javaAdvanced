@@ -1,10 +1,11 @@
 package softuni.users.entities;
 
+import softuni.users.validators.Email;
+import softuni.users.validators.Password;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Venelin on 22.7.2017 г..
@@ -58,56 +59,23 @@ public class User {
     }
 
     @Column(name = "password", nullable = false)
+    @Password(containsDigit = true, containsLowercase = true, containsSpecialSymbol = true, containsUppercase = true)
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
-        if (password.length() < 6 || password.length() > 50) {
-            throw new IllegalArgumentException("Password length must be between 6 and 50 symbols.");
-        }
-
-        Pattern pattern = Pattern.compile("[a-z]");
-        Matcher regex = pattern.matcher(password);
-
-        if (!regex.find()) {
-            throw new IllegalArgumentException("Password must contain lowercase letter");
-        }
-
-        Pattern patternTwo = Pattern.compile("[A-Z]");
-        regex = patternTwo.matcher(password);
-
-        if (!regex.find()) {
-            throw new IllegalArgumentException("Password must contain uppercase letter");
-        }
-
-        Pattern patternThree = Pattern.compile("[0-9]");
-        regex = patternThree.matcher(password);
-
-        if (!regex.find()) {
-            throw new IllegalArgumentException("Password must contain number");
-        }
-
-        Pattern patternFour = Pattern.compile("[!@#$%^&*()_+<>?]");
-        regex = patternFour.matcher(password);
-
-        if (!regex.find()) {
-            throw new IllegalArgumentException("Password must contain special character");
-        }
-
         this.password = password;
     }
 
     @Column(name = "email", nullable = false)
+    @Email
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
 //        if (!email.matches("^[a-zA-Z0-9]+[\\w.\\-_]+[a-zA-Z0-9]+@[a-zA-Z]+[a-zA-Z.]+[a-zA-Z]+$")) {
-        if (!email.matches("^[a-zA-Z0-9]+([\\.\\-_]*[a-zA-Z0-9]+)*@[a-zA-Z]+(\\.[a-zA-Z]+)+$")) {
-            throw new IllegalArgumentException("Invalid email");
-        }
         this.email = email;
     }
 
@@ -148,9 +116,9 @@ public class User {
     }
 
     public void setAge(Integer age) {
-        if (age < 1 || age > 120) {
-            throw new IllegalArgumentException("Age must have value between 1 and 120");
-        }
+    //        if (age < 1 || age > 120) {
+    //            throw new IllegalArgumentException("Age must have value between 1 and 120");
+    //        }
         this.age = age;
     }
 
