@@ -2,6 +2,7 @@ package app.repository.api;
 
 import app.model.AgeRestriction;
 import app.model.Book;
+import app.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -45,4 +47,10 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query("select b.title from Book as b where year(b.releaseDate) != :year")
     List<String> findBooksNotReleaseOn(@Param("year") int year);
+
+    @Query("select b.title from Book as b where b.categories = :categories")
+    List<String> findBookTitlesByCategories(@Param("categories") Set<Category> categories);
+
+    @Query("select b from Book as b where b.releaseDate < :date")
+    List<Book> findBooksReleasedBefore(@Param("date") Date date);
 }

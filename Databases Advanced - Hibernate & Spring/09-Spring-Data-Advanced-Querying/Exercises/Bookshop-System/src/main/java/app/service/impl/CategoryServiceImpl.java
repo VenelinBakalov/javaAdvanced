@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -17,25 +18,30 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService<Category, Long> {
 
     @Autowired
-    private CategoryRepository dao;
+    private CategoryRepository categoryRepository;
 
     @Override
     public Category findById(Long id) {
-        return dao.findOne(id);
+        return categoryRepository.findOne(id);
     }
 
     @Override
     public void remove(Category object) {
-        dao.delete(object);
+        categoryRepository.delete(object);
     }
 
     @Override
     public List<Category> findAll() {
-        return dao.findAll();
+        return categoryRepository.findAll();
     }
 
     @Override
     public void save(Category object) {
-        dao.save(object);
+        categoryRepository.save(object);
+    }
+
+    @Override
+    public Set<Category> categoriesByName(List<String> categories) {
+        return this.categoryRepository.categoriesByName(categories);
     }
 }

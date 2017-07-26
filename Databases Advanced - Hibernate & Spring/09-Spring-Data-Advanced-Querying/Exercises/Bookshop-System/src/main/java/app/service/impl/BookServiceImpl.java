@@ -1,15 +1,18 @@
 package app.service.impl;
 
+import app.model.Category;
 import app.repository.api.BookRepository;
 import app.model.AgeRestriction;
 import app.model.Book;
 import app.service.api.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -83,5 +86,15 @@ public class BookServiceImpl implements BookService<Book, Long> {
     @Override
     public List<String> findBooksNotReleaseOn(int year) {
         return this.bookRepository.findBooksNotReleaseOn(year);
+    }
+
+    @Override
+    public List<String> findBookTitlesByCategories(@Param("categories") Set<Category> categories) {
+        return this.bookRepository.findBookTitlesByCategories(categories);
+    }
+
+    @Override
+    public List<Book> findBooksReleasedBefore(Date date) {
+        return this.bookRepository.findBooksReleasedBefore(date);
     }
 }

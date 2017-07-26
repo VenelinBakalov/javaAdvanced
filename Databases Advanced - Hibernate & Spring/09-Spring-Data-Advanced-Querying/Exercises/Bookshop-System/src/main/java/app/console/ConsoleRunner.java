@@ -16,6 +16,8 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -55,9 +57,15 @@ public class ConsoleRunner implements CommandLineRunner {
 //        booksByPrice.forEach(System.out::println);
 
         // 4.	Not Released Books
-        int year = Integer.parseInt(reader.readLine());
-        List<String> booksNotReleasedOnYear = this.bookService.findBooksNotReleaseOn(year);
-        booksNotReleasedOnYear.forEach(System.out::println);
+//        int year = Integer.parseInt(reader.readLine());
+//        List<String> booksNotReleasedOnYear = this.bookService.findBooksNotReleaseOn(year);
+//        booksNotReleasedOnYear.forEach(System.out::println);
+
+        // 5.	Book Titles by Category
+        List<String> categoriesNames = Stream.of(reader.readLine().split("\\s+")).collect(Collectors.toList());
+        Set<Category> categories = this.categoryService.categoriesByName(categoriesNames);
+        List<String> titles = this.bookService.findBookTitlesByCategories(categories);
+        titles.forEach(System.out::println);
 
         // 7.	Authors Search
 //        String pattern = reader.readLine();
