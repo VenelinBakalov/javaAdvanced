@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,60 +34,51 @@ public class ConsoleRunner implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        // Seed task
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 //        seedDatabase();
 
-        // This method contains the execution of all queries from problem 03.
-//        executeQueries();
-
-        // The code for problem 04 - related books
-        List<Book> books = bookService.findAll();
-        List<Book> threeBooks = books.subList(0, 3);
-
-        threeBooks.get(0).getRelatedBooks().add(threeBooks.get(1));
-        threeBooks.get(1).getRelatedBooks().add(threeBooks.get(0));
-        threeBooks.get(0).getRelatedBooks().add(threeBooks.get(2));
-        threeBooks.get(2).getRelatedBooks().add(threeBooks.get(0));
-
-//save related books to the database
-        for (Book book : threeBooks) {
-            bookService.save(book);
-        }
-
-        for (Book book : threeBooks) {
-            System.out.printf("--%s\n", book.getTitle());
-            for (Book relatedBook : book.getRelatedBooks()) {
-                System.out.println(relatedBook.getTitle());
-            }
-        }
-
-    }
-
-    private void executeQueries() {
-
-        //
-        // Try 2 different approaches on the tasks - getting the required information directly as a List<Object[]> and
-        // getting the entities themselves.
-
-        // 1.	Get all books after the year 2000.
-//        List<String> books = bookService.findAllBookTitlesAfter2000Year();
-//        books.forEach(System.out::println);
-
-        // 2.	Get all authors with at least one book with release date before 1990
-//        List<Author> authors = authorService.findAuthorsWithBookReleasedBefore1990();
-//        authors.forEach(a -> System.out.println(a.getFirstName() + " " + a.getLastName()));
+        // 1.	Books Titles by Age Restriction
+//        String ageRestrictionType = reader.readLine();
+//        AgeRestriction ageRestriction = AgeRestriction.valueOf(ageRestrictionType.toUpperCase());
+//        List<Book> books = this.bookService.findAllByAgeRestriction(ageRestriction);
 //
-        // 3.	Get all authors, ordered by the number of their books (descending).
-//        List<Object[]> authorsByBookCount = authorService.findAllOrderedByBookCount();
-//        authorsByBookCount.forEach(a -> System.out.printf("%s %s - %s books\n",
-//                a[0], a[1], a[2]));
+//        for (Book book : books) {
+//            System.out.println(book.getTitle());
+//        }
 
-        // 4.	Get all books from author George Powell, ordered by their release date (descending), then by book title (ascending).
-        List<Book> books = bookService.findAllByGeorgePowell();
-        books.forEach(b -> System.out.printf("Title: %s, Release date: %s, Copies: %d\n",
-                b.getTitle(),
-                b.getReleaseDate(),
-                b.getCopies()));
+        // 2.	Golden Books
+//        List<String> goldenBooks = this.bookService.findAllGoldenEditionAndLessThan5000Copies();
+//        goldenBooks.forEach(System.out::println);
+
+        // 3.	Books by Price
+//        List<String> booksByPrice = this.bookService.findBooksWithPriceLessThan5GreaterThan40();
+//        booksByPrice.forEach(System.out::println);
+
+        // 4.	Not Released Books
+        int year = Integer.parseInt(reader.readLine());
+        List<String> booksNotReleasedOnYear = this.bookService.findBooksNotReleaseOn(year);
+        booksNotReleasedOnYear.forEach(System.out::println);
+
+        // 7.	Authors Search
+//        String pattern = reader.readLine();
+//        List<Author> authors = authorService.findAllByFirstNameEndsWith(pattern);
+//        for (Author author : authors) {
+//            System.out.println(author.getFirstName() + " " + author.getLastName());
+//        }
+
+        // 10.	Count Books
+//        Integer titleLength = Integer.parseInt(reader.readLine());
+//        int count = this.bookService.findBookCountByTitleLength(titleLength);
+//        System.out.println(count);
+
+
+        // 15.	* Increase Book Copies
+//        String dateStr = reader.readLine();
+//        int copiesCount = Integer.parseInt(reader.readLine());
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
+//        Date date = sdf.parse(dateStr);
+//        int updatedRows = this.bookService.updateBookCopiesAfterDate(date, copiesCount);
+//        System.out.println(updatedRows * copiesCount);
 
     }
 

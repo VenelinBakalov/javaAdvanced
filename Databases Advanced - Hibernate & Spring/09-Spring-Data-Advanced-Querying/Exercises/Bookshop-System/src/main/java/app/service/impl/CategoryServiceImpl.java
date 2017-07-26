@@ -1,6 +1,6 @@
 package app.service.impl;
 
-import app.dao.api.CategoryDao;
+import app.repository.api.CategoryRepository;
 import app.model.Category;
 import app.service.api.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService<Category, Long> {
 
     @Autowired
-    private CategoryDao dao;
+    private CategoryRepository dao;
 
     @Override
     public Category findById(Long id) {

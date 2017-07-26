@@ -59,6 +59,7 @@ public class Book {
     }
 
     @Column(name = "edition_type", nullable = false)
+    @Enumerated(EnumType.STRING)
     public EditionType getEditionType() {
         return editionType;
     }
@@ -95,6 +96,7 @@ public class Book {
     }
 
     @Column(name = "age_restriction", nullable = false)
+    @Enumerated(EnumType.STRING)
     public AgeRestriction getAgeRestriction() {
         return ageRestriction;
     }
