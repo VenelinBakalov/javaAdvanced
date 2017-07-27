@@ -38,7 +38,7 @@ public class Category {
         this.name = name;
     }
 
-    @ManyToMany(mappedBy = "categories")
+    @ManyToMany(mappedBy = "categories", fetch = FetchType.EAGER)
     public Set<Book> getBooks() {
         return books;
     }

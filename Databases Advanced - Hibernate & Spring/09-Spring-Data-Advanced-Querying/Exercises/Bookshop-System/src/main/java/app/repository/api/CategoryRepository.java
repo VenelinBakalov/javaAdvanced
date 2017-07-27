@@ -22,4 +22,10 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     @Query("select c.name, sum(b.copies * b.price) from Category as c inner join c.books as b group by c.name " +
             "order by sum(b.copies * b.price) desc, c.name asc")
     List<Object[]> findTotalProfitByCategory();
+
+//    @Query("select c.name, b.title from Category as c inner join c.books as b where b.id in (select b.id from Book inner join b.categories as bc where bc.id = c.id order by b.releaseDate desc limit 3)")
+//    List<Object[]> findRecentBooksByCategories();
+
+    @Query("select c from Category as c inner join c.books as b group by c having count(b) > 35 order by count(b) desc ")
+    List<Category> findAllCategoriesOrderByBookCount();
 }

@@ -1,7 +1,5 @@
 package app.service.api;
 
-import org.springframework.data.jpa.repository.Query;
-
 import java.util.List;
 import java.util.Set;
 
@@ -13,4 +11,6 @@ public interface CategoryService<Category, Long> extends ServiceInterface<Catego
     Set<app.model.Category> categoriesByName(List<String> categories);
 
     List<Object[]> findTotalProfitByCategory();
+    List<app.model.Category> findAllCategoriesOrderByBookCount();
+
 }

@@ -11,7 +11,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "books")
-public class Book {
+public class Book implements ReducedBook {
 
     private Long id;
     private String title;

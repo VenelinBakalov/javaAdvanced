@@ -49,4 +49,10 @@ public class CategoryServiceImpl implements CategoryService<Category, Long> {
     public List<Object[]> findTotalProfitByCategory() {
         return this.categoryRepository.findTotalProfitByCategory();
     }
+
+    @Override
+    public List<Category> findAllCategoriesOrderByBookCount() {
+        return this.categoryRepository.findAllCategoriesOrderByBookCount();
+    }
+
 }

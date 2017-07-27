@@ -2,7 +2,7 @@ package app.repository.api;
 
 import app.model.AgeRestriction;
 import app.model.Book;
-import app.model.Category;
+import app.model.ReducedBook;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -63,4 +62,11 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query("select b from Book as b where b.author.lastName like concat(:pattern, '%')")
     List<Book> findBooksWithTitlesWrittenByLastNameEndingWith(@Param("pattern") String pattern);
+
+    @Query("delete from Book as b where b.copies < :minCopies")
+    @Modifying
+    Integer removeBooksWithLessCopiesThan(@Param("minCopies") int minCopies);
+
+    @Query("select b from Book as b where b.title = :title")
+    ReducedBook findReducedBookByTitle(@Param("title") String title);
 }

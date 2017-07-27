@@ -1,9 +1,9 @@
 package app.service.impl;
 
-import app.model.Category;
-import app.repository.api.BookRepository;
 import app.model.AgeRestriction;
 import app.model.Book;
+import app.model.ReducedBook;
+import app.repository.api.BookRepository;
 import app.service.api.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -71,6 +70,16 @@ public class BookServiceImpl implements BookService<Book, Long> {
     @Override
     public Integer updateBookCopiesAfterDate(Date date, int copies) {
         return this.bookRepository.updateBookCopiesAfterDate(date, copies);
+    }
+
+    @Override
+    public Integer removeBooksWithLessCopiesThan(int minCopies) {
+        return this.bookRepository.removeBooksWithLessCopiesThan(minCopies);
+    }
+
+    @Override
+    public ReducedBook findReducedBookByTitle(String title) {
+        return this.bookRepository.findReducedBookByTitle(title);
     }
 
     @Override

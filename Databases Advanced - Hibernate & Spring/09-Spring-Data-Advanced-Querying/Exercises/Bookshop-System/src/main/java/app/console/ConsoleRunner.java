@@ -16,8 +16,6 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by Venelin on 20.7.2017 г..
@@ -37,7 +35,7 @@ public class ConsoleRunner implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        seedDatabase();
+//        seedDatabase();
 
         // 1.	Books Titles by Age Restriction
 //        String ageRestrictionType = reader.readLine();
@@ -110,8 +108,45 @@ public class ConsoleRunner implements CommandLineRunner {
 //        totalCopies.forEach(a -> System.out.printf("%s - %s\n", a[0], a[1]));
 
         // 12.	Find Profit
-        List<Object[]> totalProfit = this.categoryService.findTotalProfitByCategory();
-        totalProfit.forEach(c -> System.out.printf("%s - $%s\n", c[0], c[1]));
+//        List<Object[]> totalProfit = this.categoryService.findTotalProfitByCategory();
+//        totalProfit.forEach(c -> System.out.printf("%s - $%s\n", c[0], c[1]));
+
+        // 13.	Most Recent Books
+//        Calendar calendar = Calendar.getInstance();
+//
+//        List<Category> categoriesByBookCount = this.categoryService.findAllCategoriesOrderByBookCount();
+//        categoriesByBookCount.forEach(c -> {
+//            System.out.println(String.format("--%s: %d books",
+//                    c.getName(),
+//                    c.getBooks().size()));
+//            c.getBooks().stream()
+//                    .sorted((b1, b2) -> {
+//                        int result = b2.getReleaseDate().compareTo(b1.getReleaseDate());
+//                        if (result == 0) {
+//                            result = b1.getTitle().compareTo(b2.getTitle());
+//                        }
+//
+//                        return result;
+//                    })
+//                    .limit(3)
+//                    .forEach(b -> {
+//                        calendar.setTime(b.getReleaseDate());
+//                        System.out.println(String.format("%s - (%s)",
+//                            b.getTitle(),
+//                            calendar.get(Calendar.YEAR)));
+//                    });
+//        });
+
+        // 14.	Reduced Book
+        String title = reader.readLine();
+        ReducedBook book = this.bookService.findReducedBookByTitle(title);
+        if (book != null) {
+            System.out.printf("%s %s %s %s\n",
+                    book.getTitle(),
+                    book.getEditionType(),
+                    book.getAgeRestriction(),
+                    book.getPrice());
+        }
 
         // 15.	* Increase Book Copies
 //        String dateStr = reader.readLine();
@@ -121,6 +156,12 @@ public class ConsoleRunner implements CommandLineRunner {
 //        int updatedRows = this.bookService.updateBookCopiesAfterDate(date, copiesCount);
 //        System.out.println(updatedRows * copiesCount);
 
+        // 16.	* Remove Books
+//        int minCopies = Integer.parseInt(reader.readLine());
+//        int deleted = this.bookService.removeBooksWithLessCopiesThan(minCopies);
+//        System.out.printf("%d book%s deleted\n",
+//                deleted,
+//                deleted == 1 ? " was" : "s were");
     }
 
     private void seedDatabase() throws IOException, ParseException {
