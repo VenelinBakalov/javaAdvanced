@@ -89,12 +89,22 @@ public class BookServiceImpl implements BookService<Book, Long> {
     }
 
     @Override
-    public List<String> findBookTitlesByCategories(@Param("categories") Set<Category> categories) {
-        return this.bookRepository.findBookTitlesByCategories(categories);
+    public List<String> findBookTitlesByCategories(@Param("categories") List<String> categories) {
+        return this.bookRepository.findBookTitlesByCategories(categories, categories.size());
     }
 
     @Override
     public List<Book> findBooksReleasedBefore(Date date) {
         return this.bookRepository.findBooksReleasedBefore(date);
+    }
+
+    @Override
+    public List<String> findAllWhoseTitleContains(String pattern) {
+        return this.bookRepository.findAllWhoseTitleContains(pattern);
+    }
+
+    @Override
+    public List<Book> findBooksWithTitlesWrittenByLastNameEndingWith(String pattern) {
+        return this.bookRepository.findBooksWithTitlesWrittenByLastNameEndingWith(pattern);
     }
 }

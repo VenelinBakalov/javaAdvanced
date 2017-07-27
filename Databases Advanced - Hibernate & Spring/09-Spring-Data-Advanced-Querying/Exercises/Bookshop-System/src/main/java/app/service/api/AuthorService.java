@@ -11,5 +11,6 @@ public interface AuthorService<Author, Long> extends ServiceInterface<Author, Lo
 
     List<Object[]> findAllOrderedByBookCount();
     List<app.model.Author> findAllByFirstNameEndsWith(String pattern);
+    List<Object[]> findTotalBookCopiesCountByAuthor();
 
 }

@@ -8,7 +8,6 @@ import java.util.Set;
  * Created by Venelin on 20.7.2017 г..
  */
 @Entity
-@Table(name = "categories")
 public class Category {
 
     private Long id;

@@ -17,4 +17,9 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     @Query("select c from Category as c where c.name in :categories")
     Set<Category> categoriesByName(@Param("categories") List<String> categories);
+
+
+    @Query("select c.name, sum(b.copies * b.price) from Category as c inner join c.books as b group by c.name " +
+            "order by sum(b.copies * b.price) desc, c.name asc")
+    List<Object[]> findTotalProfitByCategory();
 }

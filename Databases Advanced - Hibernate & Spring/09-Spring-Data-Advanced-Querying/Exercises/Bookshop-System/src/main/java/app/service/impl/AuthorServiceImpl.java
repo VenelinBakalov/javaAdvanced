@@ -53,4 +53,9 @@ public class AuthorServiceImpl implements AuthorService<Author, Long> {
     public List<Author> findAllByFirstNameEndsWith(String pattern) {
         return authorRepository.findAllByFirstNameEndsWith(pattern);
     }
+
+    @Override
+    public List<Object[]> findTotalBookCopiesCountByAuthor() {
+        return this.authorRepository.findTotalBookCopiesCountByAuthor();
+    }
 }

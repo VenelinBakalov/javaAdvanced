@@ -47,10 +47,20 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query("select b.title from Book as b where year(b.releaseDate) != :year")
     List<String> findBooksNotReleaseOn(@Param("year") int year);
+//
+//    @Query("select b.title from Book as b where b.categories = :categories")
+//    List<String> findBookTitlesByCategories(@Param("categories") Set<Category> categories);
 
-    @Query("select b.title from Book as b where b.categories = :categories")
-    List<String> findBookTitlesByCategories(@Param("categories") Set<Category> categories);
+    @Query("select b.title from Book as b where (select count (c) from b.categories as c where c.name in :categories) = :catCount")
+    List<String> findBookTitlesByCategories(@Param("categories") List<String> categories, @Param("catCount") long size);
 
     @Query("select b from Book as b where b.releaseDate < :date")
     List<Book> findBooksReleasedBefore(@Param("date") Date date);
+
+    // the other option for this is where locate(:pattern, b.title) > 0
+    @Query("select b.title from Book as b where b.title like concat('%', :pattern, '%')")
+    List<String> findAllWhoseTitleContains(@Param("pattern") String pattern);
+
+    @Query("select b from Book as b where b.author.lastName like concat(:pattern, '%')")
+    List<Book> findBooksWithTitlesWrittenByLastNameEndingWith(@Param("pattern") String pattern);
 }

@@ -1,6 +1,7 @@
 package app.service.api;
 
 import app.model.AgeRestriction;
+import app.model.Book;
 import app.model.Category;
 
 import java.util.Date;
@@ -20,8 +21,10 @@ public interface BookService<Book, Long> extends ServiceInterface<Book, Long> {
     List<String> findAllGoldenEditionAndLessThan5000Copies();
     List<String> findBooksWithPriceLessThan5GreaterThan40();
     List<String> findBooksNotReleaseOn(int year);
-    List<String> findBookTitlesByCategories(Set<Category> categories);
+    List<String> findBookTitlesByCategories(List<String> categories);
     List<app.model.Book> findBooksReleasedBefore(Date date);
+    List<String> findAllWhoseTitleContains(String pattern);
+    List<app.model.Book> findBooksWithTitlesWrittenByLastNameEndingWith(String pattern);
 
     Integer updateBookCopiesAfterDate(Date date, int copies);
 

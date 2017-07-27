@@ -21,4 +21,8 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     List<Object[]> findAllOrderedByBookCount();
 
     List<Author> findAllByFirstNameEndsWith(String pattern);
+
+    @Query("select concat(a.firstName, ' ', a.lastName), sum(b.copies) from Author as a inner join a.books as b " +
+            "group by a.firstName, a.lastName order by sum(b.copies) desc ")
+    List<Object[]> findTotalBookCopiesCountByAuthor();
 }

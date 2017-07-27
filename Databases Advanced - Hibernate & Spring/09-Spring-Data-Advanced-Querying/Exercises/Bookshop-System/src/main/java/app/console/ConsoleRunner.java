@@ -37,7 +37,7 @@ public class ConsoleRunner implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        seedDatabase();
+        seedDatabase();
 
         // 1.	Books Titles by Age Restriction
 //        String ageRestrictionType = reader.readLine();
@@ -62,10 +62,24 @@ public class ConsoleRunner implements CommandLineRunner {
 //        booksNotReleasedOnYear.forEach(System.out::println);
 
         // 5.	Book Titles by Category
-        List<String> categoriesNames = Stream.of(reader.readLine().split("\\s+")).collect(Collectors.toList());
-        Set<Category> categories = this.categoryService.categoriesByName(categoriesNames);
-        List<String> titles = this.bookService.findBookTitlesByCategories(categories);
-        titles.forEach(System.out::println);
+        // this doesn't work
+//        List<String> categoriesNames = Stream.of(reader.readLine().split("\\s+")).collect(Collectors.toList());
+//        Set<Category> categories = this.categoryService.categoriesByName(categoriesNames);
+
+        // this doesn't work as well but gets result closer to the real one :D
+//        List<String> categories = Arrays.stream(reader.readLine().split("\\s+")).collect(Collectors.toList());
+//        List<String> titles = this.bookService.findBookTitlesByCategories(categories);
+//        titles.forEach(System.out::println);
+
+        // 6.	Books Released Before Date
+//        String dateStr = reader.readLine();
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = sdf.parse(dateStr);
+//        List<Book> books = this.bookService.findBooksReleasedBefore(date);
+//        books.forEach(b -> System.out.printf("%s %s %s\n",
+//                b.getTitle(),
+//                b.getEditionType().name(),
+//                b.getPrice()));
 
         // 7.	Authors Search
 //        String pattern = reader.readLine();
@@ -74,11 +88,30 @@ public class ConsoleRunner implements CommandLineRunner {
 //            System.out.println(author.getFirstName() + " " + author.getLastName());
 //        }
 
+        // 8.	Books Search
+//        String pattern = reader.readLine();
+//        List<String> titles = this.bookService.findAllWhoseTitleContains(pattern);
+//        titles.forEach(System.out::println);
+
+        // 9.	Book Titles Search
+//        String pattern = reader.readLine();
+//        List<Book> books= this.bookService.findBooksWithTitlesWrittenByLastNameEndingWith(pattern);
+//        for (Book book : books) {
+//            System.out.println(book.getTitle() + " " + book.getAuthor().getFirstName() + " " + book.getAuthor().getLastName());
+//        }
+
         // 10.	Count Books
 //        Integer titleLength = Integer.parseInt(reader.readLine());
 //        int count = this.bookService.findBookCountByTitleLength(titleLength);
 //        System.out.println(count);
 
+        // 11.	Total Book Copies
+//        List<Object[]> totalCopies = this.authorService.findTotalBookCopiesCountByAuthor();
+//        totalCopies.forEach(a -> System.out.printf("%s - %s\n", a[0], a[1]));
+
+        // 12.	Find Profit
+        List<Object[]> totalProfit = this.categoryService.findTotalProfitByCategory();
+        totalProfit.forEach(c -> System.out.printf("%s - $%s\n", c[0], c[1]));
 
         // 15.	* Increase Book Copies
 //        String dateStr = reader.readLine();

@@ -44,4 +44,9 @@ public class CategoryServiceImpl implements CategoryService<Category, Long> {
     public Set<Category> categoriesByName(List<String> categories) {
         return this.categoryRepository.categoriesByName(categories);
     }
+
+    @Override
+    public List<Object[]> findTotalProfitByCategory() {
+        return this.categoryRepository.findTotalProfitByCategory();
+    }
 }
