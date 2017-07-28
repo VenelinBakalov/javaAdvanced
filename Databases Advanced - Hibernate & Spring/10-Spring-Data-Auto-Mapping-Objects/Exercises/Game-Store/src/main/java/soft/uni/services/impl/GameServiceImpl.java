@@ -5,8 +5,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import soft.uni.entities.Game;
 import soft.uni.models.bindingModels.game.AddGame;
+import soft.uni.models.bindingModels.game.DeleteGame;
 import soft.uni.models.bindingModels.game.EditGame;
+import soft.uni.models.viewModels.game.GameDetailsView;
 import soft.uni.models.viewModels.game.GameView;
+import soft.uni.models.viewModels.game.OwnedGameView;
 import soft.uni.repositories.GameRepository;
 import soft.uni.services.api.GameService;
 import soft.uni.utils.ModelParser;
@@ -54,8 +57,35 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public EditGame findById(Long id) {
+    public <T> T findById(Long id, Class<T> gameType) {
         Game game = this.gameRepository.findOne(id);
-        return ModelParser.getInstance().map(game, EditGame.class);
+        if (game == null) return null;
+        return ModelParser.getInstance().map(game, gameType);
     }
+
+    @Override
+    public void delete(DeleteGame deleteGame) {
+        Game game = ModelParser.getInstance().map(deleteGame, Game.class);
+        this.gameRepository.delete(game);
+    }
+
+    @Override
+    public GameDetailsView findByTitle(String title) {
+        Game game = this.gameRepository.findByTitle(title);
+        if (game == null) return null;
+        return ModelParser.getInstance().map(game, GameDetailsView.class);
+    }
+
+    @Override
+    public List<OwnedGameView> findOwnedByUser(Long id) {
+        List<Game> games = this.gameRepository.findOwnedByUser(id);
+        List<OwnedGameView> ownedGames = new ArrayList<>();
+
+        for (Game game : games) {
+            OwnedGameView ownedGameView = ModelParser.getInstance().map(game, OwnedGameView.class);
+            ownedGames.add(ownedGameView);
+        }
+        return ownedGames;
+    }
+
 }

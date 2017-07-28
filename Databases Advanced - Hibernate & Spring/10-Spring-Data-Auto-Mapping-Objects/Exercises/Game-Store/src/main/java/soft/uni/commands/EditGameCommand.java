@@ -46,7 +46,7 @@ public class EditGameCommand extends Command {
 
         Long id = Long.parseLong(params[0]);
 
-        EditGame editGame = this.getGameService().findById(id);
+        EditGame editGame = this.getGameService().findById(id, EditGame.class);
         if (editGame == null) {
             return "Invalid game id";
         }
