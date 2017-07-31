@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import soft.uni.entities.User;
+import soft.uni.entities.api.UserType;
 import soft.uni.enums.Role;
 import soft.uni.models.bindingModels.user.LoggedInUser;
+import soft.uni.models.bindingModels.user.ShoppingCartUser;
 import soft.uni.utils.ModelParser;
 import soft.uni.models.bindingModels.user.RegisterUser;
 import soft.uni.repositories.UserRepository;
@@ -26,13 +28,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void persist(RegisterUser registerUser) {
-        User user = ModelParser.getInstance().map(registerUser, User.class);
+    public <T extends UserType> void persist(T userToPersist) {
+        User user = ModelParser.getInstance().map(userToPersist, User.class);
 
-        if (this.userRepository.findAll().size() > 0) {
-            user.setRole(Role.USER);
-        } else {
-            user.setRole(Role.ADMIN);
+        if (userToPersist instanceof RegisterUser) {
+            if (this.userRepository.findAll().size() > 0) {
+                user.setRole(Role.USER);
+            } else {
+                user.setRole(Role.ADMIN);
+            }
         }
 
         this.userRepository.saveAndFlush(user);
@@ -48,5 +52,12 @@ public class UserServiceImpl implements UserService {
         }
 
         return loggedInUser;
+    }
+
+    @Override
+    public <T> T findById(Long id, Class<T> userType) {
+        User user = this.userRepository.findById(id);
+        if (user == null) return null;
+        return ModelParser.getInstance().map(user, userType);
     }
 }

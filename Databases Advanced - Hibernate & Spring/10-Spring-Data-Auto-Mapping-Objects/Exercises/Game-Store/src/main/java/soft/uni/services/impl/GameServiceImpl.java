@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import soft.uni.entities.Game;
+import soft.uni.entities.api.GameType;
 import soft.uni.models.bindingModels.game.AddGame;
 import soft.uni.models.bindingModels.game.DeleteGame;
 import soft.uni.models.bindingModels.game.EditGame;
@@ -32,16 +33,11 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public void persist(AddGame addGame) {
-        Game game = ModelParser.getInstance().map(addGame, Game.class);
+    public <T extends GameType> void persist(T gameToPersist) {
+        Game game = ModelParser.getInstance().map(gameToPersist, Game.class);
         this.gameRepository.saveAndFlush(game);
     }
 
-    @Override
-    public void persist(EditGame editGame) {
-        Game game = ModelParser.getInstance().map(editGame, Game.class);
-        this.gameRepository.saveAndFlush(game);
-    }
 
     @Override
     public List<GameView> getAll() {
@@ -57,7 +53,7 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public <T> T findById(Long id, Class<T> gameType) {
+    public <T extends GameType> T findById(Long id, Class<T> gameType) {
         Game game = this.gameRepository.findOne(id);
         if (game == null) return null;
         return ModelParser.getInstance().map(game, gameType);
@@ -70,10 +66,10 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
-    public GameDetailsView findByTitle(String title) {
+    public <T extends GameType> T findByTitle(String title, Class<T> gameType) {
         Game game = this.gameRepository.findByTitle(title);
         if (game == null) return null;
-        return ModelParser.getInstance().map(game, GameDetailsView.class);
+        return ModelParser.getInstance().map(game, gameType);
     }
 
     @Override
@@ -87,5 +83,6 @@ public class GameServiceImpl implements GameService {
         }
         return ownedGames;
     }
+
 
 }

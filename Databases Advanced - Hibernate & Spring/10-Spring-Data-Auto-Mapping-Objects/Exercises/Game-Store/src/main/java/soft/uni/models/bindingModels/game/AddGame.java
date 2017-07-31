@@ -1,5 +1,6 @@
 package soft.uni.models.bindingModels.game;
 
+import soft.uni.entities.api.GameType;
 import soft.uni.validators.DoublePrecision;
 
 import javax.validation.constraints.DecimalMin;
@@ -12,7 +13,7 @@ import java.util.Date;
 /**
  * Created by Venelin on 27.7.2017 г..
  */
-public class AddGame {
+public class AddGame implements GameType {
 
     @Size(min = 3, max = 100, message = "Title must be between 3 and 100 symbols long")
     @Pattern(regexp = "[A-Z]+.+", message = "Title must start with uppercase letter")

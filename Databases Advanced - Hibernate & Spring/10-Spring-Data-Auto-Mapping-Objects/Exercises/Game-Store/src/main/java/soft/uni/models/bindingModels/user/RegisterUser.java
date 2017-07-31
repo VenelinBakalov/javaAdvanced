@@ -1,5 +1,6 @@
 package soft.uni.models.bindingModels.user;
 
+import soft.uni.entities.api.UserType;
 import soft.uni.validators.Email;
 import soft.uni.validators.Password;
 import soft.uni.validators.PasswordMatching;
@@ -8,7 +9,7 @@ import soft.uni.validators.PasswordMatching;
  * Created by Venelin on 27.7.2017 г..
  */
 @PasswordMatching
-public class RegisterUser {
+public class RegisterUser implements UserType {
 
     //    @Pattern(regexp = ".+[@.]+.+", message = "Invalid email")
     @Email

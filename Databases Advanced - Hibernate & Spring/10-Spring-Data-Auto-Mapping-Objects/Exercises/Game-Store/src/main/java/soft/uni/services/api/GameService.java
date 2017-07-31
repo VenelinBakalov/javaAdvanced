@@ -1,5 +1,6 @@
 package soft.uni.services.api;
 
+import soft.uni.entities.api.GameType;
 import soft.uni.models.bindingModels.game.AddGame;
 import soft.uni.models.bindingModels.game.DeleteGame;
 import soft.uni.models.bindingModels.game.EditGame;
@@ -14,12 +15,14 @@ import java.util.List;
  */
 public interface GameService {
 
-    void persist(AddGame addGame);
-    void persist(EditGame editGame);
+
+    <T extends GameType> void persist(T gameToPersist);
     List<GameView> getAll();
-    <T> T findById(Long id, Class<T> gameType);
+    <T extends GameType> T findById(Long id, Class<T> gameType);
     void delete(DeleteGame deleteGame);
-    GameDetailsView findByTitle(String title);
+
+    <T extends GameType> T findByTitle(String title, Class<T> gameType);
+
     List<OwnedGameView> findOwnedByUser(Long id);
 
 }

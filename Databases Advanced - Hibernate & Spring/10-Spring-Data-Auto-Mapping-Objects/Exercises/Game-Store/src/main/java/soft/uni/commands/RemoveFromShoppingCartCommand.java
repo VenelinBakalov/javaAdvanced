@@ -7,12 +7,9 @@ import soft.uni.services.api.GameService;
 import soft.uni.services.api.UserService;
 import soft.uni.utils.Session;
 
-/**
- * Created by Venelin on 28.7.2017 г..
- */
-public class AddToShoppingCartCommand extends Command {
+public class RemoveFromShoppingCartCommand extends Command {
 
-    public AddToShoppingCartCommand(UserService userService, GameService gameService) {
+    public RemoveFromShoppingCartCommand(UserService userService, GameService gameService) {
         super(userService, gameService);
     }
 
@@ -33,9 +30,10 @@ public class AddToShoppingCartCommand extends Command {
 
         ShoppingCartUser shoppingCartUser = super.getUserService().findById(loggedInUser.getId(), ShoppingCartUser.class);
 
-        String result = shoppingCartUser.addGame(shoppingCartGame);
+        String result = shoppingCartUser.removeGame(shoppingCartGame);
 
         super.getUserService().persist(shoppingCartUser);
+
         return result;
     }
 }

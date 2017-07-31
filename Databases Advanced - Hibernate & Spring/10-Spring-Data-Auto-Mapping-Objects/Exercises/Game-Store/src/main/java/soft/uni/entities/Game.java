@@ -1,5 +1,7 @@
 package soft.uni.entities;
 
+import soft.uni.entities.api.GameType;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -9,7 +11,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "games")
-public class Game {
+public class Game implements GameType {
 
     private Long id;
     private String title;

@@ -1,12 +1,14 @@
 package soft.uni.models.viewModels.game;
 
+import soft.uni.entities.api.GameType;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
  * Created by Venelin on 28.7.2017 г..
  */
-public class GameDetailsView {
+public class GameDetailsView implements GameType {
 
     private String title;
     private BigDecimal price;

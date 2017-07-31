@@ -1,8 +1,10 @@
 package soft.uni.entities;
 
+import soft.uni.entities.api.UserType;
 import soft.uni.enums.Role;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -10,7 +12,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements UserType {
 
     private Long id;
     private String email;
@@ -21,6 +23,8 @@ public class User {
     private Set<Game> boughtGames;
 
     public User() {
+        this.shoppingCartGames = new HashSet<>();
+        this.boughtGames = new HashSet<>();
     }
 
     @Id
@@ -70,7 +74,7 @@ public class User {
         this.role = role;
     }
 
-    @ManyToMany
+    @ManyToMany()
     @JoinTable(name = "users_shopping_cart_games",
     joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "game_id", referencedColumnName = "id"))

@@ -25,7 +25,7 @@ public class GameDetailsCommand extends Command {
         }
 
         String title = params[0];
-        GameDetailsView gameDetailsView = super.getGameService().findByTitle(title);
+        GameDetailsView gameDetailsView = super.getGameService().findByTitle(title, GameDetailsView.class);
 
         if (gameDetailsView == null) {
             return String.format("No game exists in the database with title: %s", title);

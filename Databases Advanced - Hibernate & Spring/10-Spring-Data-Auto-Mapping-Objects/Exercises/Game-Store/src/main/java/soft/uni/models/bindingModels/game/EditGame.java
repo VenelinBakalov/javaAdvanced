@@ -1,5 +1,6 @@
 package soft.uni.models.bindingModels.game;
 
+import soft.uni.entities.api.GameType;
 import soft.uni.validators.DoublePrecision;
 
 import javax.validation.constraints.DecimalMin;
@@ -12,7 +13,7 @@ import java.util.Date;
 /**
  * Created by Venelin on 28.7.2017 г..
  */
-public class EditGame {
+public class EditGame  implements GameType {
 
     private Long id;
     @Size(min = 3, max = 100, message = "Title must be between 3 and 100 symbols long")

@@ -1,9 +1,11 @@
 package soft.uni.models.viewModels.game;
 
+import soft.uni.entities.api.GameType;
+
 /**
  * Created by Venelin on 28.7.2017 г..
  */
-public class OwnedGameView {
+public class OwnedGameView implements GameType {
 
     private String title;
 

@@ -1,11 +1,12 @@
 package soft.uni.models.bindingModels.user;
 
+import soft.uni.entities.api.UserType;
 import soft.uni.enums.Role;
 
 /**
  * Created by Venelin on 27.7.2017 г..
  */
-public class LoggedInUser {
+public class LoggedInUser implements UserType {
 
     private Long id;
     private String fullName;

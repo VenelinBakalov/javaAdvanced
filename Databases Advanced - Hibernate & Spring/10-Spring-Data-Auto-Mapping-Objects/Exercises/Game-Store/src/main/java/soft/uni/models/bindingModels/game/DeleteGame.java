@@ -1,9 +1,11 @@
 package soft.uni.models.bindingModels.game;
 
+import soft.uni.entities.api.GameType;
+
 /**
  * Created by Venelin on 28.7.2017 г..
  */
-public class DeleteGame {
+public class DeleteGame  implements GameType {
 
     private Long id;
     private String title;

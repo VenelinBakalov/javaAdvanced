@@ -11,4 +11,5 @@ import soft.uni.entities.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByEmailAndPassword(String email, String password);
+    User findById(Long id);
 }
