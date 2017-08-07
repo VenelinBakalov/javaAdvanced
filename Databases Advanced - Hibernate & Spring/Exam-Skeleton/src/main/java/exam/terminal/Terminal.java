@@ -19,6 +19,9 @@ public class Terminal implements CommandLineRunner {
     // @SerializedName - when Json name != field name
     // ObjectDto[].class when you have collection in  .json
     // Qualifier - when you have many implementations for autowire
+    // @Valid - validate a field inside the object
+
+    // @EntityListeners(PersonListener.class) -> @PrePersist
 
     /*
      if (! DataValidator.checkIsValid(addGame)) {
