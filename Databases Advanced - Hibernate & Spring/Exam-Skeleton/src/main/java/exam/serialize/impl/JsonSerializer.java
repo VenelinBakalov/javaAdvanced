@@ -27,6 +27,7 @@ public class JsonSerializer implements Serializer {
         this.gson = new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .setPrettyPrinting()
+                .serializeNulls()
                 .create();
     }
 

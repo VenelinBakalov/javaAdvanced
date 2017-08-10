@@ -9,20 +9,24 @@ import products_shop.app.dto.bind.add.UserAddDto;
 import products_shop.app.dto.bind.xmlDtos.CategoriesImportXmlDto;
 import products_shop.app.dto.bind.xmlDtos.ProductsImportXMLDto;
 import products_shop.app.dto.bind.xmlDtos.UsersImportXMLDto;
-import products_shop.app.dto.view.*;
+import products_shop.app.dto.view.CategoryDto;
+import products_shop.app.dto.view.ProductViewDto;
+import products_shop.app.dto.view.UserDto;
+import products_shop.app.dto.view.xml.ProductsExportXMLDto;
 import products_shop.app.services.CategoryService;
 import products_shop.app.services.ProductService;
 import products_shop.app.services.UserService;
 import products_shop.app.utils.io.JsonParser;
 import products_shop.app.utils.io.XMLParser;
 
-
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.*;
 
-
+/**
+ * This time this is not exactly created by Venelin :D Keep reading the comment above the run() method and you will know
+ * what I mean :)
+ */
 
 @Component
 public class Ternimal implements CommandLineRunner {
@@ -44,134 +48,20 @@ public class Ternimal implements CommandLineRunner {
         this.xmlParser = xmlParser;
     }
 
+    // Well it's quite a sloppy homework..it is far from complete and I even used a project skeleton from the previous
+    // homework from another person since I was outside Sofia and couldn't do it...so sorry for the lame homework, normally
+    // I like to do stuff perfect but this time I had to choose between this and the exam preparation and guess what...
+    // the homework lost :D so don't waste much of your time checking it - I've done only the 4 methods in the run() method.
+    // The work well, nothing else does :D
     @Override
     public void run(String... strings) throws Exception {
 
-
-//        importUsersFromXML();
-//        importCategoriesFromXml();
+        importUsersFromXML();
+        importCategoriesFromXml();
         importProductsFromXml();
+        exportToXml();
     }
 
-
-    private void export4() {
-        String path = "/src/main/resources/files/out/users-and-products.json";
-        UserDtoViewWrapper info = this.userService.findAllUserByAtLeastOneSell();
-
-        try {
-            this.jsonParser.writeObject(info,path);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-
-    }
-
-    private void export3() {
-        String path = "/src/main/resources/files/out/categories-by-products.json";
-
-        List<CategoryDtoView> categories=this.categoryService.findAllOrderedByProductCount();
-
-        try {
-            this.jsonParser.writeObject(categories,path);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private void export2() {
-        String path = "/src/main/resources/files/out/users-sold-products.json";
-
-        List<UserDtoViewSold> usersWithSoldProducts = this.userService.findUsersWithSoldProducts();
-
-        try {
-            this.jsonParser.writeObject(usersWithSoldProducts, path);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    private void export1() {
-        String path = "/src/main/resources/files/out/products-in-range.json";
-        List<ProductDtoView> productsByPrice =
-                this.productService.findProductsByPrice(new BigDecimal("500"), new BigDecimal("1000"));
-
-        try {
-            this.jsonParser.writeObject(productsByPrice, path);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    private void seedDB() {
-        importUsers();
-        importCategories();
-        importProducts();
-
-    }
-
-    private void importProducts() {
-        String path = "/files/json/in/products.json";
-        Random random = new Random();
-        List<UserDto> allUsers = this.userService.findAll();
-        List<CategoryDto> allCategories = this.categoryService.findAll();
-        try {
-            ProductAddDto[] products = this.jsonParser.getObject(ProductAddDto[].class, path);
-            for (ProductAddDto product : products) {
-
-                Set<CategoryDto> categories = new HashSet<>();
-                int categoryNumber = random.nextInt(allCategories.size());
-                for (int i = 0; i < categoryNumber; i++) {
-                    CategoryDto categoryDto = allCategories.get(random.nextInt(allCategories.size()));
-
-                    categories.add(categoryDto);
-                }
-
-                product.setCategories(categories);
-
-                UserDto userSeller = allUsers.get(random.nextInt(allUsers.size()));
-                product.setSeller(userSeller);
-
-                int i = random.nextInt(allUsers.size());
-                UserDto userBuyer = allUsers.get(i);
-                if (i % 7 == 0) {
-                    product.setBuyer(userBuyer);
-                }
-
-                this.productService.register(product);
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
-
-    private void importCategories() {
-        String path = "/files/json/in/categories.json";
-        try {
-            CategoryAddDto[] categories = this.jsonParser.getObject(CategoryAddDto[].class, path);
-            for (CategoryAddDto category : categories) {
-                this.categoryService.register(category);
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    private void importUsers() {
-        String path = "/files/json/in/users.json";
-        try {
-            UserAddDto[] users = this.jsonParser.getObject(UserAddDto[].class, path);
-            for (UserAddDto user : users) {
-                this.userService.registerUser(user);
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
 
     private void importUsersFromXML() {
         UsersImportXMLDto users = null;
@@ -238,6 +128,16 @@ public class Ternimal implements CommandLineRunner {
     }
 
     private void exportToXml() {
-
+        ProductsExportXMLDto productsExportXMLDto = this.productService.getProductsToExport();
+        for (ProductViewDto productViewDto : productsExportXMLDto.getProductViewDtos()) {
+            productViewDto.setDate(new Date());
+        }
+        try {
+            this.xmlParser.writeObject(productsExportXMLDto, "src/main/resources/files/xml/out/productsExampleDate.xml");
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
