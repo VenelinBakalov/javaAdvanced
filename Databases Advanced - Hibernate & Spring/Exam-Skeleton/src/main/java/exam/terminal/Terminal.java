@@ -45,6 +45,9 @@ public class Terminal implements CommandLineRunner {
 
     // if collection.size() == 0 -> .set(null) in order not to export empty tags since the mapper creates empty collection
 
+    // Lenses count export in json -> @Expose @SerializedName(...) private int lensCount;
+    // SELECT distinct / group by p if you want to eliminate repeatables
+
     /*
      if (! DataValidator.checkIsValid(addGame)) {
             return DataValidator.getInvalidParameterMessage(addGame);

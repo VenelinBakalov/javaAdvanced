@@ -1,10 +1,10 @@
-package exam.serialize.impl;
+package app.serialize.impl;
 
+import app.exceptions.SerializeException;
+import app.io.FileParser;
+import app.serialize.api.Serializer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import exam.exceptions.SerializeException;
-import exam.io.FileParser;
-import exam.serialize.api.Serializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
