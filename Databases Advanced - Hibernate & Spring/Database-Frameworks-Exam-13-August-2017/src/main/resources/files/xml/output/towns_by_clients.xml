@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<towns>
+    <town name="Pekin" population="23023020" town_clients="20000000"/>
+    <town name="Mexico City" population="12041284" town_clients="5502323"/>
+    <town name="New York" population="11563790" town_clients="5001033"/>
+    <town name="Sofia" population="2001050" town_clients="102850"/>
+    <town name="Kairo" population="5432000" town_clients="100000"/>
+    <town name="Tokyo" population="27634593" town_clients="20000"/>
+    <town name="Delhi" population="12398421" town_clients="10312"/>
+    <town name="Sidney" population="4283102" town_clients="10000"/>
+    <town name="Moscow" population="4523120" town_clients="0"/>
+    <town name="Rome" population="3021333" town_clients="0"/>
+    <town name="Madrid" population="7403213" town_clients="0"/>
+    <town name="Paris" population="8900043" town_clients="0"/>
+    <town name="Rio de Janeiro" population="6345231" town_clients="0"/>
+    <town name="Washington DC" population="3204506" town_clients="0"/>
+    <town name="Kuala Lumpur" population="1000482" town_clients="0"/>
+</towns>

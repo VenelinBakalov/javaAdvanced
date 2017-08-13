@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<branches>
+    <branch name="Pekin Funny Branch" town="Pekin" total_clients="20000000"/>
+    <branch name="Mexico Main Branch" town="Mexico City" total_clients="5502323"/>
+    <branch name="Central Park Branch" town="New York" total_clients="5001023"/>
+    <branch name="Headquarters" town="Sofia" total_clients="102850"/>
+    <branch name="Kairo Central Branch" town="Kairo" total_clients="100000"/>
+    <branch name="Tokyo Main Branch" town="Tokyo" total_clients="20000"/>
+    <branch name="Delhi Western Branch" town="Delhi" total_clients="10312"/>
+    <branch name="Sidney Central Branch" town="Sidney" total_clients="10000"/>
+    <branch name="New York Central" town="New York" total_clients="10"/>
+    <branch name="Sofia Western Branch" town="Sofia" total_clients="0"/>
+    <branch name="Tokyo Underground Branch" town="Tokyo" total_clients="0"/>
+    <branch name="USA Main Branch" town="Washington DC" total_clients="0"/>
+    <branch name="Sofia Eastern Branch" town="Sofia" total_clients="0"/>
+    <branch name="Kuala Lumpur Potato Branch" town="Kuala Lumpur" total_clients="0"/>
+    <branch name="Delhi Eastern Branch" town="Delhi" total_clients="0"/>
+    <branch name="Moscow Central Branch" town="Moscow" total_clients="0"/>
+    <branch name="Rio De Janeiro Branch" town="Rio de Janeiro" total_clients="0"/>
+    <branch name="Sofia Northern Branch" town="Sofia" total_clients="0"/>
+    <branch name="Sofia Southern Branch" town="Sofia" total_clients="0"/>
+</branches>
