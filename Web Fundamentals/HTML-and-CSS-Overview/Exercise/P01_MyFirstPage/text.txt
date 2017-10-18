@@ -1,5 +1,0 @@
-My First Page
-
-Welcome to My First Web Page
-
-This is my first HTML page that I created in TextEdit.

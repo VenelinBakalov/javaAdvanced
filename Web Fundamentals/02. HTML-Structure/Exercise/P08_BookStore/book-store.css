@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+table {
+    border: 1px solid #c6c7cc;
+    border-collapse: collapse;
+    margin: 0px auto;
+}
+td {
+    border: 1px solid #c6c7cc;
+    padding: 5px 30px 5px 10px;
+}
+thead tr th{
+    border: 1px solid #c6c7cc;
+}

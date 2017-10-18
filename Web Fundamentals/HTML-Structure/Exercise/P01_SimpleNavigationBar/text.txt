@@ -1,7 +1,0 @@
-Simple Navigation Bar
-
-Home
-Services
-Products
-About Us
-Contact

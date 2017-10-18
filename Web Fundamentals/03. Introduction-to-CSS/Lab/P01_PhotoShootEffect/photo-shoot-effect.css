@@ -1,0 +1,105 @@
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,900";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 960px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #fcfcfc;
+    background: #355664;
+}
+h1, h2, h3 {
+    font-family: forte, Arial, sans-serif;
+}
+h1 {
+    font-size: 50px;
+    padding: 10px 0 0;
+    text-align: center;
+}
+h2 {
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+    border-bottom: 3px solid #416371;
+    padding-bottom: 20px;
+}
+h3 {
+    text-align: right;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+p {
+    line-height: 20px;
+    padding-bottom: 5px;
+    color: #94c258
+}
+img {
+    width: 500px;
+    height: 300px;
+    border: none;
+}
+div.article-content {
+    margin: 15px 0;
+}
+nav {
+    background: #355664;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+a {
+    color: #ffffff;
+    margin: 5px 2px;
+    padding: 7px 10px 4px;
+    font-size: 30px;
+}
+article {
+    height: 390px;
+    background: #213E4A;
+    padding: 20px;
+    margin: 0 0 10px;
+}
+figure {
+    border: 3px solid #142830;
+    float: right;
+    height: 300px;
+    width: 500px;
+    margin-left: 15px;
+}
+footer {
+    border-top: 3px solid #142830;
+    padding-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+h1, h2, a[title="sweet tabs"] + li + a {
+    text-transform: uppercase;
+}
+nav ul li {
+    display: inline-block;
+}
+p + p {
+    color: #ffffff;
+}
+nav ul a[title="sweet tabs"] {
+    color: #8EC45B;
+    font-size: 30px;
+    text-transform: none;
+}
+nav, article, nav ul li a, figure {
+    border-radius: 10px;
+}
+nav ul li:first-of-type > a {
+    color: #7CB3E9;
+    font-size: 30px;
+    text-transform: lowercase;
+}
+nav ul li:last-of-type > a {
+    text-transform: uppercase;
+}

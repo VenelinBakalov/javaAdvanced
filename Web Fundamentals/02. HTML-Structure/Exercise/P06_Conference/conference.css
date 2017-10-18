@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+nav {
+    background-color: #226880;
+}
+nav ul {
+    padding: 0px;
+    height: 40px;
+    line-height: 30px;
+}
+nav ul li {
+    width: 100px;
+    margin: 0px 5px;
+    padding: 5px 10px;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-block;
+}
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+}
+header nav p {
+    text-align: right;
+    padding-right: 10px;
+    color: #84b3ad;
+}
+header {
+    background-color: #226880;
+}
+header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    margin-top: 40px;
+}
+header h2 {
+    margin-top: 30px;
+    color: #84b3ad;
+    text-align: center;
+}
+header p {
+    text-align: center;
+    color: gray;
+}
+button {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    padding: 15px 45px;
+    font-size: 16px;
+}
+button:hover {
+    background: #ffffff;
+    color: #84b3ad;
+    cursor: pointer;
+}
+
+section {
+    display: inline-block;
+    color: gray;
+    padding: 10px 20px 15px 100px;
+    margin: 10px;
+}
+section h2 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+}
+section h1 {
+    font-size: 20px;
+}
+section p {
+    width: 200px;
+}
+img {
+    width: 200px;
+    border-radius: 3%;
+    margin: 15px;
+}
+
+footer {
+    background-color: #226880;
+}
+footer ul li {
+    float: right;
+    display: inline-block;
+}
+footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(http://fonts.gstatic.com/s/lato/v13/h3_FseZLI76g1To6meQ4zX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(http://fonts.gstatic.com/s/lato/v13/ifRS04pY1nJBsu8-cUFUS-vvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v13/IY9HZVvI1cMoAHxvl0w9LVKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v13/22JRxvfANxSmnAhzbFH8PgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v13/8qcEw_nrk_5HEcCpYdJu8BTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v13/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
