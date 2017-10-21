@@ -1,0 +1,28 @@
+main {
+    width: 500px;
+    margin: 0 auto;
+}
+.left {
+    float: left;
+    margin-right: 5px;
+}
+.right {
+    float: right;
+    margin-left: 5px;
+}
+div {
+    background: #6495ed;
+    border: 1px solid #6495ed;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+    padding: 15px;
+}
+p {
+    line-height: 20px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+.center {
+    margin: 0 auto;
+}
