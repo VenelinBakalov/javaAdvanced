@@ -1,0 +1,89 @@
+body {
+    background: #bc6c09;
+}
+header {
+    margin-top: 45px;
+}
+li {
+    display: inline-block;
+    float: right;
+    padding-top: 55px;
+}
+a {
+    text-decoration: none;
+    padding: 35px;
+    border: 3px double orange;
+    margin: 25px;
+    color: yellow;
+    background: none;
+    border-radius: 15%;
+    text-transform: uppercase;
+}
+img {
+    width: 100%;
+    height: 100%
+}
+p {
+    color: black;
+    font-size: 18px;
+}
+main article div {
+    border: 1px double greenyellow;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}
+h1 {
+    border: double;
+    display: inline-block;
+    padding: 5px;
+    font-size: 46px;
+    margin-top: 10px;
+    color: #00d5f2;
+    font-style: italic;
+}
+article {
+    height: 900px;
+    padding: 20px;
+    margin-top: 100px;
+    background: #e0ac1d;
+    border-radius: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+article div figure {
+    border: 3px solid #142830;
+    float: right;
+    height: 320px;
+    width: 530px;
+    margin-left: 15px;
+}
+figure {
+    float: right;
+    height: 320px;
+    width: 530px;
+}
+button {
+    border: 2px dashed;
+    border-color: #685d50;
+    background: #bcbc09;
+    color: yellow;
+    width: 120px;
+    height: 80px;
+    margin-left: 350px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+a:hover, button:hover {
+    color: red;
+    background: #e8f3f4;
+    font-style: italic;
+}
+footer {
+    border: dotted greenyellow;
+    border-radius: 10px;
+    color: yellow;
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+}
