@@ -1,0 +1,17 @@
+Contact Form
+
+Contact Form
+
+Please fill all the texts in the fields.
+
+Your Name :
+
+Your Email :
+
+Message :
+
+Subject :
+
+Job Inquiry
+
+General Question
