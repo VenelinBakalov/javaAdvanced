@@ -113,10 +113,21 @@ i {
 
 
 
-/*TODO: @media all and (max-width: 800px) {*/
+@media all and (max-width: 800px) {
+    form {
+        width: 90%;
+    }
+}
 
-/*}*/
-
-/*TODO: @media all and (max-width: 660px) {*/
-
-/*}*/
+@media all and (max-width: 660px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .left-contact,
+    .right-contact {
+        padding: 0;
+        width: 100%;
+    }
+}

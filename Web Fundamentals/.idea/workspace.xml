@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="agency.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.html">
+      <file leaf-file-name="hr-company.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="930">
+              <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agency.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.css">
+      <file leaf-file-name="hr-company.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+            <state relative-caret-position="975">
+              <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -66,6 +66,10 @@
         <option value="$PROJECT_DIR$/06. CSS-Positioning/Lab/P03_FloatingElements/floating-elements.css" />
         <option value="$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.html" />
         <option value="$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.css" />
+        <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P01_Flexbox_Order/flexbox-order.css" />
+        <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P02_Contact_Form/contact-form.css" />
+        <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html" />
+        <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.css" />
       </list>
     </option>
   </component>
@@ -94,7 +98,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -106,25 +109,40 @@
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="07. Creating-Landing-Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="07. Creating-Landing-Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
               <item name="Lab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="07. Creating-Landing-Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
               <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P01_ConsultingAgency" type="462c0819:PsiDirectoryNode" />
+              <item name="P01_Flexbox_Order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
+              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="P02_Contact_Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
+              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
+              <item name="Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="P04_HR_Company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,17 +180,18 @@
       <workItem from="1508354893432" duration="2308000" />
       <workItem from="1508570724807" duration="23085000" />
       <workItem from="1508742315059" duration="249000" />
+      <workItem from="1508783095461" duration="4793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25736000" />
+    <option name="totallyTimeSpent" value="30529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4172619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -201,6 +220,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -313,10 +348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.css">
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P01_Flexbox_Order/flexbox-order.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -325,6 +360,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P01_Flexbox_Order/flexbox-order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="998">
+          <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P02_Contact_Form/contact-form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="117" column="18" lean-forward="false" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P02_Contact_Form/contact-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
           <folding />
         </state>
       </provider>

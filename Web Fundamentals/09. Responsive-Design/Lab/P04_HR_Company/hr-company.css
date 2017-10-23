@@ -46,7 +46,7 @@ main h2 {
 .hr-solution {
     display: flex;
     flex-direction: column;
-    background: url("img/shv_sunrise_preview.jpg") center center no-repeat;
+    background: url("images/shv_sunrise_preview.jpg") center center no-repeat;
     background-size: cover;
     height: 600px;
     max-width: 100%;
@@ -98,7 +98,7 @@ nav {
     display: none;
     width: 40px;
     height: 40px;
-    background: #4C8FEC url(img/menu-icon.png) center;
+    background: #4C8FEC url(images/menu-icon.png) center;
 
 }
 
@@ -116,6 +116,29 @@ a:hover#menu-icon {
 
 
 
-/*TODO: @media all and (max-width: 880px) {*/
-
-/*}*/
+@media all and (max-width: 880px) {
+    .business {
+        display: block;
+        text-align: center;
+    }
+    main article p {
+        max-width: 100%;
+        text-align: center;
+    }
+    header .button {
+        display: flex;
+        flex-direction: column;
+    }
+    .button a {
+        width: 100%;
+    }
+    .subscribe-now {
+        margin-top: 15px;
+    }
+    .top-list {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+}
