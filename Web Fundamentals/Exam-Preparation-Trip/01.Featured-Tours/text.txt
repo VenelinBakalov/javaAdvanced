@@ -1,0 +1,19 @@
+Featured Tours
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique urna ex, vel iaculis mi molestie vitae. Aenean posuere quam a nisl luctus hendrerit.
+
+Kauai
+Hawaii
+$1000
+
+Patagonia
+Chile
+$1250
+
+Northern Lights
+Iceland
+$3120
+
+Keukenhof
+Netherlands
+$800

@@ -1,0 +1,25 @@
+@media screen and (max-width: 481px) {
+    .top-button-container {
+        display: none;
+    }
+    .header-wrapper {
+        background: #333333;
+        display: flex;
+        justify-content: center;
+    }
+    .header-subtitle {
+        display: none;
+    }
+    main .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .travel-section > * {
+        max-width: 100% ;
+    }
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

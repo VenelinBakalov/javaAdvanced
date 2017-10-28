@@ -1,0 +1,38 @@
+@import "https://fonts.googleapis.com/css?family=Lato";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body {
+    width: 100%;
+    font-family: Lato, sans-serif;
+}
+header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+header p {
+    width: 50%;
+    margin: auto;
+}
+main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+main > div {
+    width: 20%;
+}
+.stars-container i {
+    color: tomato;
+    padding-top: 25px;
+}
+.destination, .price {
+    font-weight: bold;
+}
+.destination {
+    font-size: 20px;
+}

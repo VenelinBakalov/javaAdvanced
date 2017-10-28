@@ -1,0 +1,29 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+main {
+    display: flex;
+}
+body {
+    width: 100%;
+}
+form {
+    width: 65%;
+}
+.first-container, .second-container {
+    display: flex;
+    justify-content: space-around;
+}
+input[type="text"] {
+    width: 440px;
+}
+.first-container div, .second-container div {
+    margin-top: 25px;
+}
+.text-area textarea{
+    width: 91.8%;
+    padding: 20px;
+}
+.text-area {
+    vertical-align: top;
+}

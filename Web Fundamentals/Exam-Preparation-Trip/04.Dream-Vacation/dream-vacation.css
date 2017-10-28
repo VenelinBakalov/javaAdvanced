@@ -1,0 +1,88 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #444444;
+    height: 700px;
+    position: relative;
+    z-index: 0;
+}
+.opacity {
+    z-index: -1;
+    background: url(images/background.jpg) center;
+    background-size: 100% 100%;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+nav {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 15px;
+}
+h1, nav {
+
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+li {
+    padding: 15px;
+}
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.section-header {
+    text-align: center;
+}
+section {
+    display: flex;
+    background: lightgray;
+    justify-content: center;
+}
+.middle-article {
+    margin: 0 30px;
+}
+figcaption {
+    background: #FFFFFF;
+    margin-top: -4px;
+    margin-bottom: 20px;
+}
+.price {
+    float: right;
+}
+.customers {
+    background: #FFFFFF;
+    text-align: center;
+}
+.last-heading {
+    text-align: center;
+}
+.user {
+    width: 27%;
+}
+.user img {
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.user:nth-child(2) {
+    margin: 0 35px;
+}
+.customers h4 {
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,63 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,900";
+
+body {
+    background: darkgray;
+}
+main {
+    width: 900px;
+    height: 620px;
+    border: 1px solid black;
+    background: whitesmoke;
+    font-family: "Open Sans", sans-serif;
+}
+img {
+    float: left;
+    position: relative;
+    top: -6px;
+    left: 50px;
+}
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+form {
+    display: flex;
+    align-items: flex-end;
+}
+h1, p{
+    text-align: right;
+}
+.section-right form {
+    justify-content: flex-end;
+}
+input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+.input-field {
+    position: relative;
+}
+i {
+    position: absolute;
+    color: slategray;
+    top: 8px;
+}
+button {
+    float: right;
+    margin: 35px 45px 0 0;
+    background: darkgray;
+    border-radius: 20px;
+    color: #FFFFFF;
+    width: 120px;
+    height: 35px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid black;
+    font-weight: bold;
+}

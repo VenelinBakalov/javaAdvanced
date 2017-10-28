@@ -13,22 +13,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hr-company.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html">
+    <leaf>
+      <file leaf-file-name="dream-vacation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+            <state relative-caret-position="840">
+              <caret line="122" column="29" lean-forward="false" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hr-company.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.css">
+      <file leaf-file-name="dream-vacation.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+            <state relative-caret-position="998">
+              <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -48,6 +48,7 @@
     <findStrings>
       <find>ce</find>
       <find>none</find>
+      <find />
       <find />
     </findStrings>
   </component>
@@ -70,6 +71,22 @@
         <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P02_Contact_Form/contact-form.css" />
         <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html" />
         <option value="$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/01_BeatsPricingPage/beats.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/01_BeatsPricingPage/beats.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/02_BeatsUnresponsive/beats-unresponsive.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/04_BeatsLandingPage/beats-landing.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/04_BeatsLandingPage/beats-landing.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/01.Featured-Tours/featured-tours.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/01.Featured-Tours/featured-tours.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/best-trip-ever.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/best-trip-ever.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/responsive.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/03.Get-in-Touch/get-in-touch.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/03.Get-in-Touch/get-in-touch.css" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.html" />
+        <option value="$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.css" />
       </list>
     </option>
   </component>
@@ -98,7 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,40 +126,24 @@
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
+              <item name="Exam-Preparation-I-Problem-Description" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="Exam-Preparation-Trip" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
               <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P01_Flexbox_Order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P02_Contact_Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Web Fundamentals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Web Fundamentals" type="462c0819:PsiDirectoryNode" />
-              <item name="09. Responsive-Design" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P04_HR_Company" type="462c0819:PsiDirectoryNode" />
+              <item name="Exam-Preparation-Trip" type="462c0819:PsiDirectoryNode" />
+              <item name="04.Dream-Vacation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,18 +181,21 @@
       <workItem from="1508354893432" duration="2308000" />
       <workItem from="1508570724807" duration="23085000" />
       <workItem from="1508742315059" duration="249000" />
-      <workItem from="1508783095461" duration="4793000" />
+      <workItem from="1508783095461" duration="5057000" />
+      <workItem from="1508952988015" duration="6455000" />
+      <workItem from="1509039616291" duration="10486000" />
+      <workItem from="1509129481310" duration="14922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30529000" />
+    <option name="totallyTimeSpent" value="62656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -208,6 +212,24 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -220,11 +242,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/07. Creating-Landing-Pages/Lab/P01_ConsultingAgency/agency.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -232,7 +267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
           <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -240,7 +274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -248,7 +281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
           <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -352,7 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -360,7 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -368,7 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -376,7 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="998">
           <caret line="83" column="18" lean-forward="false" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="818">
           <caret line="117" column="18" lean-forward="false" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -392,15 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,6 +426,147 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="141" column="23" lean-forward="false" selection-start-line="141" selection-start-column="23" selection-end-line="141" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09. Responsive-Design/Lab/P04_HR_Company/hr-company.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/01_BeatsPricingPage/beats.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/01_BeatsPricingPage/beats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/02_BeatsUnresponsive/beats-unresponsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/02_BeatsUnresponsive/beats-unresponsive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/03_BeatsOrderForm/beats-order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/01.Featured-Tours/featured-tours.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/01.Featured-Tours/featured-tours.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/04_BeatsLandingPage/beats-landing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="53" lean-forward="false" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding>
+            <element signature="e#1104#1110#1" expanded="false" />
+            <element signature="e#1650#1656#0" expanded="false" />
+            <element signature="e#1703#1707#0" expanded="false" />
+            <element signature="e#2020#2026#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-I-Problem-Description/04_BeatsLandingPage/beats-landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/best-trip-ever.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/02.Best-Trip-Ever/best-trip-ever.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/03.Get-in-Touch/get-in-touch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/03.Get-in-Touch/get-in-touch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="43" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="122" column="29" lean-forward="false" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exam-Preparation-Trip/04.Dream-Vacation/dream-vacation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="998">
+          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
           <folding />
         </state>
       </provider>
