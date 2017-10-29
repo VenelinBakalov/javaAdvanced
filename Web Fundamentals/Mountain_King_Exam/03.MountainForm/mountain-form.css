@@ -1,0 +1,71 @@
+@import "https://fonts.googleapis.com/css?family=Francois+One";
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #F4FCFF;
+    width: 100%;
+    text-align: center;
+}
+main h1 {
+    font-family: "Francois One", sans-serif;
+    font-size: 50px;
+    margin-top: 35px;
+    margin-bottom: 70px;
+    border-bottom: 3px solid #31D47D;
+    width: 17%;
+    display: inline-block;
+    color: #002C3C;
+}
+form {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 27%;
+    margin: 0 auto;
+}
+input {
+    padding: 10px 20px 10px 50px;
+    margin-bottom: 40px;
+    width: 50%;
+    border: 1px solid #BCDAE5;
+    border-radius: 2px;
+}
+.input-field {
+    position: relative;
+}
+.input-field label {
+    position: absolute;
+    top: -26px;
+}
+.input-field label::before {
+    position: absolute;
+    content: "*";
+    color: red;
+    left: -10px;
+}
+.input-field:nth-of-type(3) label::before {
+    content: '';
+}
+.input-field i {
+    position: absolute;
+    left: 95px;
+    top: 5px;
+    color: #002C3C;
+    border-right: 1px solid #BCDAE5;
+    width: 30px;
+    padding: 5px;
+}
+form button {
+    color: #FFFFFF;
+    background: #31D47D;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 23px;
+    font-size: 16px;
+    margin-top: -10px;
+    float: right;
+    margin-right: 93px;
+}

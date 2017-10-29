@@ -1,0 +1,21 @@
+MountainRooms
+
+Pick a room that best suits your taste and budget
+
+Deluxe room
+18 m2
+Balcony
+Mountain view
+$200.0 / Night
+
+Superior room
+18 m2
+Balcony
+Mountain view
+$180.0 / Night
+
+Standard room
+18 m2
+Balcony
+Mountain view
+$120.0 / Night

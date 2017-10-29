@@ -1,0 +1,74 @@
+@media all and (max-width: 479px) {
+    .menu {
+        line-height: 70px;
+        position: relative;
+    }
+    .menu span {
+        margin-left: 20px;
+        width: 100%;
+    }
+    .menu i {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 26px;
+    }
+    nav ul li{
+        display: none;
+    }
+    .about-us {
+        padding-left: 20px;
+        background-size: 100% 100%;
+    }
+    .about-us h1 {
+        font-size: 25px;
+    }
+    .about-us p {
+        font-size: 15px;
+        width: 95%;
+        letter-spacing: 1px;
+        padding-top: 37px;
+        padding-right: 15px;
+    }
+    .info p.headings {
+        margin-top: 40px;
+        width: 100%;
+        font-size: 25px;
+    }
+    .info p.paragraph {
+        width: 84%;
+    }
+    .best-place hr {
+        width: 26%;
+        margin-bottom: 20px;
+    }
+    .views {
+        flex-direction: column;
+    }
+    .views img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    #second-heading {
+        margin-top: 420px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .why-us {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .why-us article.extras {
+        width: 100%;
+    }
+    .team-presenting p.headings {
+        margin-top: 30px;
+        width: 100%;
+        font-size: 20px;
+    }
+    .team-presenting section.our-team {
+        flex-direction: column;
+        text-align: center;
+    }
+}

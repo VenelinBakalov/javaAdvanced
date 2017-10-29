@@ -1,0 +1,60 @@
+@import "https://fonts.googleapis.com/css?family=Lato";
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,600";
+
+header h1 {
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    color: #383A47;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 55px;
+    margin-top: 35px;
+}
+main section{
+    display: flex;
+    justify-content: center;
+    height: 700px;
+}
+main section article {
+    margin: 10px;
+}
+img {
+    width: 475px;
+    height: 500px;
+}
+article h2 {
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    color: #383A47;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.details-holder {
+    display: flex;
+    color: #919A90;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+}
+.details-holder p {
+    vertical-align: middle;
+}
+.details-holder span {
+    margin-left: 10px;
+}
+.details-holder span::before {
+    content: "•";
+    font-size: 25px;
+    margin-right: 10px;
+    color: #EAE8E8;
+}
+.price {
+    font-family: Montserrat, sans-serif;
+    color: #919A90;
+    font-weight: bold;
+}
+.price span {
+    color: #2340B2;
+    font-size: 25px;
+}

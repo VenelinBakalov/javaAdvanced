@@ -1,0 +1,13 @@
+Mountain Form
+
+Name
+Andrew
+
+Email:
+andrew"email.com
+
+Phone number:
+123 456 789
+
+Password(minimum 6 characters):
+********
