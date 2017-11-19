@@ -19,6 +19,12 @@
             let temp = [];
             $('#items li').each((index, element) => temp.push(element.textContent));
             $('#result').text(temp.join(', '));
+
+//            let items = $('ul#items li')
+//                .toArray()
+//                .map(li => li.textContent)
+//                .join(", ");
+//            $('#result').text(items);
         }
     </script>
 
