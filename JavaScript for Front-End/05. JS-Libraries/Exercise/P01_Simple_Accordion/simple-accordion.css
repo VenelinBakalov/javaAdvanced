@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    font-family: Lato, sans-serif;
+}
+h1 {
+    color: #993333;
+}
+.card-header {
+    background: #993333;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+.card-link {
+    text-decoration: none;
+}
+.card {
+    border: none;
+    margin: 10px 0;
+}
+.card-block ul {
+    padding-left: 15px;
+}
+.card-block ul li {
+    color: #80162e;
+    list-style-type: none;
+}

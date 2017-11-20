@@ -1,0 +1,28 @@
+body {
+    background-color: #AAA;
+}
+
+.container {
+    padding: 30px 0;
+}
+
+.slider-box {
+    background-color: white;
+    box-shadow: inset 1px 1px 5px #CCC;
+    height: 230px;
+    text-align: center;
+    padding: 15px;
+}
+
+.slider-box img {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.slider-box h4 {
+    font-size: 20px;
+}
+
+.slider-box p {
+    font-size: 15px;
+}

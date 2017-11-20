@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="simple-slider.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="autoplay"
+         data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": true, "autoplay": true, "autoplaySpeed": 5000, "pauseOnFocus": false, "dots": true}'>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://static.pexels.com/photos/371633/pexels-photo-371633.jpeg" alt="">
+            <h4>Beautiful landscape 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg" alt="">
+            <h4>Beautiful landscape 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://static.photocdn.pt/images/articles/2017_1/iStock-545347988.jpg" alt="">
+            <h4>Beautiful landscape 3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="http://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg" alt="">
+            <h4>Beautiful landscape 4</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDm01RULGx12l0V8KoeVBopBiL2G7NZ6cDaL-IP-74VJwiE3bp7A" alt="">
+            <h4>Beautiful landscape 5</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://www.proify.com/wp-content/uploads/2016/12/landscape-photography-competition.jpg" alt="">
+            <h4>Beautiful landscape 6 </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+        <div class="slider-box">
+            <img class="rounded-circle" width="100px" height="100px"
+                 src="https://iso.500px.com/wp-content/uploads/2014/09/2048-13-1500x1000.jpg" alt="">
+            <h4>Beautiful landscape 7</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"
+        integrity="sha256-F0O1TmEa4I8N24nY0bya59eP6svWcshqX1uzwaWC4F4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.autoplay').slick({
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true,
+                        autoplay: true,
+                        autoplaySpeed: 2000
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        autoplay: true,
+                        autoplaySpeed: 2000
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 2000
+                    }
+                }
+            ],
+        });
+    });
+</script>
+</body>
+</html>
