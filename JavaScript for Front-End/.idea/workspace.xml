@@ -14,14 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="load-repos.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="225">
+              <caret line="121" column="19" lean-forward="false" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
               <folding>
-                <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
+                <marker date="1511627063000" expanded="true" signature="2403:2599" ph="..." />
+                <marker date="1511627063000" expanded="true" signature="2952:2992" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,6 +85,11 @@
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.js" />
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.html" />
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P02_Bus_Schedule/bus-schedule.html" />
+        <option value="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/done.js" />
+        <option value="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/render-data.html" />
+        <option value="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/form.html" />
+        <option value="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/index.html" />
+        <option value="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/script.js" />
       </list>
     </option>
   </component>
@@ -102,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -127,7 +142,7 @@
               <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
               <item name="05. JS-Libraries" type="462c0819:PsiDirectoryNode" />
               <item name="Exercise" type="462c0819:PsiDirectoryNode" />
-              <item name="P03_Simple_Slider" type="462c0819:PsiDirectoryNode" />
+              <item name="P01_Simple_Accordion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
@@ -156,14 +171,13 @@
             <path>
               <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P03_Load_GitHub_Repos" type="462c0819:PsiDirectoryNode" />
+              <item name="07. Exam-Preparation-I-Pokemon-Codex" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,6 +186,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -189,6 +204,14 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Node.js.script.js">
+    <configuration name="script.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="script.js" working-dir="$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.script.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -209,12 +232,13 @@
       <workItem from="1511204159480" duration="5562000" />
       <workItem from="1511214493428" duration="2949000" />
       <workItem from="1511291456945" duration="6090000" />
-      <workItem from="1511597102518" duration="6051000" />
+      <workItem from="1511597102518" duration="6685000" />
+      <workItem from="1511609818328" duration="10082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30535000" />
+    <option name="totallyTimeSpent" value="41251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -251,6 +275,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <marker date="1511627063000" expanded="true" signature="2403:2599" ph="..." />
+            <marker date="1511627063000" expanded="true" signature="2952:2992" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -263,7 +308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -411,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05. JS-Libraries/Exercise/P01_Simple_Accordion/simple-accordion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05. JS-Libraries/Exercise/P02_Nested_Accordion/nested-accordion.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -464,34 +501,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="71" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.js" />
     <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P02_Bus_Schedule/bus-schedule.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1511605500000" expanded="true" signature="1673:1679" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,16 +529,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1511605500000" expanded="true" signature="1673:1679" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="334">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
           <folding>
             <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/render-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/done.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05. JS-Libraries/Exercise/P01_Simple_Accordion/simple-accordion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07. Exam-Preparation-I-Pokemon-Codex/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="121" column="19" lean-forward="false" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+          <folding>
+            <marker date="1511627063000" expanded="true" signature="2403:2599" ph="..." />
+            <marker date="1511627063000" expanded="true" signature="2952:2992" ph="..." />
           </folding>
         </state>
       </provider>
