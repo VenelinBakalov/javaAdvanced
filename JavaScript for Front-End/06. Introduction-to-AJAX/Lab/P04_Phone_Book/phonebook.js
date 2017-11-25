@@ -8,7 +8,7 @@ $(() => {
     $('#btnLoad').click(loadContacts);
     $('#btnCreate').click(createContact);
 
-    loadContacts(); 
+    loadContacts();
 
     function loadContacts() {
         list.empty();

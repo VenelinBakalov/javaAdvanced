@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Schedule</title>
+    <style>
+        #schedule {
+            text-align: center;
+            width: 400px;
+        }
+        input {
+            width: 120px;
+        }
+        #info {
+            background-color: aquamarine;
+            border: 1px solid black;
+            margin: 0.25em;
+        }
+        .info {
+            font-size: 1.5em;
+            padding: 0.25em;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="schedule">
+    <div id="info"><span class="info">Not Connected</span></div>
+    <div id="controls">
+        <input id="depart" value="Depart" type="button" onclick="result.depart()">
+        <input id="arrive" value="Arrive" type="button" onclick="result.arrive()" disabled="true">
+    </div>
+</div>
+<script>
+    const host = 'https://judgetests.firebaseio.com/schedule/';
+    const departBtn = $('#depart');
+    const arriveBtn = $('#arrive');
+    const infoBtn = $('#info').find('.info');
+
+    function solve() {
+        let busStationName,
+            nextId = 'depot';
+
+        function depart() {
+//            departBtn.prop('disabled', true);
+            departBtn.attr('disabled', true);
+            $.ajax({
+                url: host + nextId + '.json',
+                method: "GET",
+                success: success,
+                error: error
+            });
+
+            function success(response) {
+                busStationName = response.name;
+                nextId = response.next;
+
+                infoBtn.text('Next stop ' + busStationName);
+                arriveBtn.prop('disabled', false);
+            }
+            function error() {
+                infoBtn.text('Error');
+                departBtn.prop('disabled', true);
+                arriveBtn.prop('disabled', true);
+            }
+        }
+        function arrive() {
+            departBtn.prop('disabled', false);
+            arriveBtn.prop('disabled', true);
+            infoBtn.text('Arriving at '+ busStationName);
+        }
+        return {
+            depart,
+            arrive
+        };
+    }
+    let result = solve();
+</script>
+</body>
+</html>

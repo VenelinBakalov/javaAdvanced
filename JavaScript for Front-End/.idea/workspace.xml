@@ -14,37 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="load-repos.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="load-repos.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="405">
+              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phonebook.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phonebook.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding>
-                <marker date="1511600305000" expanded="true" signature="403:411" ph="…" />
-                <marker date="1511600305000" expanded="true" signature="1975:2084" ph="{...}" />
-                <marker date="1511600305000" expanded="true" signature="2119:2157" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -56,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -67,6 +43,7 @@
       <find>c</find>
       <find>Lato,</find>
       <find>rtl</find>
+      <find>attr</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -94,6 +71,9 @@
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phone-book.html" />
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.html" />
         <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.js" />
+        <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.js" />
+        <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.html" />
+        <option value="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P02_Bus_Schedule/bus-schedule.html" />
       </list>
     </option>
   </component>
@@ -134,35 +114,6 @@
             <path>
               <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="01. Introduction-to-Bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="01. Introduction-to-Bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="04. Introduction-to-jQuery-and-DOM" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="04. Introduction-to-jQuery-and-DOM" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="04. Introduction-to-jQuery-and-DOM" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P03_Link_Buttons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
               <item name="05. JS-Libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -187,6 +138,19 @@
               <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
               <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise" type="462c0819:PsiDirectoryNode" />
+              <item name="P01_Bus_Stop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
               <item name="Lab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -195,13 +159,6 @@
               <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
               <item name="Lab" type="462c0819:PsiDirectoryNode" />
               <item name="P03_Load_GitHub_Repos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaScript for Front-End" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaScript for Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="06. Introduction-to-AJAX" type="462c0819:PsiDirectoryNode" />
-              <item name="Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="P04_Phone_Book" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,6 +172,11 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,12 +209,12 @@
       <workItem from="1511204159480" duration="5562000" />
       <workItem from="1511214493428" duration="2949000" />
       <workItem from="1511291456945" duration="6090000" />
-      <workItem from="1511597102518" duration="1600000" />
+      <workItem from="1511597102518" duration="6051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26084000" />
+    <option name="totallyTimeSpent" value="30535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -310,9 +272,9 @@
         <state relative-caret-position="630">
           <caret line="42" column="39" lean-forward="false" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
           <folding>
-            <marker date="1511600305000" expanded="true" signature="403:411" ph="…" />
-            <marker date="1511600305000" expanded="true" signature="1975:2084" ph="{...}" />
-            <marker date="1511600305000" expanded="true" signature="2119:2157" ph="{...}" />
+            <marker date="1511602309000" expanded="true" signature="402:410" ph="…" />
+            <marker date="1511602309000" expanded="true" signature="1974:2083" ph="{...}" />
+            <marker date="1511602309000" expanded="true" signature="2118:2156" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -498,39 +460,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05. JS-Libraries/Exercise/P03_Simple_Slider/simple-slider.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="71" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.html">
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P02_Bus_Schedule/bus-schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Exercise/P01_Bus_Stop/bus-stop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1511605500000" expanded="true" signature="1673:1679" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="195">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <marker date="1511600305000" expanded="true" signature="403:411" ph="…" />
-            <marker date="1511600305000" expanded="true" signature="1975:2084" ph="{...}" />
-            <marker date="1511600305000" expanded="true" signature="2119:2157" ph="{...}" />
+            <marker date="1511602309000" expanded="true" signature="402:410" ph="…" />
+            <marker date="1511602309000" expanded="true" signature="1974:2083" ph="{...}" />
+            <marker date="1511602309000" expanded="true" signature="2118:2156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P04_Phone_Book/phonebook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06. Introduction-to-AJAX/Lab/P03_Load_GitHub_Repos/load-repos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <marker date="1511292975000" expanded="true" signature="1194:1291" ph="..." />
           </folding>
         </state>
       </provider>
