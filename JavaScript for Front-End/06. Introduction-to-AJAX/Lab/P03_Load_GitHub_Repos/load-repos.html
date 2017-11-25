@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Load GitHub Repos</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+<body>
+    GitHub username:
+    <input type="text" id="username" value="testnakov" />
+    <button onclick="loadRepos()">Load Repos</button>
+    <ul id="repos"></ul>
+    <script>
+        function loadRepos() {
+            let username = $("#username").val();
+            $.ajax({
+                url: `https://api.github.com/users/${username}/repos`,
+                success: loadSuccess,
+                error: ajaxError
+            });
+//            $.get(`https://api.github.com/users/${username}/repos`)
+//                .promise.then(loadSuccess)
+        }
+
+        function loadSuccess(repos) {
+            for (let repo of repos) {
+                let link = $('<a>').text(repo.full_name);
+                link.attr('href', repo.html_url);
+                $("#repos").append($('<li>').append(link));
+
+            }
+
+//            for (let entry of data) {
+//                let element = $(`
+//                <li>
+//                    <a href='${entry.html_url}'>${entry.full_name}</a>
+//                </li>`);
+////                element.text(`<li>${entry.full_name}</li>`);
+//                $('#repos').append(element);
+//            }
+        }
+
+        function ajaxError(error) {
+            console.log(error);
+        }
+    </script>
+</body>
+</html>
