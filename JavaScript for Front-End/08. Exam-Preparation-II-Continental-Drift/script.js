@@ -132,7 +132,6 @@ function renderDataInHTML(continents) {
 const continentsDiv = $('.continents');
 const continentDataDiv = $('.continent-data');
 const continentCountryDiv = $('.continent-country');
-const continentCountry = $('.continent-country');
 
 function showData() {
     continentDataDiv.show();
@@ -146,6 +145,10 @@ function hideData() {
 
 function clearData() {
     continentDataDiv.empty();
+    continentCountryDiv.empty();
+}
+
+function clearCountryData() {
     continentCountryDiv.empty();
 }
 
@@ -184,6 +187,8 @@ function attachEvents(continents) {
             e.preventDefault();
 
             let countryName = $(this).val();
+
+            clearCountryData();
 
             renderSingleCountryInHtml(continent['countries'][countryName]);
         });
@@ -260,13 +265,130 @@ function renderSingleCountryInHtml(country) {
                 : '<div class="country-monarch"><strong>Monarch:</strong><div>' + country['monarch'] + '</div></div>')
         .append('<div class="country-official-currency"><strong>Official Currency:</strong><div>' + country['officialCurrency'] + '</div></div>');
 
-    continentCountry
+    continentCountryDiv
         .append(countryTitle)
         .append(countryData);
 }
 
 function renderDataInHTML_P03(continents) {
     renderAllContinentsInHtml(continents);
+}
+
+// Problem 4
+function getAllContinents() {
+    let requestUrl = 'https://continental-drift.firebaseio.com/continents.json';
+
+    $.get(requestUrl)
+        .then(renderAllContinentsInHtml_P04)
+        .catch((err) => console.log(err));
+}
+
+function getSingleContinent(continentName) {
+    let requestUrl = `https://continental-drift.firebaseio.com/continents/${continentName}.json`;
+
+
+    $.get(requestUrl)
+        .then(renderSingleContinentInHtml)
+        .catch((err) => console.log(err));
+}
+
+function getSingleCountry(continentName, countryName) {
+    let requestUrl = `https://continental-drift.firebaseio.com/continents/${continentName}/countries/${countryName}.json`;
+
+    $.get(requestUrl)
+        .then(renderSingleCountryInHtml)
+        .catch((err) => console.log(err));
+}
+
+function renderAllContinentsInHtml_P04(continents) {
+    for (let key in continents) {
+        let continent = continents[key];
+
+        let continentDiv = $('<div>').addClass('continent')
+            .append(
+                $('<h5>')
+                    .addClass('continent-title')
+                    .text(continent['name']));
+
+        continentsDiv.append(continentDiv);
+    }
+
+    attachContinentEvents();
+}
+
+function renderSingleContinentInHtml(continent) {
+    let countriesDiv = $('<div>')
+        .addClass('countries');
+
+    let dropdownSelect = $('<select>')
+        .addClass('dropdown-select')
+        .append('<option disabled selected value> -- select an option -- </option>');
+
+    let countries = continent['countries'];
+    for (let key in countries) {
+        let country = countries[key];
+
+        dropdownSelect
+            .append($('<option>')
+                .attr('value', country['name'])
+                .text(country['name']));
+    }
+
+    countriesDiv.append(dropdownSelect);
+
+    // Render image
+    let continentImageDiv = $('<div>')
+        .addClass('continent-image')
+        .append($('<img>')
+            .attr('src', 'images/' + continent['name'].toLowerCase() + '.png'));
+
+    continentDataDiv
+        .append($('<h2>')
+            .addClass('continent-title')
+            .text(continent['name']))
+        .append($('<h3>')
+            .addClass('countries-title')
+            .text('Countries'))
+        .append(countriesDiv)
+        .append(continentImageDiv);
+
+    attachCountryEvents(continent['name'])
+}
+
+function attachContinentEvents() {
+    $('.continent').click(function (e) {
+        e.preventDefault();
+
+        if ($(this).hasClass('shown')) {
+            $(this).removeClass('shown');
+
+            hideData();
+            clearData();
+        } else {
+            clearData();
+
+            $(this).parent().find('.shown').removeClass('shown');
+            $(this).addClass('shown');
+
+            let continentName = $(this).find('.continent-title').text();
+
+            getSingleContinent(continentName);
+            showData();
+        }
+
+    })
+}
+
+function attachCountryEvents(continentName) {
+    $('.dropdown-select').change(function (e) {
+        e.preventDefault();
+
+        let countryName = $(this).val();
+
+        clearCountryData();
+
+        getSingleCountry(continentName, countryName);
+    });
 }
 
 let continents = {
@@ -393,6 +515,7 @@ let continentsForHtml = {
     }
 };
 
+getAllContinents();
 
 // renderAllContinents(continents);
 // renderSingleContinent(continents['Europe']);
@@ -400,6 +523,6 @@ let continentsForHtml = {
 
 // renderDataInHTML(continentsForHtml);
 
-renderAllContinentsInHtml(continents);
-attachEvents(continents);
+// renderAllContinentsInHtml(continents);
+// attachEvents(continents);
 
