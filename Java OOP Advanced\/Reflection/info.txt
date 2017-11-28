@@ -1,0 +1,52 @@
+Metaprogramming
+Programming technique in which computer programs have the ability to treat programs as their data
+
+Reflection е форма на метапрограмиране
+getName() дава целия път, заедно с пакетите      - Fully qualified class name
+Class.forName("livedemo.Person"). 
+
+За предпочетане е да ползваме Person.class. Освен това само по тоя начин можем да дигнем 
+примитивен тип клас - примерно int.class;
+
+Ако можем БЕЗ рефлекшън е по-добре.
+JVM генерира при компилацията фрагменти код с цел оптимизация. При reflection губим този 
+performance
+
+getFields - не показва private полета, САМО ПУБЛИЧНИ, НО показва полета и на parent-а
+getDeclaredFields - показва всички полета в класа
+
+Class person - Person.class;
+Class parent = person.getSuperclass();
+
+Only the interfaces specifically declared implemented by a given class is returned 
+
+person.newInstance() не е най-добрият вариант за дигане на клас чрез reflection
+
+Version Control System -> get Local history - можеш да си изкараш последния път, когато се е
+билднало
+
+reflectionClass.getConstructor ни показва unchecked call warning в идето и ни подсказва по-
+натам, че от тук може да имаме проблем, което улеснява дебъга.
+getConstructor връща дефолтния конструктор
+Итерираме, взимаме конструктора с определения брой параметри И проверяваме parameter type
+дали ни е правилният и инстанцираме с Obj array.
+
+Class<Reflection> - премахва нуждата от каст при newInstance()
+
+Filed element = fileds[0];
+Object obj = field.get(field.getType()); СТАВА САМО АКО Е КОНСТАНТА!!!!!! Иначе 
+.get(инстанция/РЕФЕРЕНЦИЯ) !!!!!!!!!!!!!!!!!!!!!!
+
+element.set(инстанцията, новата стойност);
+
+method.invoke(референция, аргументи);
+
+setAccessible дава достъп за модификация
+
+Статичните методи може да се invoke-нат с null за референция. firstMethod.invoke(null);
+
+getModifiers - връща int
+Modifier.toString(int); и връща интерпретацията на инт-а примерно public static
+
+
+Lambda factory....?

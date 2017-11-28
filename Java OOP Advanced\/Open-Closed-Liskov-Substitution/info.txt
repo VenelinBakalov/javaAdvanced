@@ -1,0 +1,25 @@
+open/closed - open for extention closed for modification
+
+Design pattern-ите реално ни помагат да се придържаме към SOLID
+Strategy pattern е свързан с open/closed
+
+Template Method pattern - изнасянето на методите по интерфейсите - примерно graphic editor, 
+който си работи само с drawable, а то има само draw и не се интересува от другите методи,
+които има обекта
+
+Liskov - derived types must be COMPLETELY substitutable for their base types.
+extend without replacing the funcionality
+
+Различен вариант за принтиране в printEmployee - Strategy pattern - на конзолата, в word, 
+excell и т.н.
+
+IS-SUBSTITUTED-FOR
+
+derived classes are extending the base class without changing their behavior
+Lisko is extension of OCP.
+
+type checking - instanceof - VIOLATION!
+
+Виртуални методи - в Java всички методи са виртуални, може да се override освен ако нямаме
+изрично final. Тук идва проблема с override-натия сеттър, извикан в конструктора на base class
+Поради тази причина има варианта с final setter

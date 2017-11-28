@@ -1,0 +1,95 @@
+annotations
+	-> @InjectArgs
+	-> @InjectType
+	
+collection
+	-> interface Register<T>
+		-> void enqueueEmergency(T emergency);
+		-> T dequeueEmergency();
+		-> T peekEmergency();
+		-> Integer count();
+		-> Boolean isEmpty();
+	-> class EmergencyRegister<T> implements Register<T>
+
+commands
+	-> interface Executable
+		-> String execute();
+	-> abstract class BaseCommand implements Executable	
+		-> private ManagementSystem managementSystem;
+		-> protected getManagementSystem
+		@InjectArgs
+	-> class RegisterHealthEmergencyCommand extends BaseCommand
+	-> class RegisterOrderEmergencyCommand extends BaseCommand
+	-> class RegisterPropertyEmergencyCommand extends BaseCommand
+	-> class RegisterFireServiceCenterCommand extends BaseCommand
+	-> class RegisterMedicalServiceCenterCommand extends BaseCommand
+	-> class RegisterPoliceServiceCenterCommand extends BaseCommand
+		@InjectType
+	-> class ProcessEmergenciesCommand extends BaseCommand
+	
+	-> class EmergencyReportCommand extends BaseCommand
+
+core
+	-> interface ManagementSystem
+		->  String registerPropertyEmergency(Emergency emergency);
+		->	String registerHealthEmergency(Emergency emergency);
+		->	String registerOrderEmergency(Emergency emergency);
+		->	String registerFireServiceCenter(EmergencyCenter emergencyCenter);
+		->	String registerMedicalServiceCenter(EmergencyCenter emergencyCenter);
+		->	String registerPoliceServiceCenter(EmergencyCenter emergencyCenter);
+		->	String processEmergencies(String type);
+		->	String emergencyReport();
+	-> class EmergencyManagementSystem implements ManagementSystem
+	
+engines
+	-> class Engine implements Runnable
+
+enums
+	-> enum EmergencyLevel
+	-> enum Status
+
+interpreters
+	-> interface Interpreter
+		-> Executable interpretCommand(String line);
+	-> class CommandInterpreter implements Interpreter
+	
+io
+	-> interface Writer
+		-> void write(String line);
+	-> interface Reader
+		-> String read();
+	-> class ConsoleWriter implements Writer
+	-> class ConsoleReader implements Reader
+
+models
+
+	centers
+		-> interface EmergencyCenter
+			-> String getName();
+			-> Integer getAmountOfMaximumEmergencies();
+			-> Integer getProcessedEmergencies();
+			-> void processEmergency();
+			-> Boolean isForRetirement();
+		-> abstract class BaseEmergencyCenter implements EmergencyCenter
+		-> class FiremanServiceCenter extends BaseEmergencyCenter
+		-> class MedicalServiceCenter extends BaseEmergencyCenter
+		-> class PoliceServiceCenter extends BaseEmergencyCenter
+		
+	emergencies
+		-> interface Emergency
+			-> String getDescription();
+			-> EmergencyLevel getEmergencyLevel();
+			-> RegistrationTime getRegistrationTime();
+			-> Integer getResultAfterProcessing();
+		-> abstract class BaseEmergency implements Emergency
+		-> class HealthEmergency extends BaseEmergency
+		-> class OrderEmergency extends BaseEmergency
+		-> class PropertyEmergency extends BaseEmergency
+		
+utils
+	-> interface RegistrationTime
+		-> String toString();
+	-> class RegistrationTimeImpl implements RegistrationTime
+	
+-> class Main
+	

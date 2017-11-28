@@ -1,0 +1,55 @@
+Unit test - компонентно тестване - 1 компонент, 1 клас, 1 определено поведение
+Integration test - тества 1 модул
+System test - тества цялото приложение
+JUnit - unit testing framework
+
+public void + @Test annotation
+Assert.assertTrue...
+
+3A pattern
+
+Arrange - preconditions - предварителни условия, примерно наличие на инстанция от клас 
+BankAccount
+
+Act - test a SINGLE BEHAVIOR, действието, което тестваме
+
+Assert - postconditions - условия, които трябва да са спазени след като е извършено действието
+
+Ако очакваме да има exception
+@Test(exprected = IllegalArgumentException.class)
+
+Group id - разделение с точки
+Artifact id - с тирета
+
+Assert.assertEquals(expected, actual) - проверява 2 стойности дали са ==
+Може в началото да добавим стринг параметър със съобщение за грешката
+
+Добра практика - ползвай константи, а не магически числа
+dry - don't repeat yourself
+
+@Before
+public void createAccount() {
+this.account = new BankAccount();
+
+Before - метода да се изпълни преди да си включи всеки тестов метод. Before трябва да е 
+public
+
+User business domain terminology
+
+
+Искаме класа само да работи с референция към друг, а не да го създава в себе си.
+Може да го подаваме отвън в конструктора като интерфейс, ЗА ДА НЕ ГО ИНСТАНЦИРАМЕ ВЪТРЕ
+След това вътре в теста може да инстанцираме АНОНИМЕН клас, който да ни връща това, което на
+нас ни трябва, за да изолираме грешките.
+Пр. инстанцираме AccountManager анонимен и правим new Bank(manager);
+
+3 варианта - през конструктор, през сетър, през метод.
+
+Hamcrest - tool for test diagnostics
+
+Mock - simulate behavior of real objects, supplies data for the test...
+Прави нещо, но винаги връща един зададен от нас резултат
+
+Mockito framework - създава обект от класа със всичките му методи, но празни
+
+Assert.assertArrayEquals

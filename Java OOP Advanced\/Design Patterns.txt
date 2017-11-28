@@ -1,0 +1,37 @@
+Factory
+
+Dependency Injection
+
+Strategy Pattern
+
+Composite Design Pattern - примерно един CompositeNotificationService, който съдържа масив от
+NotificationService обекти и се подават през конструктора например като varargs, за да може
+клиента да работи директно с него, а не с отделните service. Например ако ползваме клас, 
+който е написан да приема само 1 service, а ни трябва да работи с няколко - SmsNotificationService,
+EmailNotificationService....
+
+Adapter Design Pattern - if you don't own the library. Нямаме достъп до библиотеката (A) Worker,
+Robot, Employee, искаме да добавим Recharge Station -> Rechargable. 
+Правим си RobotAdapter - адаптер за класа, в който искаме да вкараме нова функционалност.
+Този адаптер държи в себе си инстанция от класа, който не притежаваме. И вече през него викаме
+Recharge и действаме върху робота.
+
+Chain of Responsibility - decoupling requests.
+
+
+
+Abstract Method - в един final метод правим скелет на алгоритъм и оставяме детайлите в ръцете
+на наследниците. Примера с атаката и this.executeClassSpecificAttack(this.target, this.dmg), 
+където this е наследник на AbstractHero 
+protected abstract void this.executeClassSpecificAttack(Target target, int dmg); - също така
+през тоя метод подаваме target и dmg, за да не правим getter-и.
+
+Command Pattern - encapsulate requests as an Objects. Callbacks (methods/functions) are now 
+object oriented. callback.execute();. Decouples invoker from reciever. Също можем да си пазим
+някакво history от команди и да го използваме за undo. примерно метод storeAndExecute
+
+
+Mediator - handling groups of colleagues. Encapsulate how a set of objects interact. Colleagues
+are decoupled to one another.
+Пример - AttackGroup. addMember, groupTarger, groupAttack
+Връзката може да е many to many

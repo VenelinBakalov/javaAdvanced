@@ -1,0 +1,49 @@
+Абстракцията дава на user-а само това, което му е необходимо. Примера с телефона, абстракцията
+и енкапсулацията. При енкапсулацията скриваме, при абстракцията даваме само нужното. (като 
+енкапсулацията отговаря и за valid state-а на обекта)
+Абстракцията - interface и abstract
+Енкапсулация - access modifiers
+По конвенция интерфейсите е добре да са прилагателни, -able
+В интерфейса имаме константи и абстрактни методи. -> компилатора добавя сам 
+public static final / public abstract
+Interface-а имам public или default modifier
+Class extends class. Class implements interface. Interface extends interface.
+UML диаграмите използват прекъсната черта при implements
+Един интерфейс МОЖЕ да наследи 2 интерфейса
+
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+
+ЛЯВАТА СТРАНА ВИНАГИ Е МАКСИМАЛНО ГОЛЯМАТА АБСТРАКЦИЯ. Примерно 
+class Document implements Printable{}
+Printable doc = new Document();!!!!!!!!!!!
+
+Помага и за loose coupling. Примерно принтера да работи с класове документ и снимка. Вместо
+това правим interface с общата им характеристика, че може да бъдат изписани/изрисувани и
+реално връзваме принтера с този интерфейс, а не с 2та класа. (пък в даден момент и с 3ти..)
+
+В UML диаграми интерфейса се изписва с <<>>
+
+Проблем при първа задача е, че така написана може да принтира само на конзола! Ако искаме нещо
+друго е по-редно да връща стринг, освен това имаме проблем по тази логика със single responsibility
+и с depend-ване.
+
+UML диаграми -o - имплементира държавен интерфейс
+
+Car -> Sellable -> Seat - може да подадем car вместо Sellable в метод 
+
+Default методи - методи с логика в интерфейса.
+
+
+От Java 8 - default и static методи в интерфейсите. 
+
+Abstract class can have final, non-final, static and non-static variables.
+Interface has only static and final variables.
+
+
+КОНВЕНЦИЯ - ако имаме абстрактен клас между интерфейс и имплементация - класа се казва
+Base клас (пр. BasePerson) и имам protected constructor.
+
+---
+Backlog и Sprint
+

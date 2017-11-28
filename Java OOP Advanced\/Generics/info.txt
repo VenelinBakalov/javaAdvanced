@@ -1,0 +1,44 @@
+След java 5 - generics. Add type safety for the client! Compile time error
+
+!!! Type Inference <> -> List<String> = new ArrayList<>();
+
+T - type
+E - element
+
+Ако интерфейса е generic наследяващият клас също може да приеме този generic
+Generic method - между modifiers и return type
+
+Метаинфо - информация за конкретната информация съдържаща се в даден обект
+@SuppressWarnings - спира компилатора от разните там warnings
+
+Type erasure - информацията я имаме само при изпълнение на програмата.Generics са илюзия
+List<String> е инстанция на List, а не List<String>. Компилатора добавя едно кастване, 
+иначе отдолу си е List / List<Object>
+Информацията за типа runtime се губи.
+Generics are compile time illusion. Compiler deletes all angle bracket syntax.
+Adds type casts for us (present in byte-code)
+
+<T extends Class> - specifies upper bound. T extends Animal - приема Cat, Dog...
+Scale<T extends Comparable<T>> - за да приема само сравними обекти
+
+!!!!! List<Objects> НЕ Е РАВНО НА List<Animal>
+
+Wildcards introduce polymorph to type params
+<?> List<?> може да бъде всякакъв тип и това е ДИНАМИЧНО! Референцията се сменя.
+Не може да се адд-ва. List<Integers> integers = new ArrayList();
+List<?> anyList; anyList = integers;
+Може да се чете от него
+
+Bounded Wildcards - <? extends Number>
+
+Типовите параметри работят по различен начин от полиморфизма (List, ArrayList...)
+При инстанциране на T типа си остава статичен, конкретен.
+Reader<Integer> reader....
+reader.read(..<Number>)
+
+Lower bounds - <? super Class> any supertype of class
+
+!!!!!
+Четене - горна граница, писане - долна!
+
+Generics are Invariant

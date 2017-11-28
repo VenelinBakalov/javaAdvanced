@@ -1,0 +1,13 @@
+transient modifier - при serializable пропуска тези полета.
+volatile - ако се промени стойността на полето моментално тр€бва да отиде в main memory
+~ inverse битовете!
+
+
+Field modifiersField = Field.class.getDeclaredField("modifiers");
+modifiersField.setAccessible(true);
+modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL)
+
+field.set(null, 10);
+
+
+curl -get http:....
