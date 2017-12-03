@@ -59,7 +59,7 @@ $(() => {
     }
 
     function attachBackEvents(punshes) {
-        $('.content-heading ').on('click', attachBackClickEvent);
+        $('.content-heading').on('click', attachBackClickEvent);
 
         function attachBackClickEvent() {
             contentDiv.empty();
